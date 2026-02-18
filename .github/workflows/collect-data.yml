@@ -1,5 +1,4 @@
 name: Collect Repository Owner Data
-
 on:
   schedule:
     - cron: '0 0 * * *'
