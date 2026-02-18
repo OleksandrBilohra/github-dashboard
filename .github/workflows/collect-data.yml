@@ -2,37 +2,22 @@ name: Collect Repository Owner Data
 
 on:
   schedule:
-    # Run daily at 00:00 UTC
     - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
   collect-data:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      
+    
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          
+      
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           
-      - name: Install dependencies
-        run: npm install axios
-        
       - name: Collect repository data
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: node scripts/collect-data.js
-        
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add data/dashboard-data.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update dashboard data $(date -u +'%Y-%m-%d %H:%M:%S UTC')" && git push)
