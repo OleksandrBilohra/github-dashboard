@@ -1,24 +1,8 @@
 {
   "name": "repo-owner-tracker",
   "version": "1.0.0",
-  "description": "Security tracking dashboard for repository owner assignments",
-  "private": true,
+  "description": "Security tracking dashboard",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "^14.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "recharts": "^2.10.0",
-    "axios": "^1.6.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/node": "^20.0.0",
-    "typescript": "^5.0.0"
+    "collect": "node scripts/collect-data.js"
   }
 }
