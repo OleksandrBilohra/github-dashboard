@@ -1,4 +1,3 @@
-cat > scripts/collect-data.js << 'EOF'
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
@@ -43,6 +42,7 @@ async function collectData() {
       
       if (!Array.isArray(repos)) {
         console.log(`${org}: Error - invalid response`);
+        organizations.push({ name: org, totalRepos: 0, assignedRepos: 0, percentage: 0 });
         continue;
       }
 
@@ -57,6 +57,7 @@ async function collectData() {
       console.log(`${org}: ${repos.length} repos`);
     } catch (error) {
       console.error(`Error: ${org} - ${error.message}`);
+      organizations.push({ name: org, totalRepos: 0, assignedRepos: 0, percentage: 0 });
     }
   }
 
@@ -70,8 +71,7 @@ async function collectData() {
 
   const dataFile = path.join(dataDir, 'dashboard-data.json');
   fs.writeFileSync(dataFile, JSON.stringify(dashboardData, null, 2));
-  console.log('Done!');
+  console.log('Data saved to ' + dataFile);
 }
 
 collectData().catch(console.error);
-EOF
