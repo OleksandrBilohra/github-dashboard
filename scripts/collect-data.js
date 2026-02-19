@@ -3,7 +3,9 @@ const fs = require('fs');
 const path = require('path');
 
 const PAT = process.env.GH_PAT;
-const ORGS = ['AS-ASK-IT', 'as-cloud-services', 'asitservices', 'axelspringer', 'Media-Impact', 'sales-impact', 'spring-media', 'welttv'];
+
+console.log('PAT provided:', PAT ? 'YES' : 'NO');
+console.log('PAT length:', PAT ? PAT.length : 0);
 
 function makeRequest(url) {
   return new Promise((resolve, reject) => {
@@ -16,12 +18,18 @@ function makeRequest(url) {
     };
 
     https.get(url, options, (res) => {
+      console.log(`${url} - Status: ${res.statusCode}`);
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
-        try {
-          resolve(JSON.parse(data));
-        } catch {
+        if (res.statusCode === 200) {
+          try {
+            resolve(JSON.parse(data));
+          } catch {
+            resolve([]);
+          }
+        } else {
+          console.log(`Response: ${data.substring(0, 200)}`);
           resolve([]);
         }
       });
@@ -30,48 +38,13 @@ function makeRequest(url) {
 }
 
 async function collectData() {
-  const organizations = [];
-  const today = new Date().toISOString().split('T')[0];
-
-  console.log('Starting data collection...');
-
+  const ORGS = ['AS-ASK-IT'];
+  
   for (const org of ORGS) {
-    try {
-      console.log(`Processing: ${org}`);
-      const repos = await makeRequest(`https://api.github.com/orgs/${org}/repos?per_page=100&type=all`);
-      
-      if (!Array.isArray(repos)) {
-        console.log(`${org}: Error - invalid response`);
-        organizations.push({ name: org, totalRepos: 0, assignedRepos: 0, percentage: 0 });
-        continue;
-      }
-
-      organizations.push({
-        name: org,
-        totalRepos: repos.length,
-        assignedRepos: Math.floor(repos.length * 0.5),
-        percentage: 50.0,
-        lastUpdated: new Date().toISOString(),
-      });
-
-      console.log(`${org}: ${repos.length} repos`);
-    } catch (error) {
-      console.error(`Error: ${org} - ${error.message}`);
-      organizations.push({ name: org, totalRepos: 0, assignedRepos: 0, percentage: 0 });
-    }
+    console.log(`\nTesting: ${org}`);
+    const repos = await makeRequest(`https://api.github.com/orgs/${org}/repos?per_page=10`);
+    console.log(`Got ${Array.isArray(repos) ? repos.length : 'invalid'} repos`);
   }
-
-  const dataDir = path.join(__dirname, '../data');
-  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
-
-  const dashboardData = {
-    organizations,
-    trends: [{ date: today, ...Object.fromEntries(organizations.map(o => [o.name, o.percentage])) }]
-  };
-
-  const dataFile = path.join(dataDir, 'dashboard-data.json');
-  fs.writeFileSync(dataFile, JSON.stringify(dashboardData, null, 2));
-  console.log('Data saved to ' + dataFile);
 }
 
 collectData().catch(console.error);
