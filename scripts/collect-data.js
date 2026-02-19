@@ -5,7 +5,7 @@ const path = require('path');
 const PAT = process.env.GH_PAT;
 
 function makeRequest(url) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const options = {
       headers: {
         'Authorization': `token ${PAT}`,
@@ -18,13 +18,9 @@ function makeRequest(url) {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
-        if (res.statusCode === 200) {
-          try {
-            resolve({ success: true, data: JSON.parse(data) });
-          } catch {
-            resolve({ success: true, data: [] });
-          }
-        } else {
+        try {
+          resolve({ success: res.statusCode === 200, data: JSON.parse(data) });
+        } catch {
           resolve({ success: false, data: [] });
         }
       });
@@ -51,12 +47,26 @@ async function getOrgRepos(org) {
     page++;
   }
 
-  // Count repos with description (= maintained)
-  const maintainedRepos = allRepos.filter(r => r.description && r.description.trim().length > 0).length;
-  const totalRepos = allRepos.length;
-  const percentage = totalRepos > 0 ? Math.round((maintainedRepos / totalRepos) * 100) : 0;
+  // Check last commit date for each repo
+  let activeRepos = 0;
+  const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
 
-  return { totalRepos, maintainedRepos, percentage };
+  for (const repo of allRepos) {
+    const commitsUrl = `https://api.github.com/repos/${org}/${repo.name}/commits?per_page=1`;
+    const commitsResult = await makeRequest(commitsUrl);
+    
+    if (commitsResult.success && Array.isArray(commitsResult.data) && commitsResult.data.length > 0) {
+      const lastCommitDate = new Date(commitsResult.data[0].commit.committer.date);
+      if (lastCommitDate > thirtyDaysAgo) {
+        activeRepos++;
+      }
+    }
+  }
+
+  const totalRepos = allRepos.length;
+  const percentage = totalRepos > 0 ? Math.round((activeRepos / totalRepos) * 100) : 0;
+
+  return { totalRepos, activeRepos, percentage };
 }
 
 async function collectData() {
@@ -75,17 +85,17 @@ async function collectData() {
 
   for (const org of ORGS) {
     try {
-      const { totalRepos, maintainedRepos, percentage } = await getOrgRepos(org);
+      const { totalRepos, activeRepos, percentage } = await getOrgRepos(org);
       
       organizations.push({
         name: org,
         totalRepos: totalRepos,
-        maintainedRepos: maintainedRepos,
+        activeRepos: activeRepos,
         ownershipPercentage: percentage,
         lastUpdated: new Date().toISOString()
       });
 
-      console.log(`  ✅ ${org}: ${totalRepos} repos, ${percentage}% maintained\n`);
+      console.log(`  ✅ ${org}: ${activeRepos}/${totalRepos} repos active (${percentage}%)\n`);
       trendEntry[org] = percentage;
     } catch (error) {
       console.error(`❌ ${org}: ${error.message}`);
