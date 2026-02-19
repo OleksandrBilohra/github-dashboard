@@ -5,57 +5,69 @@
       "totalRepos": 21,
       "assignedRepos": 10,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T10:33:03.163Z"
+      "lastUpdated": "2026-02-19T10:40:32.037Z"
     },
     {
       "name": "as-cloud-services",
       "totalRepos": 136,
       "assignedRepos": 68,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T10:33:06.305Z"
+      "lastUpdated": "2026-02-19T10:40:34.363Z"
     },
     {
       "name": "asitservices",
       "totalRepos": 852,
       "assignedRepos": 426,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T10:33:23.654Z"
+      "lastUpdated": "2026-02-19T10:40:54.639Z"
     },
     {
       "name": "axelspringer",
       "totalRepos": 144,
       "assignedRepos": 72,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T10:33:26.098Z"
+      "lastUpdated": "2026-02-19T10:40:57.011Z"
     },
     {
       "name": "Media-Impact",
       "totalRepos": 26,
       "assignedRepos": 13,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T10:33:26.960Z"
+      "lastUpdated": "2026-02-19T10:40:58.047Z"
     },
     {
       "name": "sales-impact",
       "totalRepos": 0,
       "assignedRepos": 0,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T10:33:27.066Z"
+      "lastUpdated": "2026-02-19T10:40:58.255Z"
     },
     {
       "name": "spring-media",
       "totalRepos": 3157,
       "assignedRepos": 1,
       "percentage": 0.031675641431738996,
-      "lastUpdated": "2026-02-19T10:34:21.419Z"
+      "lastUpdated": "2026-02-19T10:42:02.215Z"
     },
     {
       "name": "welttv",
       "totalRepos": 51,
       "assignedRepos": 25,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T10:34:22.188Z"
+      "lastUpdated": "2026-02-19T10:42:04.122Z"
     }
   ],
-  "trends": []
+  "trends": [
+    {
+      "date": "2026-02-19",
+      "AS-ASK-IT": 0,
+      "as-cloud-services": 0,
+      "asitservices": 0,
+      "axelspringer": 0,
+      "Media-Impact": 0,
+      "sales-impact": 0,
+      "spring-media": 0.031675641431738996,
+      "welttv": 0
+    }
+  ]
 }

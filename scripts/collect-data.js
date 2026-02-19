@@ -25,10 +25,7 @@ function makeRequest(url) {
             resolve([]);
           }
         } else {
-<<<<<<< HEAD
-=======
           console.log(`❌ Status ${res.statusCode}: ${url}`);
->>>>>>> 491deb6ef267aea428bb5710ba5aa97382a4c90d
           resolve([]);
         }
       });
@@ -37,11 +34,7 @@ function makeRequest(url) {
 }
 
 async function getOrgRepos(org) {
-<<<<<<< HEAD
-  console.log(`Processing: ${org}`);
-=======
   console.log(`\n📦 Fetching repos for: ${org}`);
->>>>>>> 491deb6ef267aea428bb5710ba5aa97382a4c90d
   
   let allRepos = [];
   let page = 1;
@@ -53,10 +46,7 @@ async function getOrgRepos(org) {
     
     if (Array.isArray(repos) && repos.length > 0) {
       allRepos = allRepos.concat(repos);
-<<<<<<< HEAD
-=======
       console.log(`  Page ${page}: ${repos.length} repos (total: ${allRepos.length})`);
->>>>>>> 491deb6ef267aea428bb5710ba5aa97382a4c90d
       page++;
       hasMore = repos.length === 100;
     } else {
@@ -64,10 +54,7 @@ async function getOrgRepos(org) {
     }
   }
 
-<<<<<<< HEAD
-=======
   console.log(`  ✅ Total repos for ${org}: ${allRepos.length}`);
->>>>>>> 491deb6ef267aea428bb5710ba5aa97382a4c90d
   return allRepos;
 }
 
@@ -84,53 +71,55 @@ async function collectData() {
   ];
 
   const organizations = [];
+  const trendEntry = { date: new Date().toISOString().split('T')[0] };
 
   for (const org of ORGS) {
     try {
       const repos = await getOrgRepos(org);
-<<<<<<< HEAD
-      
-      organizations.push({
-        name: org,
-        totalRepos: repos.length,
-        assignedRepos: Math.floor(repos.length / 2),
-        percentage: 50.0,
-        lastUpdated: new Date().toISOString()
-      });
-    } catch (error) {
-      console.error(`${org}: Error - ${error.message}`);
-=======
       const totalRepos = repos.length;
       
-      // Zähle Repos mit "owner" im Namen (oder andere Kriterien)
       const assignedRepos = repos.filter(r => r.description && r.description.includes('owner')).length;
+      const percentage = totalRepos > 0 ? (assignedRepos / totalRepos * 100) : 0;
       
       organizations.push({
         name: org,
         totalRepos: totalRepos,
         assignedRepos: assignedRepos || Math.floor(totalRepos / 2),
-        percentage: totalRepos > 0 ? (assignedRepos / totalRepos * 100) : 0,
+        percentage: percentage,
         lastUpdated: new Date().toISOString()
       });
+
+      trendEntry[org] = percentage;
     } catch (error) {
       console.error(`❌ Error processing ${org}:`, error.message);
->>>>>>> 491deb6ef267aea428bb5710ba5aa97382a4c90d
     }
   }
 
   const dataDir = path.join(__dirname, '../docs/data');
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
   
+  // Alte Trends laden und neue hinzufügen
+  let trends = [];
+  const dataFile = path.join(dataDir, 'dashboard-data.json');
+  if (fs.existsSync(dataFile)) {
+    try {
+      const existing = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+      trends = existing.trends || [];
+    } catch (e) {
+      trends = [];
+    }
+  }
+
+  // Neue Trend hinzufügen (max 30 Tage)
+  trends.push(trendEntry);
+  if (trends.length > 30) trends = trends.slice(-30);
+  
   fs.writeFileSync(
-    path.join(dataDir, 'dashboard-data.json'),
-    JSON.stringify({ organizations, trends: [] }, null, 2)
+    dataFile,
+    JSON.stringify({ organizations, trends }, null, 2)
   );
 
-<<<<<<< HEAD
-  console.log('✅ Data collection completed!');
-=======
   console.log('\n✅ Data saved to docs/data/dashboard-data.json');
->>>>>>> 491deb6ef267aea428bb5710ba5aa97382a4c90d
 }
 
 collectData().catch(console.error);
