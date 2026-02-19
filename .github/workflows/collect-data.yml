@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
-  push:
-    paths:
-      - 'scripts/collect-data.js'
 
 jobs:
   collect:
@@ -15,22 +12,20 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
       
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
       
-      - name: Run data collection
+      - name: Collect data
         run: node scripts/collect-data.js
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
       
-      - name: Commit and push
+      - name: Push changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/data/dashboard-data.json
-          git commit -m "chore: auto-update data" || exit 0
-          git push
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "data: auto-update" || true
+          git push origin main
