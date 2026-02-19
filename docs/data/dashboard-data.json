@@ -5,59 +5,70 @@
       "totalRepos": 21,
       "assignedRepos": 10,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T12:37:59.633Z"
+      "lastUpdated": "2026-02-19T14:55:42.504Z"
     },
     {
       "name": "as-cloud-services",
       "totalRepos": 136,
       "assignedRepos": 68,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T12:38:03.088Z"
+      "lastUpdated": "2026-02-19T14:55:44.950Z"
     },
     {
       "name": "asitservices",
-      "totalRepos": 852,
+      "totalRepos": 853,
       "assignedRepos": 426,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T12:38:23.975Z"
+      "lastUpdated": "2026-02-19T14:56:02.852Z"
     },
     {
       "name": "axelspringer",
       "totalRepos": 144,
       "assignedRepos": 72,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T12:38:27.208Z"
+      "lastUpdated": "2026-02-19T14:56:06.290Z"
     },
     {
       "name": "Media-Impact",
       "totalRepos": 26,
       "assignedRepos": 13,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T12:38:27.989Z"
+      "lastUpdated": "2026-02-19T14:56:07.332Z"
     },
     {
       "name": "sales-impact",
       "totalRepos": 0,
       "assignedRepos": 0,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T12:38:28.265Z"
+      "lastUpdated": "2026-02-19T14:56:07.588Z"
     },
     {
       "name": "spring-media",
       "totalRepos": 3157,
       "assignedRepos": 1,
       "percentage": 0.031675641431738996,
-      "lastUpdated": "2026-02-19T12:39:22.122Z"
+      "lastUpdated": "2026-02-19T14:57:07.184Z"
     },
     {
       "name": "welttv",
       "totalRepos": 51,
       "assignedRepos": 25,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T12:39:23.286Z"
+      "lastUpdated": "2026-02-19T14:57:08.541Z"
     }
   ],
   "trends": [
+    {
+      "date": "2026-02-19",
+      "AS-ASK-IT": 0,
+      "as-cloud-services": 0,
+      "asitservices": 0,
+      "axelspringer": 0,
+      "Media-Impact": 0,
+      "sales-impact": 0,
+      "spring-media": 0.031675641431738996,
+      "welttv": 0
+    },
     {
       "date": "2026-02-19",
       "AS-ASK-IT": 0,
