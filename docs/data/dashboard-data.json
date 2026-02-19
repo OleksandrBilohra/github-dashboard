@@ -5,59 +5,70 @@
       "totalRepos": 21,
       "assignedRepos": 10,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T12:11:17.016Z"
+      "lastUpdated": "2026-02-19T12:19:24.759Z"
     },
     {
       "name": "as-cloud-services",
       "totalRepos": 136,
       "assignedRepos": 68,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T12:11:19.015Z"
+      "lastUpdated": "2026-02-19T12:19:26.781Z"
     },
     {
       "name": "asitservices",
       "totalRepos": 852,
       "assignedRepos": 426,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T12:11:30.743Z"
+      "lastUpdated": "2026-02-19T12:19:37.918Z"
     },
     {
       "name": "axelspringer",
       "totalRepos": 144,
       "assignedRepos": 72,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T12:11:32.951Z"
+      "lastUpdated": "2026-02-19T12:19:39.844Z"
     },
     {
       "name": "Media-Impact",
       "totalRepos": 26,
       "assignedRepos": 13,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T12:11:33.379Z"
+      "lastUpdated": "2026-02-19T12:19:40.359Z"
     },
     {
       "name": "sales-impact",
       "totalRepos": 0,
       "assignedRepos": 0,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T12:11:33.466Z"
+      "lastUpdated": "2026-02-19T12:19:40.461Z"
     },
     {
       "name": "spring-media",
       "totalRepos": 3157,
       "assignedRepos": 1,
       "percentage": 0.031675641431738996,
-      "lastUpdated": "2026-02-19T12:12:12.242Z"
+      "lastUpdated": "2026-02-19T12:20:19.230Z"
     },
     {
       "name": "welttv",
       "totalRepos": 51,
       "assignedRepos": 25,
       "percentage": 0,
-      "lastUpdated": "2026-02-19T12:12:13.089Z"
+      "lastUpdated": "2026-02-19T12:20:20.114Z"
     }
   ],
   "trends": [
+    {
+      "date": "2026-02-19",
+      "AS-ASK-IT": 0,
+      "as-cloud-services": 0,
+      "asitservices": 0,
+      "axelspringer": 0,
+      "Media-Impact": 0,
+      "sales-impact": 0,
+      "spring-media": 0.031675641431738996,
+      "welttv": 0
+    },
     {
       "date": "2026-02-19",
       "AS-ASK-IT": 0,
