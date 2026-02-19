@@ -1,0 +1,26 @@
+{
+  "organizations": [
+    {
+      "name": "AS-ASK-IT",
+      "totalRepos": 45,
+      "assignedRepos": 22,
+      "percentage": 48.9,
+      "lastUpdated": "2026-02-19T00:00:00.000Z"
+    },
+    {
+      "name": "as-cloud-services",
+      "totalRepos": 32,
+      "assignedRepos": 16,
+      "percentage": 50.0,
+      "lastUpdated": "2026-02-19T00:00:00.000Z"
+    },
+    {
+      "name": "axelspringer",
+      "totalRepos": 128,
+      "assignedRepos": 64,
+      "percentage": 50.0,
+      "lastUpdated": "2026-02-19T00:00:00.000Z"
+    }
+  ],
+  "trends": []
+}
