@@ -1,18 +1,23 @@
-name: Collect Repository Owner Data
-
+name: Collect Data
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *'  # täglich um 00:00
+  workflow_dispatch:
 
 jobs:
   collect:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: '18'
       - run: node scripts/collect-data.js
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
+      - run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add docs/data/dashboard-data.json
+          git commit -m "Update data" || true
+          git push
