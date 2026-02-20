@@ -4,13 +4,16 @@ const path = require('path');
 
 const PAT = process.env.GH_PAT;
 
+// IMPORTANT: Custom properties APIs may require a preview accept header depending on your GitHub version.
+// We'll try with v3 first; if you get 415/404, switch Accept to the preview header mentioned below.
 function makeRequest(url) {
   return new Promise((resolve) => {
     const options = {
       headers: {
-        // zurück wie früher:
         'Authorization': `token ${PAT}`,
         'Accept': 'application/vnd.github.v3+json',
+        // Alternative if needed:
+        // 'Accept': 'application/vnd.github+json',
         'User-Agent': 'Node.js'
       }
     };
@@ -19,73 +22,50 @@ function makeRequest(url) {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
-        let parsed = null;
-        try { parsed = data ? JSON.parse(data) : null; } catch { parsed = data; }
-
-        resolve({
-          success: res.statusCode >= 200 && res.statusCode < 300,
-          status: res.statusCode,
-          data: parsed
-        });
+        try {
+          resolve({ success: res.statusCode >= 200 && res.statusCode < 300, status: res.statusCode, data: JSON.parse(data) });
+        } catch {
+          resolve({ success: false, status: res.statusCode, data: null });
+        }
       });
-    }).on('error', (err) => resolve({ success: false, status: 0, data: String(err) }));
+    }).on('error', () => resolve({ success: false, status: 0, data: null }));
   });
 }
 
-function normalizeToString(value) {
-  if (value == null) return '';
-  if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') return String(value).trim();
-  if (Array.isArray(value)) return value.map(normalizeToString).filter(Boolean).join(',').trim();
-  if (typeof value === 'object') {
-    if (typeof value.name === 'string') return value.name.trim();
-    if (typeof value.value === 'string') return value.value.trim();
-    if (typeof value.login === 'string') return value.login.trim();
-    return '';
-  }
-  return '';
-}
-
 function isValidRepoOwner(value) {
-  const v = normalizeToString(value);
-  if (!v) return false;
-  if (v.toLowerCase() === 'default') return false;
+  if (value == null) return false;
+  const v = String(value).trim();
+  if (!v) return false;                 // leer
+  if (v.toLowerCase() === 'default') return false; // "default"
   return true;
 }
 
+// --- Custom properties fetch ---
+// Endpoint can differ depending on your GitHub feature/API version.
+// Try this first. If it fails (404/415), tell me the status code and response and we’ll adjust.
 async function getRepoOwnerCustomProperty(org, repo) {
+  // candidate endpoint (often used for repo properties values)
   const url = `https://api.github.com/repos/${org}/${repo}/properties/values`;
   const result = await makeRequest(url);
 
-  if (!result.success) {
-    // wichtiges Debug
-    console.log(`  ⚠️ ${org}/${repo}: cannot read custom properties (status=${result.status})`);
-    return null;
-  }
+  if (!result.success || !result.data) return null;
 
-  if (!result.data) return null;
-
+  // Expected shapes can vary. We try to support a couple:
+  // Shape A: [{ property_name: 'RepoOwner', value: '...' }, ...]
   if (Array.isArray(result.data)) {
-    const hit = result.data.find(p =>
-      p.property_name === 'RepoOwner' ||
-      p.propertyName === 'RepoOwner' ||
-      p.name === 'RepoOwner'
-    );
-    if (!hit) return null;
-
-    if ('value' in hit) return hit.value;
-    if ('values' in hit) return hit.values;
-    if ('string_value' in hit) return hit.string_value;
-    if ('selected_value' in hit) return hit.selected_value;
-    return null;
+    const hit = result.data.find(p => p.property_name === 'RepoOwner' || p.propertyName === 'RepoOwner' || p.name === 'RepoOwner');
+    return hit ? (hit.value ?? hit.values ?? hit.string_value ?? hit.selected_value ?? null) : null;
   }
 
-  if (typeof result.data === 'object' && result.data !== null) {
+  // Shape B: { RepoOwner: "..." } (less common)
+  if (typeof result.data === 'object') {
     if ('RepoOwner' in result.data) return result.data.RepoOwner;
   }
 
   return null;
 }
 
+// simple concurrency pool
 async function mapWithConcurrency(items, limit, mapper) {
   const results = new Array(items.length);
   let idx = 0;
@@ -108,33 +88,33 @@ async function getOrgRepos(org) {
 
   let allRepos = [];
   let page = 1;
+  let hasMore = true;
 
-  while (true) {
+  while (hasMore) {
     const url = `https://api.github.com/orgs/${org}/repos?per_page=100&page=${page}&type=all`;
     const result = await makeRequest(url);
 
-    if (!result.success) {
-      console.error(`  ❌ ${org}: cannot list repos. status=${result.status}`);
-      console.error(`  ❌ response:`, result.data);
+    if (!result.success || !Array.isArray(result.data) || result.data.length === 0) {
+      hasMore = false;
       break;
     }
-
-    if (!Array.isArray(result.data) || result.data.length === 0) break;
 
     allRepos = allRepos.concat(result.data);
     console.log(`  📄 Page ${page}: ${result.data.length} repos (Total: ${allRepos.length})`);
 
-    if (result.data.length < 100) break;
+    if (result.data.length < 100) hasMore = false;
     page++;
   }
 
-  // total = alle visibilities, ohne archiv
+  // Du wolltest: public+private+internal ok, aber keine archived
   const filteredRepos = allRepos.filter(r => !r.archived);
 
-  // active = RepoOwner gesetzt (nicht default/leer)
-  const repoOwnerValues = await mapWithConcurrency(filteredRepos, 6, async (r) => {
+  // ACTIVE = RepoOwner Custom Property gesetzt (nicht default, nicht leer)
+  // (parallelisiert, damit es schneller läuft)
+  const repoOwnerValues = await mapWithConcurrency(filteredRepos, 8, async (r) => {
     try {
-      return await getRepoOwnerCustomProperty(org, r.name);
+      const value = await getRepoOwnerCustomProperty(org, r.name);
+      return value;
     } catch {
       return null;
     }
@@ -142,7 +122,7 @@ async function getOrgRepos(org) {
 
   const activeRepos = repoOwnerValues.filter(isValidRepoOwner).length;
 
-  console.log(`  ✅ ${org}: ${filteredRepos.length} total (public+private+internal, ohne archiv), ${activeRepos} aktiv (RepoOwner != default/leer)\n`);
+  console.log(`  ✅ ${org}: ${filteredRepos.length} total (ohne archiv), ${activeRepos} aktiv (RepoOwner gesetzt)\n`);
   return { totalRepos: filteredRepos.length, activeRepos };
 }
 
