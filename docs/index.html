@@ -1,119 +1,69 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repository Owner Tracker</title>
+    <title>Organization Repository Overview</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
-            background: #0d1117;
-            color: #c9d1d9;
-            padding: 20px;
-        }
-        .container { max-width: 1400px; margin: 0 auto; }
-        h1 { margin-bottom: 30px; color: #58a6ff; }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
-        }
         .card {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-            padding: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
         }
-        .card h3 { color: #58a6ff; margin-bottom: 10px; }
-        .stat { font-size: 24px; font-weight: bold; color: #3fb950; }
-        .chart-container { 
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-            padding: 20px;
-            margin-bottom: 20px;
-            position: relative;
+        .chart-container {
+            width: 100%;
             height: 400px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>📊 Repository Owner Tracker</h1>
-        
-        <div class="grid" id="stats"></div>
-        
-        <div class="chart-container">
-            <canvas id="trendsChart"></canvas>
-        </div>
+    <h1>Organization Repository Overview</h1>
+    <div id="orgCards"></div>
+    <div class="chart-container">
+        <canvas id="repoChart"></canvas>
     </div>
 
     <script>
-        async function loadData() {
-            try {
-                const response = await fetch('./data/dashboard-data.json');
-                const data = await response.json();
-                
-                // Stats
-                const statsHtml = data.organizations
-                    .map(org => `
-                        <div class="card">
-                            <h3>${org.name}</h3>
-                            <div class="stat">${org.totalRepos}</div>
-                            <p>Repositories</p>
-                        </div>
-                    `)
-                    .join('');
-                document.getElementById('stats').innerHTML = statsHtml;
-                
-                // Trends Chart
-                const dates = data.trends.map(t => t.date);
-                const orgs = data.organizations.map(o => o.name);
-                
-                const datasets = orgs.map((org, i) => {
-                    const colors = ['#58a6ff', '#3fb950', '#d29922', '#f85149', '#a371f7', '#79c0ff', '#56d364', '#ff7b72'];
-                    return {
-                        label: org,
-                        data: data.trends.map(t => t[org] || 0),
-                        borderColor: colors[i % colors.length],
-                        backgroundColor: colors[i % colors.length] + '20',
-                        tension: 0.3,
-                        fill: false
-                    };
-                });
-                
-                new Chart(document.getElementById('trendsChart'), {
-                    type: 'line',
-                    data: { labels: dates, datasets },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: {
-                            legend: {
-                                labels: { color: '#c9d1d9' }
-                            }
-                        },
-                        scales: {
-                            y: {
-                                ticks: { color: '#c9d1d9' },
-                                grid: { color: '#30363d' }
-                            },
-                            x: {
-                                ticks: { color: '#c9d1d9' },
-                                grid: { color: '#30363d' }
-                            }
-                        }
+        const orgData = [
+            { name: 'Org 1', totalRepos: 5, activeRepos: 3 },
+            { name: 'Org 2', totalRepos: 8, activeRepos: 6 },
+            // Add more organizations as necessary
+        ];
+
+        // Generate cards
+        const orgCardsDiv = document.getElementById('orgCards');
+        orgData.forEach(org => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `<h2>${org.name}</h2>\n                              <p>Total Repositories: ${org.totalRepos}</p>\n                              <p>Active Repositories: ${org.activeRepos}</p>`;
+            orgCardsDiv.appendChild(card);
+        });
+
+        // Line chart data
+        const ctx = document.getElementById('repoChart').getContext('2d');
+        const repoChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2026-01', '2026-02', '2026-03', '2026-04', '2026-05'], // Add more labels as needed
+                datasets: [{
+                    label: 'Total Repositories',
+                    data: [15, 20, 30, 25, 35], // Add dynamic data for total repos per organization over time
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
                     }
-                });
-            } catch (error) {
-                console.error('Error loading data:', error);
+                }
             }
-        }
-        
-        loadData();
+        });
     </script>
 </body>
 </html>
