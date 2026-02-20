@@ -120,4 +120,4 @@ async function collectData() {
   console.log('✅ Data saved!');
 }
 
-collectData().catch(console.error);
+  collectData().catch(console.error);
