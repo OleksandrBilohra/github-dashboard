@@ -3,51 +3,44 @@
     {
       "name": "AS-ASK-IT",
       "totalRepos": 21,
-      "activeRepos": 4,
-      "ownershipPercentage": 19,
-      "lastUpdated": "2026-02-20T02:34:34.827Z"
+      "activeRepos": 0,
+      "lastUpdated": "2026-02-20T10:03:55.520Z"
     },
     {
       "name": "as-cloud-services",
-      "totalRepos": 136,
-      "activeRepos": 9,
-      "ownershipPercentage": 7,
-      "lastUpdated": "2026-02-20T02:35:25.468Z"
+      "totalRepos": 100,
+      "activeRepos": 0,
+      "lastUpdated": "2026-02-20T10:03:56.452Z"
     },
     {
       "name": "asitservices",
-      "totalRepos": 840,
-      "activeRepos": 61,
-      "ownershipPercentage": 7,
-      "lastUpdated": "2026-02-20T02:40:09.337Z"
+      "totalRepos": 100,
+      "activeRepos": 0,
+      "lastUpdated": "2026-02-20T10:03:55.869Z"
     },
     {
       "name": "axelspringer",
-      "totalRepos": 144,
-      "activeRepos": 1,
-      "ownershipPercentage": 1,
-      "lastUpdated": "2026-02-20T02:40:58.124Z"
+      "totalRepos": 100,
+      "activeRepos": 0,
+      "lastUpdated": "2026-02-20T10:03:55.984Z"
     },
     {
       "name": "Media-Impact",
       "totalRepos": 26,
-      "activeRepos": 4,
-      "ownershipPercentage": 15,
-      "lastUpdated": "2026-02-20T02:41:07.137Z"
+      "activeRepos": 0,
+      "lastUpdated": "2026-02-20T10:03:56.139Z"
     },
     {
       "name": "spring-media",
-      "totalRepos": 3157,
-      "activeRepos": 488,
-      "ownershipPercentage": 15,
-      "lastUpdated": "2026-02-20T02:59:14.599Z"
+      "totalRepos": 100,
+      "activeRepos": 0,
+      "lastUpdated": "2026-02-20T10:03:55.848Z"
     },
     {
       "name": "welttv",
       "totalRepos": 51,
-      "activeRepos": 6,
-      "ownershipPercentage": 12,
-      "lastUpdated": "2026-02-20T02:59:31.794Z"
+      "activeRepos": 0,
+      "lastUpdated": "2026-02-20T10:03:56.429Z"
     }
   ],
   "trends": [
@@ -145,6 +138,16 @@
       "Media-Impact": 15,
       "spring-media": 15,
       "welttv": 12
+    },
+    {
+      "date": "2026-02-20",
+      "AS-ASK-IT": 21,
+      "as-cloud-services": 100,
+      "asitservices": 100,
+      "axelspringer": 100,
+      "Media-Impact": 26,
+      "spring-media": 100,
+      "welttv": 51
     }
   ]
 }
