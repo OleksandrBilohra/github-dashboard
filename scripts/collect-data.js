@@ -4,17 +4,11 @@ const path = require('path');
 
 const PAT = process.env.GH_PAT;
 
-if (!PAT) {
-  console.error('❌ GH_PAT is not set. Export GH_PAT and rerun.');
-  process.exit(1);
-}
-
-const DEBUG_REPOOWNER = process.env.DEBUG_REPOOWNER === '1';
-
 function makeRequest(url) {
   return new Promise((resolve) => {
     const options = {
       headers: {
+        // zurück wie früher:
         'Authorization': `token ${PAT}`,
         'Accept': 'application/vnd.github.v3+json',
         'User-Agent': 'Node.js'
@@ -38,116 +32,58 @@ function makeRequest(url) {
   });
 }
 
-/**
- * Extract a comparable string from "RepoOwner" custom property values.
- * Handles string, number, arrays, and common object shapes from GitHub custom properties.
- */
-function extractRepoOwnerString(raw) {
-  if (raw == null) return '';
-
-  // direct scalar
-  if (typeof raw === 'string' || typeof raw === 'number' || typeof raw === 'boolean') {
-    return String(raw).trim();
-  }
-
-  // array: try to extract meaningful parts
-  if (Array.isArray(raw)) {
-    // if array of objects/strings, extract each and join
-    const parts = raw
-      .map(extractRepoOwnerString)
-      .map(s => s.trim())
-      .filter(Boolean);
-
-    return parts.join(',').trim();
-  }
-
-  // object: try common keys
-  if (typeof raw === 'object') {
-    // common candidate keys for select-like values
-    const candidates = [
-      raw.name,
-      raw.value,
-      raw.label,
-      raw.display_name,
-      raw.displayName,
-      raw.login
-    ];
-
-    for (const c of candidates) {
-      const s = extractRepoOwnerString(c);
-      if (s) return s;
-    }
-
-    // Sometimes value is nested deeper:
-    // e.g. { selected: { name: "default" } } or { option: { label: "default" } }
-    // We'll search a limited depth for strings.
-    for (const key of Object.keys(raw)) {
-      const v = raw[key];
-      if (typeof v === 'string') {
-        const s = v.trim();
-        if (s) return s;
-      }
-      if (v && typeof v === 'object') {
-        const s = extractRepoOwnerString(v);
-        if (s) return s;
-      }
-    }
-
+function normalizeToString(value) {
+  if (value == null) return '';
+  if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') return String(value).trim();
+  if (Array.isArray(value)) return value.map(normalizeToString).filter(Boolean).join(',').trim();
+  if (typeof value === 'object') {
+    if (typeof value.name === 'string') return value.name.trim();
+    if (typeof value.value === 'string') return value.value.trim();
+    if (typeof value.login === 'string') return value.login.trim();
     return '';
   }
-
   return '';
 }
 
-function isActiveByRepoOwner(rawRepoOwnerValue) {
-  const v = extractRepoOwnerString(rawRepoOwnerValue).trim();
-
-  // empty => not active
+function isValidRepoOwner(value) {
+  const v = normalizeToString(value);
   if (!v) return false;
-
-  // "default" in any case => not active
   if (v.toLowerCase() === 'default') return false;
-
-  // also treat "Default " etc. as default
-  if (v.toLowerCase().includes('default') && v.replace(/\s+/g, '').toLowerCase() === 'default') return false;
-
   return true;
 }
 
-/**
- * Fetch RepoOwner custom property for a repo.
- * Endpoint can differ depending on GitHub setup. You said it "works now", so we keep it.
- */
 async function getRepoOwnerCustomProperty(org, repo) {
   const url = `https://api.github.com/repos/${org}/${repo}/properties/values`;
   const result = await makeRequest(url);
 
-  if (!result.success || !result.data) return { ok: false, value: null };
+  if (!result.success) {
+    // wichtiges Debug
+    console.log(`  ⚠️ ${org}/${repo}: cannot read custom properties (status=${result.status})`);
+    return null;
+  }
 
-  // Most common: array of properties
+  if (!result.data) return null;
+
   if (Array.isArray(result.data)) {
     const hit = result.data.find(p =>
       p.property_name === 'RepoOwner' ||
       p.propertyName === 'RepoOwner' ||
       p.name === 'RepoOwner'
     );
-    if (!hit) return { ok: true, value: null }; // property not set
+    if (!hit) return null;
 
-    // Try the likely fields in order, but return RAW (could be object)
-    if ('value' in hit) return { ok: true, value: hit.value };
-    if ('string_value' in hit) return { ok: true, value: hit.string_value };
-    if ('selected_value' in hit) return { ok: true, value: hit.selected_value };
-    if ('values' in hit) return { ok: true, value: hit.values };
-
-    return { ok: true, value: null };
+    if ('value' in hit) return hit.value;
+    if ('values' in hit) return hit.values;
+    if ('string_value' in hit) return hit.string_value;
+    if ('selected_value' in hit) return hit.selected_value;
+    return null;
   }
 
-  // Object/map shape
   if (typeof result.data === 'object' && result.data !== null) {
-    if ('RepoOwner' in result.data) return { ok: true, value: result.data.RepoOwner };
+    if ('RepoOwner' in result.data) return result.data.RepoOwner;
   }
 
-  return { ok: true, value: null };
+  return null;
 }
 
 async function mapWithConcurrency(items, limit, mapper) {
@@ -192,24 +128,22 @@ async function getOrgRepos(org) {
     page++;
   }
 
-  // total: all visibilities; exclude archived
-  const repos = allRepos.filter(r => !r.archived);
+  // total = alle visibilities, ohne archiv
+  const filteredRepos = allRepos.filter(r => !r.archived);
 
-  // Fetch RepoOwner for each repo
-  const results = await mapWithConcurrency(repos, 8, async (r) => {
-    const { ok, value } = await getRepoOwnerCustomProperty(org, r.name);
-    if (DEBUG_REPOOWNER) {
-      console.log(`  🔎 ${org}/${r.name} RepoOwner raw=`, value, ' extracted=', extractRepoOwnerString(value));
+  // active = RepoOwner gesetzt (nicht default/leer)
+  const repoOwnerValues = await mapWithConcurrency(filteredRepos, 6, async (r) => {
+    try {
+      return await getRepoOwnerCustomProperty(org, r.name);
+    } catch {
+      return null;
     }
-    return { repo: r.name, ok, value };
   });
 
-  // Active only if property readable AND not default/empty
-  // If properties endpoint returns ok=false (not readable) => NOT active.
-  const activeRepos = results.filter(x => x.ok && isActiveByRepoOwner(x.value)).length;
+  const activeRepos = repoOwnerValues.filter(isValidRepoOwner).length;
 
-  console.log(`  ✅ ${org}: ${repos.length} total (ohne archiv), ${activeRepos} aktiv (RepoOwner != default/leer)\n`);
-  return { totalRepos: repos.length, activeRepos };
+  console.log(`  ✅ ${org}: ${filteredRepos.length} total (public+private+internal, ohne archiv), ${activeRepos} aktiv (RepoOwner != default/leer)\n`);
+  return { totalRepos: filteredRepos.length, activeRepos };
 }
 
 async function collectData() {
@@ -249,7 +183,6 @@ async function collectData() {
 
   let trends = [];
   const dataFile = path.join(dataDir, 'dashboard-data.json');
-
   if (fs.existsSync(dataFile)) {
     try {
       const existing = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
