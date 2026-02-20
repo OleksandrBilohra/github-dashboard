@@ -53,8 +53,11 @@ async function getOrgRepos(org) {
     page++;
   }
 
-  console.log(`  ✅ ${org}: ${allRepos.length} repos total\n`);
-  return { totalRepos: allRepos.length, activeRepos: 0 };
+  // Count repos mit description
+  const activeRepos = allRepos.filter(r => r.description && r.description.trim().length > 0).length;
+
+  console.log(`  ✅ ${org}: ${allRepos.length} total, ${activeRepos} aktiv gepflegt\n`);
+  return { totalRepos: allRepos.length, activeRepos: activeRepos };
 }
 
 async function collectData() {
@@ -73,12 +76,12 @@ async function collectData() {
 
   for (const org of ORGS) {
     try {
-      const { totalRepos } = await getOrgRepos(org);
+      const { totalRepos, activeRepos } = await getOrgRepos(org);
       
       organizations.push({
         name: org,
         totalRepos: totalRepos,
-        activeRepos: 0,
+        activeRepos: activeRepos,
         lastUpdated: new Date().toISOString()
       });
 
