@@ -213,6 +213,7 @@ async function listOrgRepos(org) {
     page++;
   }
 
+  // Filter out archived repositories
   return allRepos.filter(r => !r.archived);
 }
 
@@ -260,11 +261,13 @@ async function collectData() {
 
   const dashboardFile = path.join(dataDir, 'dashboard-data.json');
   const cacheFile = path.join(dataDir, 'repoowner-cache.json');
+  const reportFile = path.join(dataDir, 'inactive-repos-report.json');
 
   const repoOwnerCache = safeJsonRead(cacheFile, {});
 
   const organizations = [];
   const trendEntry = { date: isoDateOnly(nowIso) };
+  const inactiveReposReport = [];
 
   for (const org of ORGS) {
     console.log(`📦 ${org}`);
@@ -299,6 +302,18 @@ async function collectData() {
         ok,
         cached_at: nowIso
       };
+
+      // Track inactive repos
+      if (!active) {
+        inactiveReposReport.push({
+          organization: org,
+          repository: r.name,
+          repoUrl: `https://github.com/${org}/${r.name}`,
+          repoOwnerValue: value,
+          status: 'nicht aktiv',
+          checkedAt: nowIso
+        });
+      }
     });
 
     const totalRepos = repos.length;
@@ -308,16 +323,19 @@ async function collectData() {
       return cached ? Boolean(cached.ok && cached.active) : false;
     }).length;
 
+    const inactiveRepos = totalRepos - activeRepos;
+
     organizations.push({
       name: org,
       totalRepos,
       activeRepos,
+      inactiveRepos,
       lastUpdated: nowIso
     });
 
     trendEntry[org] = totalRepos;
 
-    console.log(`  ✅ ${org}: ${totalRepos} total (ohne archiv), ${activeRepos} aktiv\n`);
+    console.log(`  ✅ ${org}: ${totalRepos} total (ohne archiv), ${activeRepos} aktiv, ${inactiveRepos} nicht aktiv\n`);
   }
 
   const existingDashboard = safeJsonRead(dashboardFile, { organizations: [], trends: [] });
@@ -327,9 +345,17 @@ async function collectData() {
 
   safeJsonWrite(dashboardFile, { organizations, trends });
   safeJsonWrite(cacheFile, repoOwnerCache);
+  safeJsonWrite(reportFile, {
+    generatedAt: nowIso,
+    totalInactiveRepos: inactiveReposReport.length,
+    repos: inactiveReposReport
+  });
 
   console.log('✅ Data saved!');
   console.log(`🗃️ Cache saved: ${cacheFile}`);
+  console.log(`📋 Inactive repos report saved: ${reportFile}`);
+  console.log(`\n📊 Summary:`);
+  console.log(`   Total inactive repos: ${inactiveReposReport.length}`);
 }
 
 collectData().catch(console.error);
