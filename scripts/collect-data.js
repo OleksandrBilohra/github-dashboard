@@ -4,16 +4,12 @@ const path = require('path');
 
 const PAT = process.env.GH_PAT;
 
-// IMPORTANT: Custom properties APIs may require a preview accept header depending on your GitHub version.
-// We'll try with v3 first; if you get 415/404, switch Accept to the preview header mentioned below.
 function makeRequest(url) {
   return new Promise((resolve) => {
     const options = {
       headers: {
         'Authorization': `token ${PAT}`,
         'Accept': 'application/vnd.github.v3+json',
-        // Alternative if needed:
-        // 'Accept': 'application/vnd.github+json',
         'User-Agent': 'Node.js'
       }
     };
@@ -23,7 +19,11 @@ function makeRequest(url) {
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
         try {
-          resolve({ success: res.statusCode >= 200 && res.statusCode < 300, status: res.statusCode, data: JSON.parse(data) });
+          resolve({
+            success: res.statusCode >= 200 && res.statusCode < 300,
+            status: res.statusCode,
+            data: JSON.parse(data)
+          });
         } catch {
           resolve({ success: false, status: res.statusCode, data: null });
         }
@@ -32,33 +32,68 @@ function makeRequest(url) {
   });
 }
 
+function normalizeToString(value) {
+  if (value == null) return '';
+
+  if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
+    return String(value).trim();
+  }
+
+  if (Array.isArray(value)) {
+    return value.map(normalizeToString).filter(Boolean).join(',').trim();
+  }
+
+  if (typeof value === 'object') {
+    // common shapes
+    if (typeof value.name === 'string') return value.name.trim();
+    if (typeof value.value === 'string') return value.value.trim();
+    if (typeof value.login === 'string') return value.login.trim();
+
+    // unknown object => treat as empty (NOT active)
+    return '';
+  }
+
+  return '';
+}
+
 function isValidRepoOwner(value) {
-  if (value == null) return false;
-  const v = String(value).trim();
-  if (!v) return false;                 // leer
-  if (v.toLowerCase() === 'default') return false; // "default"
+  const v = normalizeToString(value).toLowerCase();
+
+  if (!v) return false;         // leer
+  if (v === 'default') return false;
   return true;
 }
 
-// --- Custom properties fetch ---
-// Endpoint can differ depending on your GitHub feature/API version.
-// Try this first. If it fails (404/415), tell me the status code and response and we’ll adjust.
+// Fetch RepoOwner custom property for a repo
+// NOTE: Endpoint can differ depending on your GitHub Custom Properties API.
+// If you get 404/415, tell me the status code + body and I’ll adapt it.
 async function getRepoOwnerCustomProperty(org, repo) {
-  // candidate endpoint (often used for repo properties values)
   const url = `https://api.github.com/repos/${org}/${repo}/properties/values`;
   const result = await makeRequest(url);
 
   if (!result.success || !result.data) return null;
 
-  // Expected shapes can vary. We try to support a couple:
-  // Shape A: [{ property_name: 'RepoOwner', value: '...' }, ...]
+  // Shape A: array of properties
   if (Array.isArray(result.data)) {
-    const hit = result.data.find(p => p.property_name === 'RepoOwner' || p.propertyName === 'RepoOwner' || p.name === 'RepoOwner');
-    return hit ? (hit.value ?? hit.values ?? hit.string_value ?? hit.selected_value ?? null) : null;
+    const hit = result.data.find(p =>
+      p.property_name === 'RepoOwner' ||
+      p.propertyName === 'RepoOwner' ||
+      p.name === 'RepoOwner'
+    );
+
+    if (!hit) return null;
+
+    // value can be in different keys depending on API shape
+    if ('value' in hit) return hit.value;
+    if ('values' in hit) return hit.values;
+    if ('string_value' in hit) return hit.string_value;
+    if ('selected_value' in hit) return hit.selected_value;
+
+    return null;
   }
 
-  // Shape B: { RepoOwner: "..." } (less common)
-  if (typeof result.data === 'object') {
+  // Shape B: object map
+  if (typeof result.data === 'object' && result.data !== null) {
     if ('RepoOwner' in result.data) return result.data.RepoOwner;
   }
 
@@ -106,15 +141,13 @@ async function getOrgRepos(org) {
     page++;
   }
 
-  // Du wolltest: public+private+internal ok, aber keine archived
+  // public + private + internal sind ok, aber keine archived
   const filteredRepos = allRepos.filter(r => !r.archived);
 
-  // ACTIVE = RepoOwner Custom Property gesetzt (nicht default, nicht leer)
-  // (parallelisiert, damit es schneller läuft)
+  // ACTIVE = RepoOwner custom property gesetzt (nicht "default", nicht leer)
   const repoOwnerValues = await mapWithConcurrency(filteredRepos, 8, async (r) => {
     try {
-      const value = await getRepoOwnerCustomProperty(org, r.name);
-      return value;
+      return await getRepoOwnerCustomProperty(org, r.name);
     } catch {
       return null;
     }
@@ -122,7 +155,7 @@ async function getOrgRepos(org) {
 
   const activeRepos = repoOwnerValues.filter(isValidRepoOwner).length;
 
-  console.log(`  ✅ ${org}: ${filteredRepos.length} total (ohne archiv), ${activeRepos} aktiv (RepoOwner gesetzt)\n`);
+  console.log(`  ✅ ${org}: ${filteredRepos.length} total (ohne archiv), ${activeRepos} aktiv (RepoOwner != default/leer)\n`);
   return { totalRepos: filteredRepos.length, activeRepos };
 }
 
@@ -175,7 +208,11 @@ async function collectData() {
   trends.push(trendEntry);
   if (trends.length > 90) trends = trends.slice(-90);
 
-  fs.writeFileSync(dataFile, JSON.stringify({ organizations, trends }, null, 2));
+  fs.writeFileSync(
+    dataFile,
+    JSON.stringify({ organizations, trends }, null, 2)
+  );
+
   console.log('✅ Data saved!');
 }
 
