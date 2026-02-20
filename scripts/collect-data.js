@@ -1,5 +1,5 @@
 /**
- * Repo Owner Tracker
+ * Repo Owner Tracker - FIXED VERSION
  * - totalRepos: all repos in org (type=all), excluding archived
  * - activeRepos: RepoOwner custom property is NOT empty and NOT a default-like placeholder
  *
@@ -58,7 +58,6 @@ function toLowerTrim(s) {
 
 /**
  * Convert RepoOwner raw value into a list of strings.
- * Avoid deep-searching arbitrary object keys to prevent false matches.
  */
 function repoOwnerToList(raw) {
   if (raw == null) return [];
@@ -85,26 +84,19 @@ function repoOwnerToList(raw) {
 }
 
 /**
- * Your enterprise uses placeholder text "Please choose a valid option!" as the default value.
- * Treat all these as "default-like" => NOT active:
- * - empty
- * - "default", "default (...)" (any case)
- * - "please choose ...", "please choose a valid option!"
- * - generic "choose ..."
+ * Check if value is a placeholder/default
  */
 function isDefaultLike(v) {
   const s = toLowerTrim(v);
 
   if (!s) return true;
 
-  // classic / ui "Default (...)"
+  // "default" variations
   if (s === 'default') return true;
   if (s.startsWith('default')) return true;
 
-  // your observed placeholder default:
+  // "Please choose a valid option!" and variations
   if (s === 'please choose a valid option!') return true;
-
-  // other placeholder variants
   if (s.includes('please choose')) return true;
   if (s.includes('choose a valid option')) return true;
   if (s.includes('choose')) return true;
@@ -113,12 +105,23 @@ function isDefaultLike(v) {
 }
 
 /**
- * Active if there exists at least one non-default-like value.
+ * Active ONLY if there exists at least one NON-default-like value
  */
 function isActiveByRepoOwner(rawRepoOwnerValue) {
   const values = repoOwnerToList(rawRepoOwnerValue).map(v => String(v).trim()).filter(Boolean);
-  if (values.length === 0) return false;
-  return values.some(v => !isDefaultLike(v));
+  
+  if (values.length === 0) {
+    return false; // ❌ NOT ACTIVE - no value
+  }
+
+  // Check if ANY value is NOT default-like
+  const hasNonDefault = values.some(v => !isDefaultLike(v));
+  
+  if (DEBUG_REPOOWNER) {
+    console.log(`    Values: ${JSON.stringify(values)}, Has non-default: ${hasNonDefault}`);
+  }
+  
+  return hasNonDefault; // ✅ ACTIVE only if non-default exists
 }
 
 // ---------- HTTP with rate-limit handling ----------
@@ -213,7 +216,6 @@ async function listOrgRepos(org) {
     page++;
   }
 
-  // Filter out archived repositories
   return allRepos.filter(r => !r.archived);
 }
 
@@ -221,23 +223,59 @@ async function getRepoOwnerCustomProperty(org, repo) {
   const url = `https://api.github.com/repos/${org}/${repo}/properties/values`;
   const result = await makeRequestWithRateLimitHandling(url);
 
-  if (!result.success || !result.data) return { ok: false, value: null, status: result.status };
+  if (DEBUG_REPOOWNER) {
+    console.log(`    [API Response] Status: ${result.status}, Data:`, JSON.stringify(result.data));
+  }
 
+  if (!result.success) {
+    return { ok: false, value: null, status: result.status, error: result.data };
+  }
+
+  if (!result.data) {
+    return { ok: true, value: null, status: result.status };
+  }
+
+  // Handle array response
   if (Array.isArray(result.data)) {
     const hit = result.data.find(p =>
-      p.property_name === 'RepoOwner' ||
-      p.propertyName === 'RepoOwner' ||
-      p.name === 'RepoOwner'
+      (p.property_name && p.property_name === 'RepoOwner') ||
+      (p.propertyName && p.propertyName === 'RepoOwner') ||
+      (p.name && p.name === 'RepoOwner')
     );
 
-    if (!hit) return { ok: true, value: null, status: result.status };
+    if (!hit) {
+      if (DEBUG_REPOOWNER) {
+        console.log(`    [No RepoOwner found in properties]`);
+      }
+      return { ok: true, value: null, status: result.status };
+    }
 
-    if ('value' in hit) return { ok: true, value: hit.value, status: result.status };
-    if ('string_value' in hit) return { ok: true, value: hit.string_value, status: result.status };
-    if ('selected_value' in hit) return { ok: true, value: hit.selected_value, status: result.status };
-    if ('values' in hit) return { ok: true, value: hit.values, status: result.status };
+    // Extract value from different possible formats
+    let value = null;
+    if (hit.value !== undefined) value = hit.value;
+    else if (hit.string_value !== undefined) value = hit.string_value;
+    else if (hit.selected_value !== undefined) value = hit.selected_value;
+    else if (hit.values !== undefined) value = hit.values;
 
-    return { ok: true, value: null, status: result.status };
+    if (DEBUG_REPOOWNER) {
+      console.log(`    [RepoOwner found] Raw value:`, JSON.stringify(value));
+    }
+
+    return { ok: true, value, status: result.status };
+  }
+
+  // Handle object response
+  if (typeof result.data === 'object') {
+    let value = null;
+    if (result.data.value !== undefined) value = result.data.value;
+    else if (result.data.string_value !== undefined) value = result.data.string_value;
+    else if (result.data.selected_value !== undefined) value = result.data.selected_value;
+
+    if (DEBUG_REPOOWNER) {
+      console.log(`    [Object response] Value:`, JSON.stringify(value));
+    }
+
+    return { ok: true, value, status: result.status };
   }
 
   return { ok: true, value: null, status: result.status };
@@ -261,7 +299,7 @@ async function collectData() {
 
   const dashboardFile = path.join(dataDir, 'dashboard-data.json');
   const cacheFile = path.join(dataDir, 'repoowner-cache.json');
-  const reportFile = path.join(dataDir, 'inactive-repos-report.json');
+  const inactiveReportFile = path.join(dataDir, 'inactive-repos-report.json');
 
   const repoOwnerCache = safeJsonRead(cacheFile, {});
 
@@ -270,9 +308,10 @@ async function collectData() {
   const inactiveReposReport = [];
 
   for (const org of ORGS) {
-    console.log(`📦 ${org}`);
+    console.log(`\n📦 Organization: ${org}`);
 
     const repos = await listOrgRepos(org);
+    console.log(`  📊 Found ${repos.length} repositories (excluding archived)`);
 
     const toRefresh = repos.filter(r => {
       const key = cacheKey(org, r.name);
@@ -280,18 +319,23 @@ async function collectData() {
       return !cached || cached.updated_at !== r.updated_at;
     });
 
-    console.log(`  🔄 Refresh RepoOwner for ${toRefresh.length}/${repos.length} repos (cache-aware)`);
+    console.log(`  🔄 Checking RepoOwner for ${toRefresh.length}/${repos.length} repos`);
+
+    let processedCount = 0;
 
     await mapWithConcurrency(toRefresh, 2, async (r) => {
-      const { ok, value, status } = await getRepoOwnerCustomProperty(org, r.name);
+      processedCount++;
+      const { ok, value, status, error } = await getRepoOwnerCustomProperty(org, r.name);
 
       const list = repoOwnerToList(value);
       const active = ok && isActiveByRepoOwner(value);
 
       if (DEBUG_REPOOWNER) {
-        console.log(
-          `  🔎 ${org}/${r.name} updated_at=${r.updated_at} propsStatus=${status} list=${JSON.stringify(list)} active=${active}`
-        );
+        console.log(`\n  [${processedCount}/${toRefresh.length}] ${org}/${r.name}`);
+        console.log(`    Status: ${status}, OK: ${ok}`);
+        console.log(`    Raw value: ${JSON.stringify(value)}`);
+        console.log(`    List: ${JSON.stringify(list)}`);
+        console.log(`    Active: ${active}`);
       }
 
       repoOwnerCache[cacheKey(org, r.name)] = {
@@ -310,7 +354,9 @@ async function collectData() {
           repository: r.name,
           repoUrl: `https://github.com/${org}/${r.name}`,
           repoOwnerValue: value,
-          status: 'nicht aktiv',
+          repoOwnerList: list,
+          status: '❌ NICHT AKTIV',
+          reason: value === null ? 'Keine RepoOwner Custom Property gesetzt' : `Standard-Wert: "${value}"`,
           checkedAt: nowIso
         });
       }
@@ -330,12 +376,16 @@ async function collectData() {
       totalRepos,
       activeRepos,
       inactiveRepos,
+      inactivePercentage: totalRepos > 0 ? ((inactiveRepos / totalRepos) * 100).toFixed(1) + '%' : '0%',
       lastUpdated: nowIso
     });
 
     trendEntry[org] = totalRepos;
 
-    console.log(`  ✅ ${org}: ${totalRepos} total (ohne archiv), ${activeRepos} aktiv, ${inactiveRepos} nicht aktiv\n`);
+    console.log(`\n  ✅ ${org}:`);
+    console.log(`     - Total: ${totalRepos} repositories`);
+    console.log(`     - ✅ Aktiv: ${activeRepos}`);
+    console.log(`     - ❌ Nicht Aktiv: ${inactiveRepos}`);
   }
 
   const existingDashboard = safeJsonRead(dashboardFile, { organizations: [], trends: [] });
@@ -345,17 +395,20 @@ async function collectData() {
 
   safeJsonWrite(dashboardFile, { organizations, trends });
   safeJsonWrite(cacheFile, repoOwnerCache);
-  safeJsonWrite(reportFile, {
+  safeJsonWrite(inactiveReportFile, {
     generatedAt: nowIso,
     totalInactiveRepos: inactiveReposReport.length,
     repos: inactiveReposReport
   });
 
-  console.log('✅ Data saved!');
-  console.log(`🗃️ Cache saved: ${cacheFile}`);
-  console.log(`📋 Inactive repos report saved: ${reportFile}`);
-  console.log(`\n📊 Summary:`);
-  console.log(`   Total inactive repos: ${inactiveReposReport.length}`);
+  console.log('\n\n═══════════════════════════════════════════════════════════');
+  console.log('✅ Alle Daten gespeichert!');
+  console.log('═════════════════════════════════��═════════════════════════');
+  console.log(`🗃️  Cache: ${cacheFile}`);
+  console.log(`📊 Dashboard: ${dashboardFile}`);
+  console.log(`📋 Report (Nicht Aktiv): ${inactiveReportFile}`);
+  console.log(`\n📈 Gesamt nicht aktive Repos: ${inactiveReposReport.length}`);
+  console.log('═══════════════════════════════════════════════════════════\n');
 }
 
 collectData().catch(console.error);
