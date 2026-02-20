@@ -1,5 +1,7 @@
 {
   "organizations": [
+    
+    
     {
       "name": "AS-ASK-IT",
       "totalRepos": 21,
@@ -43,6 +45,20 @@
       "lastUpdated": "2026-02-20T13:00:06.004Z"
     }
   ],
+
+  "trends": [
+    {
+      "date": "2026-02-19",
+      "AS-ASK-IT": 0,
+      "as-cloud-services": 0,
+      "asitservices": 0,
+      "axelspringer": 0,
+      "Media-Impact": 0,
+      "spring-media": 0,
+      "welttv": 0
+    }
+  ]
+  
   "trends": [
     {
       "date": "2026-02-20",
