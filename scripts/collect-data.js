@@ -19,7 +19,7 @@ function makeRequest(url) {
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
         try {
-          resolve({ success: res.statusCode === 200, data: JSON.parse(data) });
+          resolve({ success: res.statusCode === 200, data: JSON.parse(data), headers: res.headers });
         } catch {
           resolve({ success: false, data: [] });
         }
@@ -31,42 +31,44 @@ function makeRequest(url) {
 async function getOrgRepos(org) {
   console.log(`📦 ${org}`);
   
-  let allRepos = [];
-  let page = 1;
-
-  while (true) {
-    const url = `https://api.github.com/orgs/${org}/repos?per_page=100&page=${page}&type=all`;
-    const result = await makeRequest(url);
-    
-    if (!result.success || !Array.isArray(result.data) || result.data.length === 0) {
-      break;
-    }
-    
-    allRepos = allRepos.concat(result.data);
-    if (result.data.length < 100) break;
-    page++;
+  // Get first page to know total count
+  const firstUrl = `https://api.github.com/orgs/${org}/repos?per_page=100&page=1&type=all`;
+  const firstResult = await makeRequest(firstUrl);
+  
+  if (!firstResult.success || !Array.isArray(firstResult.data)) {
+    console.log(`  ❌ ${org}: Failed\n`);
+    return { totalRepos: 0, activeRepos: 0 };
   }
 
-  // Check last commit date for each repo
-  let activeRepos = 0;
-  const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+  let allRepos = firstResult.data;
+  const linkHeader = firstResult.headers.link;
+  
+  // Parse total pages from link header
+  let totalPages = 1;
+  if (linkHeader) {
+    const lastMatch = linkHeader.match(/page=(\d+)>; rel="last"/);
+    if (lastMatch) totalPages = parseInt(lastMatch[1]);
+  }
 
-  for (const repo of allRepos) {
-    const commitsUrl = `https://api.github.com/repos/${org}/${repo.name}/commits?per_page=1`;
-    const commitsResult = await makeRequest(commitsUrl);
-    
-    if (commitsResult.success && Array.isArray(commitsResult.data) && commitsResult.data.length > 0) {
-      const lastCommitDate = new Date(commitsResult.data[0].commit.committer.date);
-      if (lastCommitDate > thirtyDaysAgo) {
-        activeRepos++;
-      }
+  // Fetch remaining pages in parallel
+  if (totalPages > 1) {
+    const promises = [];
+    for (let page = 2; page <= Math.min(totalPages, 5); page++) {
+      const url = `https://api.github.com/orgs/${org}/repos?per_page=100&page=${page}&type=all`;
+      promises.push(makeRequest(url));
     }
+    
+    const results = await Promise.all(promises);
+    results.forEach(result => {
+      if (result.success && Array.isArray(result.data)) {
+        allRepos = allRepos.concat(result.data);
+      }
+    });
   }
 
   const totalRepos = allRepos.length;
-  const percentage = totalRepos > 0 ? Math.round((activeRepos / totalRepos) * 100) : 0;
-
-  return { totalRepos, activeRepos, percentage };
+  console.log(`  ✅ ${org}: ${totalRepos} repos\n`);
+  return { totalRepos, activeRepos: 0 };
 }
 
 async function collectData() {
@@ -83,25 +85,33 @@ async function collectData() {
   const organizations = [];
   const trendEntry = { date: new Date().toISOString().split('T')[0] };
 
-  for (const org of ORGS) {
+  // Fetch all orgs in parallel
+  const promises = ORGS.map(async (org) => {
     try {
-      const { totalRepos, activeRepos, percentage } = await getOrgRepos(org);
+      const { totalRepos, activeRepos } = await getOrgRepos(org);
       
-      organizations.push({
+      return {
         name: org,
         totalRepos: totalRepos,
         activeRepos: activeRepos,
-        ownershipPercentage: percentage,
         lastUpdated: new Date().toISOString()
-      });
-
-      console.log(`  ✅ ${org}: ${activeRepos}/${totalRepos} repos active (${percentage}%)\n`);
-      trendEntry[org] = percentage;
+      };
     } catch (error) {
       console.error(`❌ ${org}: ${error.message}`);
-      trendEntry[org] = 0;
+      return {
+        name: org,
+        totalRepos: 0,
+        activeRepos: 0,
+        lastUpdated: new Date().toISOString()
+      };
     }
-  }
+  });
+
+  const results = await Promise.all(promises);
+  results.forEach(org => {
+    organizations.push(org);
+    trendEntry[org.name] = org.totalRepos;
+  });
 
   const dataDir = path.join(__dirname, '../docs/data');
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
