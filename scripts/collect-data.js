@@ -8,8 +8,10 @@ function makeRequest(url) {
   return new Promise((resolve) => {
     const options = {
       headers: {
-        'Authorization': `token ${PAT}`,
-        'Accept': 'application/vnd.github.v3+json',
+        // Bearer ist für neue Tokens zuverlässiger
+        'Authorization': `Bearer ${PAT}`,
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28',
         'User-Agent': 'Node.js'
       }
     };
@@ -18,17 +20,16 @@ function makeRequest(url) {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
-        try {
-          resolve({
-            success: res.statusCode >= 200 && res.statusCode < 300,
-            status: res.statusCode,
-            data: JSON.parse(data)
-          });
-        } catch {
-          resolve({ success: false, status: res.statusCode, data: null });
-        }
+        let parsed = null;
+        try { parsed = data ? JSON.parse(data) : null; } catch { parsed = data; }
+
+        resolve({
+          success: res.statusCode >= 200 && res.statusCode < 300,
+          status: res.statusCode,
+          data: parsed
+        });
       });
-    }).on('error', () => resolve({ success: false, status: 0, data: null }));
+    }).on('error', (err) => resolve({ success: false, status: 0, data: String(err) }));
   });
 }
 
@@ -44,12 +45,9 @@ function normalizeToString(value) {
   }
 
   if (typeof value === 'object') {
-    // common shapes
     if (typeof value.name === 'string') return value.name.trim();
     if (typeof value.value === 'string') return value.value.trim();
     if (typeof value.login === 'string') return value.login.trim();
-
-    // unknown object => treat as empty (NOT active)
     return '';
   }
 
@@ -57,33 +55,31 @@ function normalizeToString(value) {
 }
 
 function isValidRepoOwner(value) {
-  const v = normalizeToString(value).toLowerCase();
-
-  if (!v) return false;         // leer
-  if (v === 'default') return false;
+  const v = normalizeToString(value);
+  if (!v) return false;
+  if (v.toLowerCase() === 'default') return false;
   return true;
 }
 
-// Fetch RepoOwner custom property for a repo
-// NOTE: Endpoint can differ depending on your GitHub Custom Properties API.
-// If you get 404/415, tell me the status code + body and I’ll adapt it.
+// Custom Property RepoOwner holen
+// Hinweis: je nach GitHub-Version kann der Endpoint anders sein.
+// Falls du hier 404 bekommst, sag mir status+body, dann passe ich an.
 async function getRepoOwnerCustomProperty(org, repo) {
   const url = `https://api.github.com/repos/${org}/${repo}/properties/values`;
   const result = await makeRequest(url);
 
   if (!result.success || !result.data) return null;
 
-  // Shape A: array of properties
+  // meistens ist es ein Array
   if (Array.isArray(result.data)) {
     const hit = result.data.find(p =>
       p.property_name === 'RepoOwner' ||
       p.propertyName === 'RepoOwner' ||
       p.name === 'RepoOwner'
     );
-
     if (!hit) return null;
 
-    // value can be in different keys depending on API shape
+    // value kann verschiedene Formen haben
     if ('value' in hit) return hit.value;
     if ('values' in hit) return hit.values;
     if ('string_value' in hit) return hit.string_value;
@@ -92,7 +88,7 @@ async function getRepoOwnerCustomProperty(org, repo) {
     return null;
   }
 
-  // Shape B: object map
+  // oder map/object
   if (typeof result.data === 'object' && result.data !== null) {
     if ('RepoOwner' in result.data) return result.data.RepoOwner;
   }
@@ -100,7 +96,6 @@ async function getRepoOwnerCustomProperty(org, repo) {
   return null;
 }
 
-// simple concurrency pool
 async function mapWithConcurrency(items, limit, mapper) {
   const results = new Array(items.length);
   let idx = 0;
@@ -123,28 +118,31 @@ async function getOrgRepos(org) {
 
   let allRepos = [];
   let page = 1;
-  let hasMore = true;
 
-  while (hasMore) {
+  while (true) {
     const url = `https://api.github.com/orgs/${org}/repos?per_page=100&page=${page}&type=all`;
     const result = await makeRequest(url);
 
-    if (!result.success || !Array.isArray(result.data) || result.data.length === 0) {
-      hasMore = false;
+    // Debug wenn es schiefgeht (damit du sofort Permissions/SSO siehst)
+    if (!result.success) {
+      console.error(`  ❌ ${org}: cannot list repos. status=${result.status}`);
+      console.error(`  ❌ response:`, result.data);
       break;
     }
+
+    if (!Array.isArray(result.data) || result.data.length === 0) break;
 
     allRepos = allRepos.concat(result.data);
     console.log(`  📄 Page ${page}: ${result.data.length} repos (Total: ${allRepos.length})`);
 
-    if (result.data.length < 100) hasMore = false;
+    if (result.data.length < 100) break;
     page++;
   }
 
-  // public + private + internal sind ok, aber keine archived
+  // TOTAL = alle Sichtbarkeiten (public/private/internal), aber keine archived
   const filteredRepos = allRepos.filter(r => !r.archived);
 
-  // ACTIVE = RepoOwner custom property gesetzt (nicht "default", nicht leer)
+  // ACTIVE = RepoOwner != default/leer
   const repoOwnerValues = await mapWithConcurrency(filteredRepos, 8, async (r) => {
     try {
       return await getRepoOwnerCustomProperty(org, r.name);
@@ -155,7 +153,7 @@ async function getOrgRepos(org) {
 
   const activeRepos = repoOwnerValues.filter(isValidRepoOwner).length;
 
-  console.log(`  ✅ ${org}: ${filteredRepos.length} total (ohne archiv), ${activeRepos} aktiv (RepoOwner != default/leer)\n`);
+  console.log(`  ✅ ${org}: ${filteredRepos.length} total (public+private+internal, ohne archiv), ${activeRepos} aktiv (RepoOwner gesetzt)\n`);
   return { totalRepos: filteredRepos.length, activeRepos };
 }
 
@@ -196,6 +194,7 @@ async function collectData() {
 
   let trends = [];
   const dataFile = path.join(dataDir, 'dashboard-data.json');
+
   if (fs.existsSync(dataFile)) {
     try {
       const existing = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
@@ -208,11 +207,7 @@ async function collectData() {
   trends.push(trendEntry);
   if (trends.length > 90) trends = trends.slice(-90);
 
-  fs.writeFileSync(
-    dataFile,
-    JSON.stringify({ organizations, trends }, null, 2)
-  );
-
+  fs.writeFileSync(dataFile, JSON.stringify({ organizations, trends }, null, 2));
   console.log('✅ Data saved!');
 }
 
