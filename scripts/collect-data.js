@@ -54,7 +54,7 @@ async function getOrgRepos(org) {
   }
 
   // Exclude archived and internal repos
-  const filteredRepos = allRepos.filter(r => !r.archived && r.visibility !== 'private');
+  const filteredRepos = allRepos.filter(r => !r.archived && r.visibility === 'priavate');
 
   // Count repos mit description
   const activeRepos = filteredRepos.filter(r => r.description && r.description.trim().length > 0).length;
