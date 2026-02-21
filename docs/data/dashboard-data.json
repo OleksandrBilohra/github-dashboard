@@ -2,45 +2,59 @@
   "organizations": [
     {
       "name": "AS-ASK-IT",
-      "totalRepos": 0,
+      "totalRepos": 21,
       "activeRepos": 0,
-      "lastUpdated": "2026-02-20T15:04:05.059Z"
+      "inactiveRepos": 21,
+      "inactivePercentage": "100.0%",
+      "lastUpdated": "2026-02-21T02:28:10.272Z"
     },
     {
       "name": "as-cloud-services",
-      "totalRepos": 0,
+      "totalRepos": 136,
       "activeRepos": 0,
-      "lastUpdated": "2026-02-20T15:04:05.121Z"
+      "inactiveRepos": 136,
+      "inactivePercentage": "100.0%",
+      "lastUpdated": "2026-02-21T02:28:10.272Z"
     },
     {
       "name": "asitservices",
-      "totalRepos": 0,
-      "activeRepos": 0,
-      "lastUpdated": "2026-02-20T15:04:05.205Z"
+      "totalRepos": 813,
+      "activeRepos": 218,
+      "inactiveRepos": 595,
+      "inactivePercentage": "73.2%",
+      "lastUpdated": "2026-02-21T02:28:10.272Z"
     },
     {
       "name": "axelspringer",
-      "totalRepos": 0,
+      "totalRepos": 46,
       "activeRepos": 0,
-      "lastUpdated": "2026-02-20T15:04:05.272Z"
+      "inactiveRepos": 46,
+      "inactivePercentage": "100.0%",
+      "lastUpdated": "2026-02-21T02:28:10.272Z"
     },
     {
       "name": "Media-Impact",
-      "totalRepos": 0,
-      "activeRepos": 0,
-      "lastUpdated": "2026-02-20T15:04:05.351Z"
+      "totalRepos": 14,
+      "activeRepos": 14,
+      "inactiveRepos": 0,
+      "inactivePercentage": "0.0%",
+      "lastUpdated": "2026-02-21T02:28:10.272Z"
     },
     {
       "name": "spring-media",
-      "totalRepos": 0,
-      "activeRepos": 0,
-      "lastUpdated": "2026-02-20T15:04:05.417Z"
+      "totalRepos": 1150,
+      "activeRepos": 1150,
+      "inactiveRepos": 0,
+      "inactivePercentage": "0.0%",
+      "lastUpdated": "2026-02-21T02:28:10.272Z"
     },
     {
       "name": "welttv",
-      "totalRepos": 0,
+      "totalRepos": 48,
       "activeRepos": 0,
-      "lastUpdated": "2026-02-20T15:04:05.493Z"
+      "inactiveRepos": 48,
+      "inactivePercentage": "100.0%",
+      "lastUpdated": "2026-02-21T02:28:10.272Z"
     }
   ],
   "trends": [
@@ -103,6 +117,16 @@
       "Media-Impact": 0,
       "spring-media": 0,
       "welttv": 0
+    },
+    {
+      "date": "2026-02-21",
+      "AS-ASK-IT": 21,
+      "as-cloud-services": 136,
+      "asitservices": 813,
+      "axelspringer": 46,
+      "Media-Impact": 14,
+      "spring-media": 1150,
+      "welttv": 48
     }
   ]
 }
