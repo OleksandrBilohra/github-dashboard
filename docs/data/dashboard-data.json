@@ -6,7 +6,7 @@
       "activeRepos": 0,
       "inactiveRepos": 21,
       "inactivePercentage": "100.0%",
-      "lastUpdated": "2026-02-21T09:26:15.358Z"
+      "lastUpdated": "2026-02-22T02:40:46.769Z"
     },
     {
       "name": "as-cloud-services",
@@ -14,7 +14,7 @@
       "activeRepos": 0,
       "inactiveRepos": 136,
       "inactivePercentage": "100.0%",
-      "lastUpdated": "2026-02-21T09:26:15.358Z"
+      "lastUpdated": "2026-02-22T02:40:46.769Z"
     },
     {
       "name": "asitservices",
@@ -22,7 +22,7 @@
       "activeRepos": 218,
       "inactiveRepos": 595,
       "inactivePercentage": "73.2%",
-      "lastUpdated": "2026-02-21T09:26:15.358Z"
+      "lastUpdated": "2026-02-22T02:40:46.769Z"
     },
     {
       "name": "axelspringer",
@@ -30,7 +30,7 @@
       "activeRepos": 0,
       "inactiveRepos": 46,
       "inactivePercentage": "100.0%",
-      "lastUpdated": "2026-02-21T09:26:15.358Z"
+      "lastUpdated": "2026-02-22T02:40:46.769Z"
     },
     {
       "name": "Media-Impact",
@@ -38,7 +38,7 @@
       "activeRepos": 14,
       "inactiveRepos": 0,
       "inactivePercentage": "0.0%",
-      "lastUpdated": "2026-02-21T09:26:15.358Z"
+      "lastUpdated": "2026-02-22T02:40:46.769Z"
     },
     {
       "name": "spring-media",
@@ -46,7 +46,7 @@
       "activeRepos": 1150,
       "inactiveRepos": 0,
       "inactivePercentage": "0.0%",
-      "lastUpdated": "2026-02-21T09:26:15.358Z"
+      "lastUpdated": "2026-02-22T02:40:46.769Z"
     },
     {
       "name": "welttv",
@@ -54,7 +54,7 @@
       "activeRepos": 0,
       "inactiveRepos": 48,
       "inactivePercentage": "100.0%",
-      "lastUpdated": "2026-02-21T09:26:15.358Z"
+      "lastUpdated": "2026-02-22T02:40:46.769Z"
     }
   ],
   "trends": [
@@ -130,6 +130,16 @@
     },
     {
       "date": "2026-02-21",
+      "AS-ASK-IT": 21,
+      "as-cloud-services": 136,
+      "asitservices": 813,
+      "axelspringer": 46,
+      "Media-Impact": 14,
+      "spring-media": 1150,
+      "welttv": 48
+    },
+    {
+      "date": "2026-02-22",
       "AS-ASK-IT": 21,
       "as-cloud-services": 136,
       "asitservices": 813,
