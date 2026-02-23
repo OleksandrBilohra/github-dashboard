@@ -26,6 +26,12 @@
             border: 1px solid #30363d;
             border-radius: 6px;
             padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            border-color: #58a6ff;
+            box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
         }
         .card h3 { color: #58a6ff; margin-bottom: 10px; }
         .stat { font-size: 24px; font-weight: bold; color: #3fb950; }
@@ -43,6 +49,135 @@
             position: relative;
             height: 400px;
         }
+
+        /* Modal für Repos-Details */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 30px;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            width: 90%;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 15px;
+        }
+        .modal-header h2 {
+            color: #58a6ff;
+        }
+        .close-btn {
+            color: #8b949e;
+            font-size: 28px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .close-btn:hover {
+            color: #58a6ff;
+        }
+
+        .repos-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .repo-item {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            padding: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .repo-item:hover {
+            border-color: #f85149;
+            background: #1a1f26;
+        }
+        .repo-name {
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .repo-name:hover {
+            text-decoration: underline;
+        }
+        .repo-value {
+            background: #f85149;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .stats-modal {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .stat-box {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            padding: 15px;
+            text-align: center;
+        }
+        .stat-box .number {
+            font-size: 28px;
+            font-weight: bold;
+            color: #3fb950;
+        }
+        .stat-box .label {
+            font-size: 12px;
+            color: #8b949e;
+            margin-top: 5px;
+        }
+        .stat-box.inactive .number {
+            color: #f85149;
+        }
+
+        .search-box {
+            margin-bottom: 15px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 10px;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            color: #c9d1d9;
+        }
+        .search-box input::placeholder {
+            color: #8b949e;
+        }
     </style>
 </head>
 <body>
@@ -55,13 +190,39 @@
             <canvas id="trendsChart"></canvas>
         </div>
 
-        <!-- NEU: Prozent-Grafik -->
         <div class="chart-container">
             <canvas id="percentChart"></canvas>
         </div>
     </div>
 
+    <!-- Modal für inaktive Repos -->
+    <div class="modal" id="reposModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Inaktive Repositories</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+
+            <div class="stats-modal" id="statsModal"></div>
+
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Nach Repository suchen..."
+                    onkeyup="filterRepos()"
+                >
+            </div>
+
+            <div class="repos-list" id="reposList"></div>
+        </div>
+    </div>
+
     <script>
+        let allReposDetail = [];
+        let filteredRepos = [];
+        let currentOrg = null;
+
         async function loadData() {
             try {
                 const response = await fetch('./data/dashboard-data.json');
@@ -69,22 +230,26 @@
 
                 const colors = ['#58a6ff', '#3fb950', '#d29922', '#f85149', '#a371f7', '#79c0ff', '#56d364'];
                 
-                // Stats (oben)
+                // Stats (oben) - mit Click-Handler
                 const statsHtml = data.organizations
                     .map(org => {
                         const pct = org.totalRepos > 0 ? Math.round(((org.activeRepos || 0) / org.totalRepos) * 100) : 0;
                         return `
-                        <div class="card">
+                        <div class="card" onclick="showInactiveRepos('${org.name}')">
                             <h3>${org.name}</h3>
                             <div class="stat">${org.totalRepos}</div>
                             <p>Repositories</p>
-                            <div class="sub-stat">Aktiv: ${org.activeRepos || 0} (${pct}%)</div>
+                            <div class="sub-stat">✅ Aktiv: ${org.activeRepos || 0} (${pct}%)</div>
+                            <div class="sub-stat">❌ Nicht Aktiv: ${org.inactiveRepos || 0}</div>
                         </div>`;
                     })
                     .join('');
                 document.getElementById('stats').innerHTML = statsHtml;
                 
-                // Trends Chart (Repos total)
+                // Lade detaillierte Repo-Daten
+                await loadReposDetail();
+                
+                // Trends Chart
                 const dates = data.trends.map(t => t.date);
                 const orgs = data.organizations.map(o => o.name);
                 
@@ -104,7 +269,12 @@
                         responsive: true,
                         maintainAspectRatio: false,
                         plugins: {
-                            legend: { labels: { color: '#c9d1d9' } }
+                            legend: { labels: { color: '#c9d1d9' } },
+                            title: {
+                                display: true,
+                                text: 'Repositories pro Org (Trend)',
+                                color: '#c9d1d9'
+                            }
                         },
                         scales: {
                             y: { ticks: { color: '#c9d1d9' }, grid: { color: '#30363d' } },
@@ -113,9 +283,7 @@
                     }
                 });
 
-                // NEU: Prozent Chart (Aktiv in % vom aktuellen Stand)
-                // Achtung: In deinen Trends steht aktuell nur totalRepos pro Tag.
-                // Deshalb zeichnen wir pro Org eine horizontale Linie basierend auf aktuellem % (organizations[]).
+                // Prozent Chart
                 const percentDatasets = orgs.map((org, i) => {
                     const orgNow = data.organizations.find(o => o.name === org);
                     const pct = orgNow && orgNow.totalRepos > 0
@@ -124,7 +292,7 @@
 
                     return {
                         label: org,
-                        data: dates.map(() => Number(pct.toFixed(2))), // gleiche % über alle Tage
+                        data: dates.map(() => Number(pct.toFixed(2))),
                         borderColor: colors[i % colors.length],
                         backgroundColor: colors[i % colors.length] + '20',
                         tension: 0.3,
@@ -170,7 +338,95 @@
                 console.error('Error loading data:', error);
             }
         }
-        
+
+        async function loadReposDetail() {
+            try {
+                const response = await fetch('./data/repos-detail.json');
+                allReposDetail = await response.json();
+                if (allReposDetail.repos) {
+                    allReposDetail = allReposDetail.repos;
+                }
+            } catch (error) {
+                console.error('Error loading repos detail:', error);
+            }
+        }
+
+        function showInactiveRepos(org) {
+            currentOrg = org;
+            const inactiveRepos = allReposDetail.filter(r => r.org === org && !r.isActive);
+            filteredRepos = inactiveRepos;
+
+            const totalRepos = allReposDetail.filter(r => r.org === org).length;
+            const activeRepos = allReposDetail.filter(r => r.org === org && r.isActive).length;
+
+            document.getElementById('modalTitle').textContent = `${org} - Inaktive Repositories`;
+
+            const statsHtml = `
+                <div class="stat-box">
+                    <div class="number">${totalRepos}</div>
+                    <div class="label">Total Repos</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number" style="color: #3fb950;">${activeRepos}</div>
+                    <div class="label">Aktiv</div>
+                </div>
+                <div class="stat-box inactive">
+                    <div class="number">${inactiveRepos.length}</div>
+                    <div class="label">Nicht Aktiv</div>
+                </div>
+            `;
+            document.getElementById('statsModal').innerHTML = statsHtml;
+
+            renderReposList(inactiveRepos);
+            document.getElementById('reposModal').classList.add('active');
+        }
+
+        function renderReposList(repos) {
+            if (repos.length === 0) {
+                document.getElementById('reposList').innerHTML = `
+                    <div style="text-align: center; color: #3fb950; padding: 20px;">
+                        ✅ Alle Repositories sind aktiv!
+                    </div>
+                `;
+                return;
+            }
+
+            const html = repos
+                .map(repo => `
+                    <div class="repo-item">
+                        <a href="${repo.url}" target="_blank" class="repo-name">
+                            ${repo.repo}
+                        </a>
+                        <div class="repo-value">
+                            ${repo.repoOwner || 'null'}
+                        </div>
+                    </div>
+                `)
+                .join('');
+            
+            document.getElementById('reposList').innerHTML = html;
+        }
+
+        function filterRepos() {
+            const searchText = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = filteredRepos.filter(r => 
+                r.repo.toLowerCase().includes(searchText)
+            );
+            renderReposList(filtered);
+        }
+
+        function closeModal() {
+            document.getElementById('reposModal').classList.remove('active');
+        }
+
+        // Schließe Modal wenn außen geklickt
+        window.onclick = function(event) {
+            const modal = document.getElementById('reposModal');
+            if (event.target === modal) {
+                modal.classList.remove('active');
+            }
+        }
+
         loadData();
     </script>
 </body>
