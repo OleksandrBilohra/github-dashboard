@@ -224,17 +224,30 @@
 
         async function loadData() {
             try {
-                const response = await fetch('./data/repos-detail.json');
-                dashboardData = await response.json();
+                // Lade Dashboard Data
+                console.log('Loading: ./data/dashboard-data.json');
+                const dashResponse = await fetch('./data/dashboard-data.json');
+                
+                if (!dashResponse.ok) {
+                    throw new Error(`Dashboard load failed: ${dashResponse.status}`);
+                }
+                
+                const dash = await dashResponse.json();
+                console.log('Dashboard loaded:', dash);
 
-                console.log('Data loaded:', dashboardData);
+                // Lade Repos Detail
+                console.log('Loading: ./data/repos-detail.json');
+                const detailResponse = await fetch('./data/repos-detail.json');
+                
+                if (!detailResponse.ok) {
+                    throw new Error(`Detail load failed: ${detailResponse.status}`);
+                }
+                
+                dashboardData = await detailResponse.json();
+                console.log('Detail data loaded:', dashboardData);
                 console.log('Total inactive repos:', dashboardData.repos ? dashboardData.repos.length : 0);
 
                 const colors = ['#58a6ff', '#3fb950', '#d29922', '#f85149', '#a371f7', '#79c0ff', '#56d364'];
-                
-                // Load dashboard stats
-                const dashResponse = await fetch('./data/dashboard-data.json');
-                const dash = await dashResponse.json();
                 
                 // Stats Cards
                 const statsHtml = dash.organizations
@@ -339,12 +352,22 @@
 
             } catch (error) {
                 console.error('Error loading data:', error);
+                document.getElementById('stats').innerHTML = `
+                    <div style="color: #f85149; padding: 20px;">
+                        ❌ Error: ${error.message}
+                    </div>
+                `;
             }
         }
 
         function showInactiveRepos(org) {
             console.log('Showing repos for:', org);
             
+            if (!dashboardData || !dashboardData.repos) {
+                console.error('No data loaded');
+                return;
+            }
+
             // Filter inaktive repos für diese Org
             currentInactiveRepos = dashboardData.repos.filter(r => r.org === org);
             filteredRepos = [...currentInactiveRepos];
