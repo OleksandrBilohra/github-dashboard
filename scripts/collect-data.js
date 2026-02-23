@@ -258,7 +258,7 @@ async function collectData() {
         
         inactiveRepos.push({
           repo: repo.name,
-          url: `https://github.com/${org}/${repo.name}/custom-properties`,
+          url: `https://github.com/${org}/${repo.name}`,
           repoOwner: repoOwnerValue
         });
       }
