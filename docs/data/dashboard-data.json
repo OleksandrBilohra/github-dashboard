@@ -53,6 +53,16 @@
   ],
   "trends": [
     {
+      "date": "2026-02-22",
+      "AS-ASK-IT": 15,
+      "as-cloud-services": 100,
+      "asitservices": 752,
+      "axelspringer": 34,
+      "Media-Impact": 5,
+      "spring-media": 1100,
+      "welttv": 21
+    },
+    {
       "date": "2026-02-23",
       "AS-ASK-IT": 21,
       "as-cloud-services": 136,
