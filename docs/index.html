@@ -219,7 +219,7 @@
     </div>
 
     <script>
-        let allReposDetail = [];
+        let allInactiveRepos = [];
         let filteredRepos = [];
         let currentOrg = null;
 
@@ -228,7 +228,12 @@
                 const response = await fetch('./data/dashboard-data.json');
                 const data = await response.json();
 
+                console.log('Dashboard data loaded:', data);
+
                 const colors = ['#58a6ff', '#3fb950', '#d29922', '#f85149', '#a371f7', '#79c0ff', '#56d364'];
+                
+                // Lade detaillierte Repo-Daten
+                await loadInactiveRepos();
                 
                 // Stats (oben) - mit Click-Handler
                 const statsHtml = data.organizations
@@ -245,9 +250,6 @@
                     })
                     .join('');
                 document.getElementById('stats').innerHTML = statsHtml;
-                
-                // Lade detaillierte Repo-Daten
-                await loadReposDetail();
                 
                 // Trends Chart
                 const dates = data.trends.map(t => t.date);
@@ -339,46 +341,59 @@
             }
         }
 
-        async function loadReposDetail() {
+        async function loadInactiveRepos() {
             try {
                 const response = await fetch('./data/repos-detail.json');
-                allReposDetail = await response.json();
-                if (allReposDetail.repos) {
-                    allReposDetail = allReposDetail.repos;
-                }
+                const data = await response.json();
+                console.log('Inactive repos data loaded:', data);
+                
+                allInactiveRepos = data.repos || [];
+                console.log('Total inactive repos loaded:', allInactiveRepos.length);
             } catch (error) {
-                console.error('Error loading repos detail:', error);
+                console.error('Error loading inactive repos:', error);
+                allInactiveRepos = [];
             }
         }
 
         function showInactiveRepos(org) {
             currentOrg = org;
-            const inactiveRepos = allReposDetail.filter(r => r.org === org && !r.isActive);
-            filteredRepos = inactiveRepos;
+            
+            // Filtere nur inaktive Repos für diese Org
+            const orgInactiveRepos = allInactiveRepos.filter(r => r.org === org);
+            filteredRepos = orgInactiveRepos;
 
-            const totalRepos = allReposDetail.filter(r => r.org === org).length;
-            const activeRepos = allReposDetail.filter(r => r.org === org && r.isActive).length;
+            console.log(`Showing ${orgInactiveRepos.length} inactive repos for ${org}`);
 
-            document.getElementById('modalTitle').textContent = `${org} - Inaktive Repositories`;
+            // Hole die Total-Werte vom API
+            fetch('./data/dashboard-data.json')
+                .then(r => r.json())
+                .then(data => {
+                    const orgData = data.organizations.find(o => o.name === org);
+                    const totalRepos = orgData?.totalRepos || 0;
+                    const activeRepos = orgData?.activeRepos || 0;
+                    const inactiveRepos = orgData?.inactiveRepos || 0;
 
-            const statsHtml = `
-                <div class="stat-box">
-                    <div class="number">${totalRepos}</div>
-                    <div class="label">Total Repos</div>
-                </div>
-                <div class="stat-box">
-                    <div class="number" style="color: #3fb950;">${activeRepos}</div>
-                    <div class="label">Aktiv</div>
-                </div>
-                <div class="stat-box inactive">
-                    <div class="number">${inactiveRepos.length}</div>
-                    <div class="label">Nicht Aktiv</div>
-                </div>
-            `;
-            document.getElementById('statsModal').innerHTML = statsHtml;
+                    document.getElementById('modalTitle').textContent = `${org} - Inaktive Repositories`;
 
-            renderReposList(inactiveRepos);
-            document.getElementById('reposModal').classList.add('active');
+                    const statsHtml = `
+                        <div class="stat-box">
+                            <div class="number">${totalRepos}</div>
+                            <div class="label">Total Repos</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number" style="color: #3fb950;">${activeRepos}</div>
+                            <div class="label">Aktiv</div>
+                        </div>
+                        <div class="stat-box inactive">
+                            <div class="number">${inactiveRepos}</div>
+                            <div class="label">Nicht Aktiv</div>
+                        </div>
+                    `;
+                    document.getElementById('statsModal').innerHTML = statsHtml;
+
+                    renderReposList(orgInactiveRepos);
+                    document.getElementById('reposModal').classList.add('active');
+                });
         }
 
         function renderReposList(repos) {
