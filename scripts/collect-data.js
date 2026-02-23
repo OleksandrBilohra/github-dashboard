@@ -1,5 +1,5 @@
 /**
- * Repo Owner Tracker - Speichert nur INAKTIVE Repos
+ * Repo Owner Tracker - Speichert nur INAKTIVE Repos - FIXED
  */
 
 const https = require('https');
@@ -178,6 +178,7 @@ async function collectData() {
     console.log(`  🔍 Checking RepoOwner for ${repos.length} repos...\n`);
 
     let activeCount = 0;
+    let inactiveCount = 0;
 
     for (const repo of repos) {
       const repoOwnerValue = await getRepoOwnerValue(org, repo.name);
@@ -187,6 +188,11 @@ async function collectData() {
       if (active) {
         activeCount++;
       } else {
+        inactiveCount++;
+        
+        // DEBUG: Zeige was als inaktiv erkannt wurde
+        console.log(`    ❌ INAKTIV: ${repo.name} (value: "${repoOwnerValue}")`);
+        
         // NUR inaktive Repos speichern
         inactiveRepos.push({
           org,
@@ -202,7 +208,6 @@ async function collectData() {
     }
 
     const totalRepos = repos.length;
-    const inactiveCount = totalRepos - activeCount;
 
     organizations.push({
       name: org,
@@ -215,7 +220,7 @@ async function collectData() {
     // Für Trends: speichere totalRepos
     trendEntry[org] = totalRepos;
 
-    console.log(`  ✅ ${org}: ${totalRepos} total (ohne archiv), ${activeCount} aktiv (RepoOwner != default/leer)\n`);
+    console.log(`\n  ✅ ${org}: ${totalRepos} total, ${activeCount} aktiv, ${inactiveCount} inaktiv\n`);
   }
 
   // Füge neuen Trend-Eintrag hinzu
@@ -244,7 +249,7 @@ async function collectData() {
 
   safeJsonWrite(detailFile, detailData);
 
-  console.log('\n═══════════════════════════════════════════════════════════');
+  console.log('\n══════════════════════════════════════════════════════════��');
   console.log('✅ Data collected!');
   console.log('═══════════════════════════════════════════════════════════');
   console.log(`\n📊 Summary:`);
@@ -255,7 +260,16 @@ async function collectData() {
   console.log(`\n📁 Files:`);
   console.log(`   ${dashboardFile}`);
   console.log(`   ${detailFile}`);
-  console.log(`   Total inaktive repos: ${inactiveRepos.length}`);
+  console.log(`\n📊 Total inaktive repos saved: ${inactiveRepos.length}`);
+  
+  // DEBUG: Zeige ein Beispiel
+  if (inactiveRepos.length > 0) {
+    console.log(`\n📝 First 3 inactive repos:`)
+    inactiveRepos.slice(0, 3).forEach(r => {
+      console.log(`   - ${r.org}/${r.repo} (${r.repoOwner})`);
+    });
+  }
+  
   console.log('═══════════════════════════════════════════════════════════\n');
 }
 
