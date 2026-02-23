@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-02-22T02:40:46.769Z",
+  "generatedAt": "2026-02-23T02:41:05.851Z",
   "totalInactiveRepos": 1,
   "repos": [
     {
-      "organization": "as-cloud-services",
-      "repository": "planning-poker",
-      "repoUrl": "https://github.com/as-cloud-services/planning-poker",
+      "organization": "asitservices",
+      "repository": "ec_mimir-ansible",
+      "repoUrl": "https://github.com/asitservices/ec_mimir-ansible",
       "repoOwnerValue": "Please choose a valid option!",
       "repoOwnerList": [
         "Please choose a valid option!"
       ],
       "status": "❌ NICHT AKTIV",
       "reason": "Standard-Wert: \"Please choose a valid option!\"",
-      "checkedAt": "2026-02-22T02:40:46.769Z"
+      "checkedAt": "2026-02-23T02:41:05.851Z"
     }
   ]
 }

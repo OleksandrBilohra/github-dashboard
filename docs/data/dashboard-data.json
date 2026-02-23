@@ -6,15 +6,15 @@
       "activeRepos": 0,
       "inactiveRepos": 21,
       "inactivePercentage": "100.0%",
-      "lastUpdated": "2026-02-22T09:26:35.972Z"
+      "lastUpdated": "2026-02-23T02:41:05.851Z"
     },
     {
       "name": "as-cloud-services",
       "totalRepos": 136,
-      "activeRepos": 0,
-      "inactiveRepos": 136,
-      "inactivePercentage": "100.0%",
-      "lastUpdated": "2026-02-22T09:26:35.972Z"
+      "activeRepos": 1,
+      "inactiveRepos": 135,
+      "inactivePercentage": "99.3%",
+      "lastUpdated": "2026-02-23T02:41:05.851Z"
     },
     {
       "name": "asitservices",
@@ -22,7 +22,7 @@
       "activeRepos": 218,
       "inactiveRepos": 595,
       "inactivePercentage": "73.2%",
-      "lastUpdated": "2026-02-22T09:26:35.972Z"
+      "lastUpdated": "2026-02-23T02:41:05.851Z"
     },
     {
       "name": "axelspringer",
@@ -30,7 +30,7 @@
       "activeRepos": 0,
       "inactiveRepos": 46,
       "inactivePercentage": "100.0%",
-      "lastUpdated": "2026-02-22T09:26:35.972Z"
+      "lastUpdated": "2026-02-23T02:41:05.851Z"
     },
     {
       "name": "Media-Impact",
@@ -38,7 +38,7 @@
       "activeRepos": 14,
       "inactiveRepos": 0,
       "inactivePercentage": "0.0%",
-      "lastUpdated": "2026-02-22T09:26:35.972Z"
+      "lastUpdated": "2026-02-23T02:41:05.851Z"
     },
     {
       "name": "spring-media",
@@ -46,7 +46,7 @@
       "activeRepos": 1150,
       "inactiveRepos": 0,
       "inactivePercentage": "0.0%",
-      "lastUpdated": "2026-02-22T09:26:35.972Z"
+      "lastUpdated": "2026-02-23T02:41:05.851Z"
     },
     {
       "name": "welttv",
@@ -54,7 +54,7 @@
       "activeRepos": 0,
       "inactiveRepos": 48,
       "inactivePercentage": "100.0%",
-      "lastUpdated": "2026-02-22T09:26:35.972Z"
+      "lastUpdated": "2026-02-23T02:41:05.851Z"
     }
   ],
   "trends": [
@@ -150,6 +150,16 @@
     },
     {
       "date": "2026-02-22",
+      "AS-ASK-IT": 21,
+      "as-cloud-services": 136,
+      "asitservices": 813,
+      "axelspringer": 46,
+      "Media-Impact": 14,
+      "spring-media": 1150,
+      "welttv": 48
+    },
+    {
+      "date": "2026-02-23",
       "AS-ASK-IT": 21,
       "as-cloud-services": 136,
       "asitservices": 813,
