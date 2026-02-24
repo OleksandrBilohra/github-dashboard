@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-24T02:37:57.588Z",
+  "generatedAt": "2026-02-24T09:48:13.891Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
@@ -113,7 +113,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-02-24T02:37:57.588Z"
+      "lastUpdated": "2026-02-24T09:48:13.891Z"
     },
     {
       "name": "as-cloud-services",
@@ -797,13 +797,13 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-02-24T02:37:57.588Z"
+      "lastUpdated": "2026-02-24T09:48:13.891Z"
     },
     {
       "name": "asitservices",
       "totalRepos": 814,
-      "activeRepos": 289,
-      "inactiveRepos": 525,
+      "activeRepos": 290,
+      "inactiveRepos": 524,
       "inactiveList": [
         {
           "repo": "ins-cd-terraform-aws-account-asit-security-controls",
@@ -1133,11 +1133,6 @@
         {
           "repo": "ec_ansible-aws-ir17",
           "url": "https://github.com/asitservices/ec_ansible-aws-ir17",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "rafl",
-          "url": "https://github.com/asitservices/rafl",
           "repoOwner": "Please choose a valid option!"
         },
         {
@@ -3431,7 +3426,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-02-24T02:37:57.588Z"
+      "lastUpdated": "2026-02-24T09:48:13.891Z"
     },
     {
       "name": "axelspringer",
@@ -3670,7 +3665,7 @@
           "repoOwner": "Please choose a valid option! "
         }
       ],
-      "lastUpdated": "2026-02-24T02:37:57.588Z"
+      "lastUpdated": "2026-02-24T09:48:13.891Z"
     },
     {
       "name": "Media-Impact",
@@ -3678,12 +3673,12 @@
       "activeRepos": 14,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-02-24T02:37:57.588Z"
+      "lastUpdated": "2026-02-24T09:48:13.891Z"
     },
     {
       "name": "spring-media",
-      "totalRepos": 1146,
-      "activeRepos": 1120,
+      "totalRepos": 1145,
+      "activeRepos": 1119,
       "inactiveRepos": 26,
       "inactiveList": [
         {
@@ -3817,7 +3812,7 @@
           "repoOwner": "Please choose a valid option!  "
         }
       ],
-      "lastUpdated": "2026-02-24T02:37:57.588Z"
+      "lastUpdated": "2026-02-24T09:48:13.891Z"
     },
     {
       "name": "welttv",
@@ -4066,7 +4061,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-02-24T02:37:57.588Z"
+      "lastUpdated": "2026-02-24T09:48:13.891Z"
     },
     {
       "name": "sales-impact",
@@ -4074,7 +4069,7 @@
       "activeRepos": 151,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-02-24T02:37:57.588Z"
+      "lastUpdated": "2026-02-24T09:48:13.891Z"
     }
   ],
   "trends": [
@@ -4179,6 +4174,17 @@
       "axelspringer": 46,
       "Media-Impact": 14,
       "spring-media": 1146,
+      "welttv": 48,
+      "sales-impact": 151
+    },
+    {
+      "date": "2026-02-24",
+      "AS-ASK-IT": 21,
+      "as-cloud-services": 136,
+      "asitservices": 814,
+      "axelspringer": 46,
+      "Media-Impact": 14,
+      "spring-media": 1145,
       "welttv": 48,
       "sales-impact": 151
     }
