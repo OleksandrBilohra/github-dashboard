@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-26T00:38:50.218Z",
+  "generatedAt": "2026-02-26T07:27:04.551Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
@@ -113,13 +113,13 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-02-26T00:38:50.218Z"
+      "lastUpdated": "2026-02-26T07:27:04.551Z"
     },
     {
       "name": "as-cloud-services",
       "totalRepos": 35,
-      "activeRepos": 1,
-      "inactiveRepos": 34,
+      "activeRepos": 29,
+      "inactiveRepos": 6,
       "inactiveList": [
         {
           "repo": ".github-private",
@@ -132,133 +132,8 @@
           "repoOwner": "Please choose a valid option!"
         },
         {
-          "repo": "ocp-service-space-bootstrap",
-          "url": "https://github.com/as-cloud-services/ocp-service-space-bootstrap",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-shared-space-bootstrap",
-          "url": "https://github.com/as-cloud-services/ocp-shared-space-bootstrap",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-root-space-bootstrap",
-          "url": "https://github.com/as-cloud-services/ocp-root-space-bootstrap",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-spacelift-bootstrap-platform-stack-spaces",
-          "url": "https://github.com/as-cloud-services/ocp-spacelift-bootstrap-platform-stack-spaces",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-poc-stack-context-sharing",
-          "url": "https://github.com/as-cloud-services/ocp-poc-stack-context-sharing",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-security-action",
-          "url": "https://github.com/as-cloud-services/ocp-security-action",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "aft-account-customizations",
-          "url": "https://github.com/as-cloud-services/aft-account-customizations",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "aft-account-request",
-          "url": "https://github.com/as-cloud-services/aft-account-request",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "aft-account-factory",
-          "url": "https://github.com/as-cloud-services/aft-account-factory",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "aft-global-customizations",
-          "url": "https://github.com/as-cloud-services/aft-global-customizations",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "aft-account-provisioning-customizations",
-          "url": "https://github.com/as-cloud-services/aft-account-provisioning-customizations",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "aft-sso-account-configuration",
-          "url": "https://github.com/as-cloud-services/aft-sso-account-configuration",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-aws-bootstrap",
-          "url": "https://github.com/as-cloud-services/ocp-aws-bootstrap",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "jpjuni0r-test",
-          "url": "https://github.com/as-cloud-services/jpjuni0r-test",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-tgw-poc",
-          "url": "https://github.com/as-cloud-services/ocp-tgw-poc",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-aws-bootstrap-network",
-          "url": "https://github.com/as-cloud-services/ocp-aws-bootstrap-network",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "maps3-setup-bootstrapper",
-          "url": "https://github.com/as-cloud-services/maps3-setup-bootstrapper",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-aws-bootstrap-dns",
-          "url": "https://github.com/as-cloud-services/ocp-aws-bootstrap-dns",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ansible-aws",
-          "url": "https://github.com/as-cloud-services/ansible-aws",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
           "repo": "terraform-migration",
           "url": "https://github.com/as-cloud-services/terraform-migration",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-aws-bootstrap-sg",
-          "url": "https://github.com/as-cloud-services/ocp-aws-bootstrap-sg",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-aws-bootstrap-lb",
-          "url": "https://github.com/as-cloud-services/ocp-aws-bootstrap-lb",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-aws-bootstrap-ec2",
-          "url": "https://github.com/as-cloud-services/ocp-aws-bootstrap-ec2",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "nmg-aws-bootstrap-scps",
-          "url": "https://github.com/as-cloud-services/nmg-aws-bootstrap-scps",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-azure-poc",
-          "url": "https://github.com/as-cloud-services/ocp-azure-poc",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "maps3",
-          "url": "https://github.com/as-cloud-services/maps3",
           "repoOwner": "Please choose a valid option!"
         },
         {
@@ -275,30 +150,15 @@
           "repo": "CIS-MCP-HUB",
           "url": "https://github.com/as-cloud-services/CIS-MCP-HUB",
           "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "aws-chargeback-migration",
-          "url": "https://github.com/as-cloud-services/aws-chargeback-migration",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-aws-bootstrap-sopsecret",
-          "url": "https://github.com/as-cloud-services/ocp-aws-bootstrap-sopsecret",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ocp-aws-bootstrap-lambda",
-          "url": "https://github.com/as-cloud-services/ocp-aws-bootstrap-lambda",
-          "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-02-26T00:38:50.218Z"
+      "lastUpdated": "2026-02-26T07:27:04.551Z"
     },
     {
       "name": "asitservices",
       "totalRepos": 775,
-      "activeRepos": 425,
-      "inactiveRepos": 350,
+      "activeRepos": 426,
+      "inactiveRepos": 349,
       "inactiveList": [
         {
           "repo": "ins-cd-terraform-aws-account-asit-security-controls",
@@ -2006,11 +1866,6 @@
           "repoOwner": "Please choose a valid option!"
         },
         {
-          "repo": "Threema",
-          "url": "https://github.com/asitservices/Threema",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
           "repo": "asit-config-ansible",
           "url": "https://github.com/asitservices/asit-config-ansible",
           "repoOwner": "Please choose a valid option!"
@@ -2051,7 +1906,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-02-26T00:38:50.218Z"
+      "lastUpdated": "2026-02-26T07:27:04.551Z"
     },
     {
       "name": "axelspringer",
@@ -2290,7 +2145,7 @@
           "repoOwner": "Please choose a valid option! "
         }
       ],
-      "lastUpdated": "2026-02-26T00:38:50.218Z"
+      "lastUpdated": "2026-02-26T07:27:04.551Z"
     },
     {
       "name": "Media-Impact",
@@ -2298,13 +2153,13 @@
       "activeRepos": 14,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-02-26T00:38:50.218Z"
+      "lastUpdated": "2026-02-26T07:27:04.551Z"
     },
     {
       "name": "spring-media",
-      "totalRepos": 1149,
-      "activeRepos": 1123,
-      "inactiveRepos": 26,
+      "totalRepos": 1150,
+      "activeRepos": 1125,
+      "inactiveRepos": 25,
       "inactiveList": [
         {
           "repo": "DeepPhonemizer",
@@ -2339,11 +2194,6 @@
         {
           "repo": "politico-landingpage",
           "url": "https://github.com/spring-media/politico-landingpage",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "path-release-test",
-          "url": "https://github.com/spring-media/path-release-test",
           "repoOwner": "Please choose a valid option!  "
         },
         {
@@ -2437,7 +2287,7 @@
           "repoOwner": "Please choose a valid option!  "
         }
       ],
-      "lastUpdated": "2026-02-26T00:38:50.218Z"
+      "lastUpdated": "2026-02-26T07:27:04.551Z"
     },
     {
       "name": "welttv",
@@ -2686,7 +2536,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-02-26T00:38:50.218Z"
+      "lastUpdated": "2026-02-26T07:27:04.551Z"
     },
     {
       "name": "sales-impact",
@@ -2694,7 +2544,7 @@
       "activeRepos": 151,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-02-26T00:38:50.218Z"
+      "lastUpdated": "2026-02-26T07:27:04.551Z"
     }
   ],
   "trends": [
@@ -2843,6 +2693,17 @@
       "axelspringer": 46,
       "Media-Impact": 14,
       "spring-media": 1149,
+      "welttv": 48,
+      "sales-impact": 151
+    },
+    {
+      "date": "2026-02-26",
+      "AS-ASK-IT": 21,
+      "as-cloud-services": 35,
+      "asitservices": 775,
+      "axelspringer": 46,
+      "Media-Impact": 14,
+      "spring-media": 1150,
       "welttv": 48,
       "sales-impact": 151
     }
