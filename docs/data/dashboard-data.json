@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-01T09:07:27.294Z",
+  "generatedAt": "2026-03-02T00:41:02.589Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
@@ -113,7 +113,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-01T09:07:27.294Z"
+      "lastUpdated": "2026-03-02T00:41:02.589Z"
     },
     {
       "name": "as-cloud-services",
@@ -121,7 +121,7 @@
       "activeRepos": 35,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-01T09:07:27.294Z"
+      "lastUpdated": "2026-03-02T00:41:02.589Z"
     },
     {
       "name": "asitservices",
@@ -1760,7 +1760,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-01T09:07:27.294Z"
+      "lastUpdated": "2026-03-02T00:41:02.589Z"
     },
     {
       "name": "axelspringer",
@@ -1999,7 +1999,7 @@
           "repoOwner": "Please choose a valid option! "
         }
       ],
-      "lastUpdated": "2026-03-01T09:07:27.294Z"
+      "lastUpdated": "2026-03-02T00:41:02.589Z"
     },
     {
       "name": "Media-Impact",
@@ -2007,7 +2007,7 @@
       "activeRepos": 14,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-01T09:07:27.294Z"
+      "lastUpdated": "2026-03-02T00:41:02.589Z"
     },
     {
       "name": "spring-media",
@@ -2146,7 +2146,7 @@
           "repoOwner": "Please choose a valid option!  "
         }
       ],
-      "lastUpdated": "2026-03-01T09:07:27.294Z"
+      "lastUpdated": "2026-03-02T00:41:02.589Z"
     },
     {
       "name": "welttv",
@@ -2395,7 +2395,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-01T09:07:27.294Z"
+      "lastUpdated": "2026-03-02T00:41:02.589Z"
     },
     {
       "name": "sales-impact",
@@ -2403,7 +2403,7 @@
       "activeRepos": 151,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-01T09:07:27.294Z"
+      "lastUpdated": "2026-03-02T00:41:02.589Z"
     }
   ],
   "trends": [
@@ -2682,6 +2682,25 @@
     },
     {
       "date": "2026-03-01",
+      "AS-ASK-IT": 21,
+      "AS-ASK-IT_active": 0,
+      "as-cloud-services": 35,
+      "as-cloud-services_active": 35,
+      "asitservices": 772,
+      "asitservices_active": 446,
+      "axelspringer": 46,
+      "axelspringer_active": 0,
+      "Media-Impact": 14,
+      "Media-Impact_active": 14,
+      "spring-media": 1152,
+      "spring-media_active": 1126,
+      "welttv": 48,
+      "welttv_active": 0,
+      "sales-impact": 151,
+      "sales-impact_active": 151
+    },
+    {
+      "date": "2026-03-02",
       "AS-ASK-IT": 21,
       "AS-ASK-IT_active": 0,
       "as-cloud-services": 35,
