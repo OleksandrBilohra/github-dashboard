@@ -1,119 +1,13 @@
 {
-  "generatedAt": "2026-03-04T09:13:53.638Z",
+  "generatedAt": "2026-03-05T00:41:10.510Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
       "totalRepos": 21,
-      "activeRepos": 0,
-      "inactiveRepos": 21,
-      "inactiveList": [
-        {
-          "repo": "sf-archive_v2",
-          "url": "https://github.com/AS-ASK-IT/sf-archive_v2",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "Pyper-ControlRoom",
-          "url": "https://github.com/AS-ASK-IT/Pyper-ControlRoom",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "azVoiceBotTools",
-          "url": "https://github.com/AS-ASK-IT/azVoiceBotTools",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "pyper_Server",
-          "url": "https://github.com/AS-ASK-IT/pyper_Server",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "pyper_Worker",
-          "url": "https://github.com/AS-ASK-IT/pyper_Worker",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "azVoiceBotAgent",
-          "url": "https://github.com/AS-ASK-IT/azVoiceBotAgent",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "azVoiceBotAPIHelper",
-          "url": "https://github.com/AS-ASK-IT/azVoiceBotAPIHelper",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "azBILDDebatte",
-          "url": "https://github.com/AS-ASK-IT/azBILDDebatte",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "iMail-CSAT",
-          "url": "https://github.com/AS-ASK-IT/iMail-CSAT",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "azVoiceBotAMP-tst",
-          "url": "https://github.com/AS-ASK-IT/azVoiceBotAMP-tst",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "pyper_Bots",
-          "url": "https://github.com/AS-ASK-IT/pyper_Bots",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ASK-iMail-CSAT",
-          "url": "https://github.com/AS-ASK-IT/ASK-iMail-CSAT",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ask-icons",
-          "url": "https://github.com/AS-ASK-IT/ask-icons",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ask-design-system-docs",
-          "url": "https://github.com/AS-ASK-IT/ask-design-system-docs",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "azVoiceBotAMPAnalytics",
-          "url": "https://github.com/AS-ASK-IT/azVoiceBotAMPAnalytics",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "azTest",
-          "url": "https://github.com/AS-ASK-IT/azTest",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "azVoicebotAMP-Prd",
-          "url": "https://github.com/AS-ASK-IT/azVoicebotAMP-Prd",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ask-design-system",
-          "url": "https://github.com/AS-ASK-IT/ask-design-system",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "Wave-Dateien_transkribieren",
-          "url": "https://github.com/AS-ASK-IT/Wave-Dateien_transkribieren",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ASK-RPA-general",
-          "url": "https://github.com/AS-ASK-IT/ASK-RPA-general",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "azVoiceBotAMP2",
-          "url": "https://github.com/AS-ASK-IT/azVoiceBotAMP2",
-          "repoOwner": "Please choose a valid option!"
-        }
-      ],
-      "lastUpdated": "2026-03-04T09:13:53.638Z"
+      "activeRepos": 21,
+      "inactiveRepos": 0,
+      "inactiveList": [],
+      "lastUpdated": "2026-03-05T00:41:10.510Z"
     },
     {
       "name": "as-cloud-services",
@@ -121,12 +15,12 @@
       "activeRepos": 35,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-04T09:13:53.638Z"
+      "lastUpdated": "2026-03-05T00:41:10.510Z"
     },
     {
       "name": "asitservices",
-      "totalRepos": 771,
-      "activeRepos": 499,
+      "totalRepos": 772,
+      "activeRepos": 500,
       "inactiveRepos": 272,
       "inactiveList": [
         {
@@ -1490,7 +1384,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-04T09:13:53.638Z"
+      "lastUpdated": "2026-03-05T00:41:10.510Z"
     },
     {
       "name": "axelspringer",
@@ -1624,7 +1518,7 @@
           "repoOwner": "Please choose a valid option! "
         }
       ],
-      "lastUpdated": "2026-03-04T09:13:53.638Z"
+      "lastUpdated": "2026-03-05T00:41:10.510Z"
     },
     {
       "name": "Media-Impact",
@@ -1632,13 +1526,13 @@
       "activeRepos": 14,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-04T09:13:53.638Z"
+      "lastUpdated": "2026-03-05T00:41:10.510Z"
     },
     {
       "name": "spring-media",
-      "totalRepos": 1138,
+      "totalRepos": 1139,
       "activeRepos": 1109,
-      "inactiveRepos": 29,
+      "inactiveRepos": 30,
       "inactiveList": [
         {
           "repo": "DeepPhonemizer",
@@ -1784,9 +1678,14 @@
           "repo": "next-test-backseat-wetter-local-clone",
           "url": "https://github.com/spring-media/next-test-backseat-wetter-local-clone",
           "repoOwner": "Please choose a valid option!  "
+        },
+        {
+          "repo": "Duolingoproposedfeature",
+          "url": "https://github.com/spring-media/Duolingoproposedfeature",
+          "repoOwner": "Please choose a valid option!  "
         }
       ],
-      "lastUpdated": "2026-03-04T09:13:53.638Z"
+      "lastUpdated": "2026-03-05T00:41:10.510Z"
     },
     {
       "name": "welttv",
@@ -2035,7 +1934,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-04T09:13:53.638Z"
+      "lastUpdated": "2026-03-05T00:41:10.510Z"
     },
     {
       "name": "sales-impact",
@@ -2043,7 +1942,7 @@
       "activeRepos": 151,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-04T09:13:53.638Z"
+      "lastUpdated": "2026-03-05T00:41:10.510Z"
     }
   ],
   "trends": [
@@ -2447,6 +2346,25 @@
       "Media-Impact": 14,
       "Media-Impact_active": 14,
       "spring-media": 1138,
+      "spring-media_active": 1109,
+      "welttv": 48,
+      "welttv_active": 0,
+      "sales-impact": 151,
+      "sales-impact_active": 151
+    },
+    {
+      "date": "2026-03-05",
+      "AS-ASK-IT": 21,
+      "AS-ASK-IT_active": 21,
+      "as-cloud-services": 35,
+      "as-cloud-services_active": 35,
+      "asitservices": 772,
+      "asitservices_active": 500,
+      "axelspringer": 28,
+      "axelspringer_active": 3,
+      "Media-Impact": 14,
+      "Media-Impact_active": 14,
+      "spring-media": 1139,
       "spring-media_active": 1109,
       "welttv": 48,
       "welttv_active": 0,
