@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-05T09:15:07.754Z",
+  "generatedAt": "2026-03-06T00:44:11.723Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
@@ -7,7 +7,7 @@
       "activeRepos": 21,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-05T09:15:07.754Z"
+      "lastUpdated": "2026-03-06T00:44:11.723Z"
     },
     {
       "name": "as-cloud-services",
@@ -15,7 +15,7 @@
       "activeRepos": 35,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-05T09:15:07.754Z"
+      "lastUpdated": "2026-03-06T00:44:11.723Z"
     },
     {
       "name": "asitservices",
@@ -1384,13 +1384,13 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-05T09:15:07.754Z"
+      "lastUpdated": "2026-03-06T00:44:11.723Z"
     },
     {
       "name": "axelspringer",
-      "totalRepos": 28,
-      "activeRepos": 3,
-      "inactiveRepos": 25,
+      "totalRepos": 26,
+      "activeRepos": 2,
+      "inactiveRepos": 24,
       "inactiveList": [
         {
           "repo": "tech-radar",
@@ -1478,11 +1478,6 @@
           "repoOwner": "Please choose a valid option! "
         },
         {
-          "repo": "wp-featured-video-plus",
-          "url": "https://github.com/axelspringer/wp-featured-video-plus",
-          "repoOwner": "Please choose a valid option! "
-        },
-        {
           "repo": "wp-dynamic-featured-image",
           "url": "https://github.com/axelspringer/wp-dynamic-featured-image",
           "repoOwner": "Please choose a valid option! "
@@ -1518,7 +1513,7 @@
           "repoOwner": "Please choose a valid option! "
         }
       ],
-      "lastUpdated": "2026-03-05T09:15:07.754Z"
+      "lastUpdated": "2026-03-06T00:44:11.723Z"
     },
     {
       "name": "Media-Impact",
@@ -1526,13 +1521,13 @@
       "activeRepos": 14,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-05T09:15:07.754Z"
+      "lastUpdated": "2026-03-06T00:44:11.723Z"
     },
     {
       "name": "spring-media",
-      "totalRepos": 1138,
-      "activeRepos": 1108,
-      "inactiveRepos": 30,
+      "totalRepos": 1137,
+      "activeRepos": 1106,
+      "inactiveRepos": 31,
       "inactiveList": [
         {
           "repo": "DeepPhonemizer",
@@ -1683,9 +1678,14 @@
           "repo": "Duolingoproposedfeature",
           "url": "https://github.com/spring-media/Duolingoproposedfeature",
           "repoOwner": "Please choose a valid option!  "
+        },
+        {
+          "repo": "next-hey-adobe",
+          "url": "https://github.com/spring-media/next-hey-adobe",
+          "repoOwner": "Please choose a valid option!  "
         }
       ],
-      "lastUpdated": "2026-03-05T09:15:07.754Z"
+      "lastUpdated": "2026-03-06T00:44:11.723Z"
     },
     {
       "name": "welttv",
@@ -1934,15 +1934,15 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-05T09:15:07.754Z"
+      "lastUpdated": "2026-03-06T00:44:11.723Z"
     },
     {
       "name": "sales-impact",
-      "totalRepos": 151,
-      "activeRepos": 151,
+      "totalRepos": 150,
+      "activeRepos": 150,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-05T09:15:07.754Z"
+      "lastUpdated": "2026-03-06T00:44:11.723Z"
     }
   ],
   "trends": [
@@ -2389,6 +2389,25 @@
       "welttv_active": 0,
       "sales-impact": 151,
       "sales-impact_active": 151
+    },
+    {
+      "date": "2026-03-06",
+      "AS-ASK-IT": 21,
+      "AS-ASK-IT_active": 21,
+      "as-cloud-services": 35,
+      "as-cloud-services_active": 35,
+      "asitservices": 772,
+      "asitservices_active": 500,
+      "axelspringer": 26,
+      "axelspringer_active": 2,
+      "Media-Impact": 14,
+      "Media-Impact_active": 14,
+      "spring-media": 1137,
+      "spring-media_active": 1106,
+      "welttv": 48,
+      "welttv_active": 0,
+      "sales-impact": 150,
+      "sales-impact_active": 150
     }
   ]
 }
