@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T09:07:38.517Z",
+  "generatedAt": "2026-03-09T00:41:39.248Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
@@ -7,7 +7,7 @@
       "activeRepos": 21,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-08T09:07:38.517Z"
+      "lastUpdated": "2026-03-09T00:41:39.248Z"
     },
     {
       "name": "as-cloud-services",
@@ -15,7 +15,7 @@
       "activeRepos": 35,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-08T09:07:38.517Z"
+      "lastUpdated": "2026-03-09T00:41:39.248Z"
     },
     {
       "name": "asitservices",
@@ -1384,7 +1384,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-08T09:07:38.517Z"
+      "lastUpdated": "2026-03-09T00:41:39.248Z"
     },
     {
       "name": "axelspringer",
@@ -1392,7 +1392,7 @@
       "activeRepos": 4,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-08T09:07:38.517Z"
+      "lastUpdated": "2026-03-09T00:41:39.248Z"
     },
     {
       "name": "Media-Impact",
@@ -1400,13 +1400,13 @@
       "activeRepos": 14,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-08T09:07:38.517Z"
+      "lastUpdated": "2026-03-09T00:41:39.248Z"
     },
     {
       "name": "spring-media",
-      "totalRepos": 1139,
+      "totalRepos": 1140,
       "activeRepos": 1107,
-      "inactiveRepos": 32,
+      "inactiveRepos": 33,
       "inactiveList": [
         {
           "repo": "DeepPhonemizer",
@@ -1567,9 +1567,14 @@
           "repo": "next-API-checker",
           "url": "https://github.com/spring-media/next-API-checker",
           "repoOwner": "Please choose a valid option!  "
+        },
+        {
+          "repo": "go-toolkit",
+          "url": "https://github.com/spring-media/go-toolkit",
+          "repoOwner": "Please choose a valid option!  "
         }
       ],
-      "lastUpdated": "2026-03-08T09:07:38.517Z"
+      "lastUpdated": "2026-03-09T00:41:39.248Z"
     },
     {
       "name": "welttv",
@@ -1818,7 +1823,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-08T09:07:38.517Z"
+      "lastUpdated": "2026-03-09T00:41:39.248Z"
     },
     {
       "name": "sales-impact",
@@ -1826,7 +1831,7 @@
       "activeRepos": 150,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-08T09:07:38.517Z"
+      "lastUpdated": "2026-03-09T00:41:39.248Z"
     }
   ],
   "trends": [
@@ -2382,6 +2387,25 @@
       "Media-Impact": 14,
       "Media-Impact_active": 14,
       "spring-media": 1139,
+      "spring-media_active": 1107,
+      "welttv": 48,
+      "welttv_active": 0,
+      "sales-impact": 150,
+      "sales-impact_active": 150
+    },
+    {
+      "date": "2026-03-09",
+      "AS-ASK-IT": 21,
+      "AS-ASK-IT_active": 21,
+      "as-cloud-services": 35,
+      "as-cloud-services_active": 35,
+      "asitservices": 772,
+      "asitservices_active": 500,
+      "axelspringer": 4,
+      "axelspringer_active": 4,
+      "Media-Impact": 14,
+      "Media-Impact_active": 14,
+      "spring-media": 1140,
       "spring-media_active": 1107,
       "welttv": 48,
       "welttv_active": 0,
