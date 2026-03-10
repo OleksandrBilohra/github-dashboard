@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T09:15:52.861Z",
+  "generatedAt": "2026-03-10T14:17:11.403Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
@@ -7,7 +7,7 @@
       "activeRepos": 21,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-10T09:15:52.861Z"
+      "lastUpdated": "2026-03-10T14:17:11.403Z"
     },
     {
       "name": "as-cloud-services",
@@ -15,13 +15,13 @@
       "activeRepos": 35,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-10T09:15:52.861Z"
+      "lastUpdated": "2026-03-10T14:17:11.403Z"
     },
     {
       "name": "asitservices",
       "totalRepos": 771,
-      "activeRepos": 500,
-      "inactiveRepos": 271,
+      "activeRepos": 510,
+      "inactiveRepos": 261,
       "inactiveList": [
         {
           "repo": "ins-cd-terraform-aws-account-asit-security-controls",
@@ -261,31 +261,6 @@
         {
           "repo": "aws-sls-cur-export",
           "url": "https://github.com/asitservices/aws-sls-cur-export",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "as-sag-bueroonline-portal",
-          "url": "https://github.com/asitservices/as-sag-bueroonline-portal",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "as-sag-bueroonline-integration",
-          "url": "https://github.com/asitservices/as-sag-bueroonline-integration",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "as-sag-bueroonline-database-scripts",
-          "url": "https://github.com/asitservices/as-sag-bueroonline-database-scripts",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "as-sag-bueroonline-pdf-generator",
-          "url": "https://github.com/asitservices/as-sag-bueroonline-pdf-generator",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "as-sag-bueroonline-business-processes",
-          "url": "https://github.com/asitservices/as-sag-bueroonline-business-processes",
           "repoOwner": "Please choose a valid option!"
         },
         {
@@ -1094,18 +1069,8 @@
           "repoOwner": "Please choose a valid option!"
         },
         {
-          "repo": "paf_automations",
-          "url": "https://github.com/asitservices/paf_automations",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
           "repo": "as-mulesoft-dwl-ASUtil",
           "url": "https://github.com/asitservices/as-mulesoft-dwl-ASUtil",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "python_automation_system",
-          "url": "https://github.com/asitservices/python_automation_system",
           "repoOwner": "Please choose a valid option!"
         },
         {
@@ -1324,16 +1289,6 @@
           "repoOwner": "Please choose a valid option!"
         },
         {
-          "repo": "AzureFunctions_Template",
-          "url": "https://github.com/asitservices/AzureFunctions_Template",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "AzureFunctions_CalendarBooking",
-          "url": "https://github.com/asitservices/AzureFunctions_CalendarBooking",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
           "repo": "User-Remover-Rovo-Agent",
           "url": "https://github.com/asitservices/User-Remover-Rovo-Agent",
           "repoOwner": "Please choose a valid option!"
@@ -1359,11 +1314,6 @@
           "repoOwner": "Please choose a valid option!"
         },
         {
-          "repo": "screenshot-manager",
-          "url": "https://github.com/asitservices/screenshot-manager",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
           "repo": "ec_mimir_nextdam_backend",
           "url": "https://github.com/asitservices/ec_mimir_nextdam_backend",
           "repoOwner": "Please choose a valid option!"
@@ -1379,7 +1329,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-10T09:15:52.861Z"
+      "lastUpdated": "2026-03-10T14:17:11.403Z"
     },
     {
       "name": "axelspringer",
@@ -1387,7 +1337,7 @@
       "activeRepos": 4,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-10T09:15:52.861Z"
+      "lastUpdated": "2026-03-10T14:17:11.403Z"
     },
     {
       "name": "Media-Impact",
@@ -1395,7 +1345,7 @@
       "activeRepos": 14,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-10T09:15:52.861Z"
+      "lastUpdated": "2026-03-10T14:17:11.403Z"
     },
     {
       "name": "spring-media",
@@ -1574,7 +1524,7 @@
           "repoOwner": "Please choose a valid option!  "
         }
       ],
-      "lastUpdated": "2026-03-10T09:15:52.861Z"
+      "lastUpdated": "2026-03-10T14:17:11.403Z"
     },
     {
       "name": "welttv",
@@ -1823,21 +1773,15 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-10T09:15:52.861Z"
+      "lastUpdated": "2026-03-10T14:17:11.403Z"
     },
     {
       "name": "sales-impact",
-      "totalRepos": 150,
-      "activeRepos": 149,
-      "inactiveRepos": 1,
-      "inactiveList": [
-        {
-          "repo": "autobild-chatbot-exp",
-          "url": "https://github.com/sales-impact/autobild-chatbot-exp",
-          "repoOwner": "Please choose a valid option!"
-        }
-      ],
-      "lastUpdated": "2026-03-10T09:15:52.861Z"
+      "totalRepos": 0,
+      "activeRepos": 0,
+      "inactiveRepos": 0,
+      "inactiveList": [],
+      "lastUpdated": "2026-03-10T14:17:11.403Z"
     }
   ],
   "trends": [
@@ -2474,6 +2418,44 @@
       "welttv_active": 0,
       "sales-impact": 150,
       "sales-impact_active": 149
+    },
+    {
+      "date": "2026-03-10",
+      "AS-ASK-IT": 21,
+      "AS-ASK-IT_active": 21,
+      "as-cloud-services": 35,
+      "as-cloud-services_active": 35,
+      "asitservices": 771,
+      "asitservices_active": 500,
+      "axelspringer": 4,
+      "axelspringer_active": 4,
+      "Media-Impact": 14,
+      "Media-Impact_active": 14,
+      "spring-media": 1139,
+      "spring-media_active": 1105,
+      "welttv": 48,
+      "welttv_active": 0,
+      "sales-impact": 0,
+      "sales-impact_active": 0
+    },
+    {
+      "date": "2026-03-10",
+      "AS-ASK-IT": 21,
+      "AS-ASK-IT_active": 21,
+      "as-cloud-services": 35,
+      "as-cloud-services_active": 35,
+      "asitservices": 771,
+      "asitservices_active": 510,
+      "axelspringer": 4,
+      "axelspringer_active": 4,
+      "Media-Impact": 14,
+      "Media-Impact_active": 14,
+      "spring-media": 1139,
+      "spring-media_active": 1105,
+      "welttv": 48,
+      "welttv_active": 0,
+      "sales-impact": 0,
+      "sales-impact_active": 0
     }
   ]
 }

@@ -526,10 +526,10 @@
         grid.innerHTML = list.slice(0, 200).map(a => {
             const chips = (a.repos||[]).slice(0, 6).map(r => `<span class="chip">${r.org}/${r.repo}</span>`).join('');
             const more = (a.repos||[]).length > 6 ? `<span class="chip">+${a.repos.length - 6} mehr</span>` : '';
-            return `<div class="person-card">
+            return `<div class="person-card" style="cursor:pointer;" onclick="showAdminDetail('${a.login}')">
                 <img src="${a.avatar}&s=88" class="avatar" alt="${a.login}">
                 <div class="info">
-                    <a href="${a.profileUrl}" target="_blank" class="login-link">${a.login}</a>
+                    <a href="${a.profileUrl}" target="_blank" class="login-link" onclick="event.stopPropagation()">${a.login}</a>
                     <div class="meta">${permTag('admin')} &middot; ${a.repoCount} Repo${a.repoCount!==1?'s':''} &middot; ${(a.orgs||[]).length} Org${(a.orgs||[]).length>1?'s':''}</div>
                     <div class="chip-list">${chips}${more}</div>
                 </div>
@@ -592,17 +592,20 @@
             <div class="tab-panel active" id="panel-org-repos">
                 <div class="toolbar">
                     <input class="search-input" id="orgRepoSearch" placeholder="Repo suchen..." oninput="renderOrgRepos('${org.org}')">
+                    <input class="search-input" id="orgAdminFilter" placeholder="&#128269; Nach Admin filtern..." oninput="renderOrgRepos('${org.org}')" style="max-width:220px;">
                     <select class="select-input" id="orgRepoSort" onchange="renderOrgRepos('${org.org}')">
                         <option value="admins-desc">Admins &#8595;</option>
                         <option value="teams-desc">Teams &#8595;</option>
                         <option value="name-asc">Name A-Z</option>
                         <option value="pushed-desc">Letzter Push &#8595;</option>
+                        <option value="created-desc">Erstellt &#8595;</option>
+                        <option value="created-asc">Erstellt &#8593;</option>
                     </select>
                 </div>
                 <div class="table-wrapper"><table>
                     <thead><tr>
                         <th>Repository</th><th>Sprache</th><th>RepoOwner</th>
-                        <th>Direct Admins</th><th>Teams</th><th>Letzter Push</th><th>Sichtbarkeit</th>
+                        <th>Direct Admins</th><th>Teams</th><th>Erstellt</th><th>Letzter Push</th><th>Sichtbarkeit</th>
                     </tr></thead>
                     <tbody id="orgReposBody"></tbody>
                 </table></div>
@@ -637,27 +640,44 @@
         const org = DATA.organizations.find(o => o.org === orgName);
         if (!org) return;
         const search = (document.getElementById('orgRepoSearch')?.value || '').toLowerCase();
+        const adminFilter = (document.getElementById('orgAdminFilter')?.value || '').toLowerCase();
         const sort = document.getElementById('orgRepoSort')?.value || 'admins-desc';
         let repos = [...(org.repos||[])];
         if (search) repos = repos.filter(r => r.repo.toLowerCase().includes(search) || (r.description||'').toLowerCase().includes(search) || (r.language||'').toLowerCase().includes(search));
+        if (adminFilter) repos = repos.filter(r => (r.admins||[]).some(a => a.login.toLowerCase().includes(adminFilter)));
         repos.sort((a,b) => {
             switch(sort) {
                 case 'name-asc': return a.repo.localeCompare(b.repo);
                 case 'admins-desc': return (b.adminCount||0) - (a.adminCount||0);
                 case 'teams-desc': return (b.teamCount||0) - (a.teamCount||0);
                 case 'pushed-desc': return new Date(b.pushedAt||0) - new Date(a.pushedAt||0);
+                case 'created-desc': return new Date(b.createdAt||0) - new Date(a.createdAt||0);
+                case 'created-asc': return new Date(a.createdAt||0) - new Date(b.createdAt||0);
                 default: return 0;
             }
         });
         const body = document.getElementById('orgReposBody');
-        if (!repos.length) { body.innerHTML = '<tr><td colspan="7" class="empty">Keine Repos gefunden</td></tr>'; return; }
+        const adminInfo = adminFilter ? `<div style="margin-bottom:8px;font-size:13px;color:var(--orange);">&#128100; Filter: <strong>${esc(adminFilter)}</strong> &mdash; ${repos.length} Repo${repos.length!==1?'s':''} gefunden</div>` : '';
+        const infoDiv = body.parentElement.parentElement.querySelector('.admin-filter-info');
+        if (infoDiv) infoDiv.remove();
+        if (adminInfo) {
+            const div = document.createElement('div');
+            div.className = 'admin-filter-info';
+            div.innerHTML = adminInfo;
+            body.closest('.tab-panel').querySelector('.toolbar').after(div);
+        }
+        if (!repos.length) { body.innerHTML = '<tr><td colspan="8" class="empty">' + (adminFilter ? 'Keine Repos f&uuml;r Admin "'+esc(adminFilter)+'" gefunden' : 'Keine Repos gefunden') + '</td></tr>'; return; }
         body.innerHTML = repos.map(r => {
             const pushed = r.pushedAt ? new Date(r.pushedAt).toLocaleDateString('de-DE') : '-';
+            const created = r.createdAt ? new Date(r.createdAt).toLocaleDateString('de-DE') : '-';
             const ownerDisp = esc(r.repoOwner || 'null');
             const langClass = 'lc-' + (r.language || 'Unknown').replace(/[^a-zA-Z]/g, '');
             const admins = r.admins || [];
             const teams = r.teams || [];
-            let avatars = admins.slice(0,4).map(a => `<img src="${a.avatar}&s=48" alt="${a.login}" title="${a.login}">`).join('');
+            let avatars = admins.slice(0,4).map(a => {
+                const highlighted = adminFilter && a.login.toLowerCase().includes(adminFilter) ? 'border-color:var(--orange);' : '';
+                return `<img src="${a.avatar}&s=48" alt="${a.login}" title="${a.login}" style="${highlighted}">`;
+            }).join('');
             if (admins.length > 4) avatars += `<span class="more">+${admins.length-4}</span>`;
             if (!admins.length) avatars = '<span style="color:var(--text-muted);font-size:12px;">&mdash;</span>';
             const teamChips = teams.slice(0,3).map(t => permTag(t.permission) + ' ' + esc(t.name)).join(', ');
@@ -677,6 +697,7 @@
                 <td style="font-size:12px;color:var(--text-secondary);">
                     ${teams.length ? `<span style="font-size:12px;">${teamChips}${moreTeams}</span>` : '<span style="color:var(--text-muted);">&mdash;</span>'}
                 </td>
+                <td style="white-space:nowrap;font-size:13px;color:var(--text-secondary);">${created}</td>
                 <td style="white-space:nowrap;font-size:13px;color:var(--text-secondary);">${pushed}</td>
                 <td><span class="vis-tag ${visClass}">${r.visibility||'-'}</span></td>
             </tr>`;
@@ -696,10 +717,10 @@
         grid.innerHTML = list.map(a => {
             const chips = (a.repos||[]).slice(0,8).map(r => `<span class="chip">${r}</span>`).join('');
             const more = (a.repos||[]).length > 8 ? `<span class="chip">+${a.repos.length-8} mehr</span>` : '';
-            return `<div class="person-card">
+            return `<div class="person-card" style="cursor:pointer;" onclick="showOrgAdminDetail('${orgName}','${a.login}')">
                 <img src="${a.avatar}&s=88" class="avatar" alt="${a.login}">
                 <div class="info">
-                    <a href="${a.profileUrl}" target="_blank" class="login-link">${a.login}</a>
+                    <a href="${a.profileUrl}" target="_blank" class="login-link" onclick="event.stopPropagation()">${a.login}</a>
                     <div class="meta">${permTag('admin')} &middot; ${a.repoCount} Repo${a.repoCount!==1?'s':''}</div>
                     <div class="chip-list">${chips}${more}</div>
                 </div>
@@ -754,12 +775,15 @@
             <span style="font-size:13px;color:var(--text-muted);font-weight:normal;margin-left:8px;">${orgName}</span>
         `;
 
+        const created = repo.createdAt ? new Date(repo.createdAt).toLocaleDateString('de-DE') : '-';
+
         let html = `
             <div class="modal-stats">
                 <div class="modal-stat"><div class="num">${admins.length}</div><div class="lbl">Direct Admins</div></div>
                 <div class="modal-stat"><div class="num">${teams.length}</div><div class="lbl">Teams</div></div>
                 <div class="modal-stat"><div class="num" style="color:var(--danger);font-size:14px;">${esc(repo.repoOwner||'null')}</div><div class="lbl">RepoOwner</div></div>
                 <div class="modal-stat"><div class="num" style="font-size:16px;">${repo.language||'-'}</div><div class="lbl">Sprache</div></div>
+                <div class="modal-stat"><div class="num" style="font-size:14px;">${created}</div><div class="lbl">Erstellt</div></div>
                 <div class="modal-stat"><div class="num" style="font-size:14px;">${pushed}</div><div class="lbl">Letzter Push</div></div>
                 <div class="modal-stat"><div class="num" style="font-size:14px;">${repo.visibility||'-'}</div><div class="lbl">Sichtbarkeit</div></div>
             </div>
@@ -811,6 +835,67 @@
     }
 
     function closeModal() { document.getElementById('overlay').classList.remove('active'); }
+
+    // ===== ADMIN DETAIL =====
+    function showOrgAdminDetail(orgName, login) {
+        const filterInput = document.getElementById('orgAdminFilter');
+        if (filterInput) {
+            filterInput.value = login;
+            switchOrgTab('org-repos');
+            renderOrgRepos(orgName);
+        }
+    }
+
+    function showAdminDetail(login) {
+        const admin = (DATA.globalAdmins||[]).find(a => a.login === login);
+        if (!admin) return;
+
+        document.getElementById('modalTitle').innerHTML = `
+            <img src="${admin.avatar}&s=48" style="width:32px;height:32px;border-radius:50%;vertical-align:middle;margin-right:8px;">
+            <a href="${admin.profileUrl}" target="_blank" style="color:var(--accent);text-decoration:none;">${admin.login}</a>
+            <span style="font-size:13px;color:var(--text-muted);font-weight:normal;margin-left:8px;">${permTag('admin')}</span>
+        `;
+
+        const repos = (admin.repos||[]);
+        const orgs = [...new Set(repos.map(r => r.org))];
+
+        let html = `
+            <div class="modal-stats">
+                <div class="modal-stat"><div class="num" style="color:var(--danger);">${repos.length}</div><div class="lbl">Inaktive Repos</div></div>
+                <div class="modal-stat"><div class="num">${orgs.length}</div><div class="lbl">Organisation${orgs.length!==1?'en':''}</div></div>
+            </div>
+            <div class="modal-section-title">&#128230; Inaktive Repos mit Admin-Zugriff</div>
+            <div class="table-wrapper"><table style="font-size:13px;">
+                <thead><tr><th>Org</th><th>Repository</th><th>RepoOwner</th><th>Erstellt</th><th>Letzter Push</th><th>Sprache</th></tr></thead>
+                <tbody>
+        `;
+
+        for (const ref of repos) {
+            const orgData = DATA.organizations.find(o => o.org === ref.org);
+            const repoData = orgData ? (orgData.repos||[]).find(r => r.repo === ref.repo) : null;
+            const pushed = repoData?.pushedAt ? new Date(repoData.pushedAt).toLocaleDateString('de-DE') : '-';
+            const created = repoData?.createdAt ? new Date(repoData.createdAt).toLocaleDateString('de-DE') : '-';
+            const owner = esc(repoData?.repoOwner || 'null');
+            const lang = repoData?.language || '-';
+            const url = repoData?.url || `https://github.com/${ref.org}/${ref.repo}`;
+            html += `<tr>
+                <td style="color:var(--text-muted);">${ref.org}</td>
+                <td><a href="${url}" target="_blank" style="color:var(--accent);text-decoration:none;">${ref.repo}</a></td>
+                <td><span class="owner-tag">${owner}</span></td>
+                <td style="white-space:nowrap;color:var(--text-secondary);">${created}</td>
+                <td style="white-space:nowrap;color:var(--text-secondary);">${pushed}</td>
+                <td style="color:var(--text-secondary);">${lang}</td>
+            </tr>`;
+        }
+
+        html += '</tbody></table></div>';
+        html += `<div style="margin-top:16px;text-align:center;">
+            <a href="${admin.profileUrl}" target="_blank" style="color:var(--accent);text-decoration:none;font-size:13px;">GitHub Profil &ouml;ffnen &rarr;</a>
+        </div>`;
+
+        document.getElementById('modalBody').innerHTML = html;
+        document.getElementById('overlay').classList.add('active');
+    }
 
     // ===== HELPERS =====
     function sortByField(list, sort) {
