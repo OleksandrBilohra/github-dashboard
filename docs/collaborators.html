@@ -592,7 +592,10 @@
             <div class="tab-panel active" id="panel-org-repos">
                 <div class="toolbar">
                     <input class="search-input" id="orgRepoSearch" placeholder="Repo suchen..." oninput="renderOrgRepos('${org.org}')">
-                    <input class="search-input" id="orgAdminFilter" placeholder="&#128269; Nach Admin filtern..." oninput="renderOrgRepos('${org.org}')" style="max-width:220px;">
+                    <select class="select-input" id="orgAdminFilter" onchange="renderOrgRepos('${org.org}')" style="max-width:240px;">
+                        <option value="">Alle Admins</option>
+                        ${(org.admins||[]).sort((a,b)=>a.login.localeCompare(b.login)).map(a => `<option value="${a.login}">${a.login} (${a.repoCount})</option>`).join('')}
+                    </select>
                     <select class="select-input" id="orgRepoSort" onchange="renderOrgRepos('${org.org}')">
                         <option value="admins-desc">Admins &#8595;</option>
                         <option value="teams-desc">Teams &#8595;</option>
@@ -602,6 +605,7 @@
                         <option value="created-asc">Erstellt &#8593;</option>
                     </select>
                 </div>
+                <div id="adminFilterInfo" style="display:none;margin-bottom:8px;padding:8px 12px;background:rgba(240,136,62,0.1);border:1px solid rgba(240,136,62,0.3);border-radius:6px;font-size:13px;color:var(--orange);display:flex;align-items:center;justify-content:space-between;"></div>
                 <div class="table-wrapper"><table>
                     <thead><tr>
                         <th>Repository</th><th>Sprache</th><th>RepoOwner</th>
@@ -640,11 +644,11 @@
         const org = DATA.organizations.find(o => o.org === orgName);
         if (!org) return;
         const search = (document.getElementById('orgRepoSearch')?.value || '').toLowerCase();
-        const adminFilter = (document.getElementById('orgAdminFilter')?.value || '').toLowerCase();
+        const adminFilter = document.getElementById('orgAdminFilter')?.value || '';
         const sort = document.getElementById('orgRepoSort')?.value || 'admins-desc';
         let repos = [...(org.repos||[])];
         if (search) repos = repos.filter(r => r.repo.toLowerCase().includes(search) || (r.description||'').toLowerCase().includes(search) || (r.language||'').toLowerCase().includes(search));
-        if (adminFilter) repos = repos.filter(r => (r.admins||[]).some(a => a.login.toLowerCase().includes(adminFilter)));
+        if (adminFilter) repos = repos.filter(r => (r.admins||[]).some(a => a.login === adminFilter));
         repos.sort((a,b) => {
             switch(sort) {
                 case 'name-asc': return a.repo.localeCompare(b.repo);
@@ -657,14 +661,15 @@
             }
         });
         const body = document.getElementById('orgReposBody');
-        const adminInfo = adminFilter ? `<div style="margin-bottom:8px;font-size:13px;color:var(--orange);">&#128100; Filter: <strong>${esc(adminFilter)}</strong> &mdash; ${repos.length} Repo${repos.length!==1?'s':''} gefunden</div>` : '';
-        const infoDiv = body.parentElement.parentElement.querySelector('.admin-filter-info');
-        if (infoDiv) infoDiv.remove();
-        if (adminInfo) {
-            const div = document.createElement('div');
-            div.className = 'admin-filter-info';
-            div.innerHTML = adminInfo;
-            body.closest('.tab-panel').querySelector('.toolbar').after(div);
+        const infoBox = document.getElementById('adminFilterInfo');
+        if (infoBox) {
+            if (adminFilter) {
+                infoBox.style.display = 'flex';
+                infoBox.innerHTML = `<span>&#128100; <strong>${esc(adminFilter)}</strong> &mdash; ${repos.length} inaktive Repo${repos.length!==1?'s':''}</span><button onclick="document.getElementById('orgAdminFilter').value='';renderOrgRepos('${orgName}')" style="background:none;border:1px solid var(--orange);color:var(--orange);border-radius:4px;padding:2px 8px;cursor:pointer;font-size:12px;">&#10005; Filter entfernen</button>`;
+            } else {
+                infoBox.style.display = 'none';
+                infoBox.innerHTML = '';
+            }
         }
         if (!repos.length) { body.innerHTML = '<tr><td colspan="8" class="empty">' + (adminFilter ? 'Keine Repos f&uuml;r Admin "'+esc(adminFilter)+'" gefunden' : 'Keine Repos gefunden') + '</td></tr>'; return; }
         body.innerHTML = repos.map(r => {
@@ -675,7 +680,7 @@
             const admins = r.admins || [];
             const teams = r.teams || [];
             let avatars = admins.slice(0,4).map(a => {
-                const highlighted = adminFilter && a.login.toLowerCase().includes(adminFilter) ? 'border-color:var(--orange);' : '';
+                const highlighted = adminFilter && a.login === adminFilter ? 'border-color:var(--orange);' : '';
                 return `<img src="${a.avatar}&s=48" alt="${a.login}" title="${a.login}" style="${highlighted}">`;
             }).join('');
             if (admins.length > 4) avatars += `<span class="more">+${admins.length-4}</span>`;
@@ -838,10 +843,10 @@
 
     // ===== ADMIN DETAIL =====
     function showOrgAdminDetail(orgName, login) {
-        const filterInput = document.getElementById('orgAdminFilter');
-        if (filterInput) {
-            filterInput.value = login;
-            switchOrgTab('org-repos');
+        switchOrgTab('org-repos');
+        const filterSelect = document.getElementById('orgAdminFilter');
+        if (filterSelect) {
+            filterSelect.value = login;
             renderOrgRepos(orgName);
         }
     }
