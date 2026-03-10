@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Security tracking dashboard",
   "scripts": {
-    "collect": "node scripts/collect-data.js",
-    "collect:contributors": "node scripts/collect-contributors.js"
+    "collect": "node scripts/collect-data.js"
   }
 }
