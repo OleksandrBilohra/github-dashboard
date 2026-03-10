@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T00:37:44.201Z",
+  "generatedAt": "2026-03-10T09:15:52.861Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
@@ -7,7 +7,7 @@
       "activeRepos": 21,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-10T00:37:44.201Z"
+      "lastUpdated": "2026-03-10T09:15:52.861Z"
     },
     {
       "name": "as-cloud-services",
@@ -15,13 +15,13 @@
       "activeRepos": 35,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-10T00:37:44.201Z"
+      "lastUpdated": "2026-03-10T09:15:52.861Z"
     },
     {
       "name": "asitservices",
-      "totalRepos": 772,
+      "totalRepos": 771,
       "activeRepos": 500,
-      "inactiveRepos": 272,
+      "inactiveRepos": 271,
       "inactiveList": [
         {
           "repo": "ins-cd-terraform-aws-account-asit-security-controls",
@@ -241,11 +241,6 @@
         {
           "repo": "aws-as-asit-misc_pgadmin",
           "url": "https://github.com/asitservices/aws-as-asit-misc_pgadmin",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "de.axelspringer.ArticlePanel",
-          "url": "https://github.com/asitservices/de.axelspringer.ArticlePanel",
           "repoOwner": "Please choose a valid option!"
         },
         {
@@ -626,11 +621,6 @@
         {
           "repo": "ASV_Setup_network_fix",
           "url": "https://github.com/asitservices/ASV_Setup_network_fix",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "Computername-Swift",
-          "url": "https://github.com/asitservices/Computername-Swift",
           "repoOwner": "Please choose a valid option!"
         },
         {
@@ -1382,9 +1372,14 @@
           "repo": "SAP-FICO",
           "url": "https://github.com/asitservices/SAP-FICO",
           "repoOwner": "Please choose a valid option!"
+        },
+        {
+          "repo": "ki-coding-seminar",
+          "url": "https://github.com/asitservices/ki-coding-seminar",
+          "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-10T00:37:44.201Z"
+      "lastUpdated": "2026-03-10T09:15:52.861Z"
     },
     {
       "name": "axelspringer",
@@ -1392,7 +1387,7 @@
       "activeRepos": 4,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-10T00:37:44.201Z"
+      "lastUpdated": "2026-03-10T09:15:52.861Z"
     },
     {
       "name": "Media-Impact",
@@ -1400,7 +1395,7 @@
       "activeRepos": 14,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-10T00:37:44.201Z"
+      "lastUpdated": "2026-03-10T09:15:52.861Z"
     },
     {
       "name": "spring-media",
@@ -1579,7 +1574,7 @@
           "repoOwner": "Please choose a valid option!  "
         }
       ],
-      "lastUpdated": "2026-03-10T00:37:44.201Z"
+      "lastUpdated": "2026-03-10T09:15:52.861Z"
     },
     {
       "name": "welttv",
@@ -1828,7 +1823,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-10T00:37:44.201Z"
+      "lastUpdated": "2026-03-10T09:15:52.861Z"
     },
     {
       "name": "sales-impact",
@@ -1842,7 +1837,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-10T00:37:44.201Z"
+      "lastUpdated": "2026-03-10T09:15:52.861Z"
     }
   ],
   "trends": [
@@ -2449,6 +2444,25 @@
       "as-cloud-services": 35,
       "as-cloud-services_active": 35,
       "asitservices": 772,
+      "asitservices_active": 500,
+      "axelspringer": 4,
+      "axelspringer_active": 4,
+      "Media-Impact": 14,
+      "Media-Impact_active": 14,
+      "spring-media": 1139,
+      "spring-media_active": 1105,
+      "welttv": 48,
+      "welttv_active": 0,
+      "sales-impact": 150,
+      "sales-impact_active": 149
+    },
+    {
+      "date": "2026-03-10",
+      "AS-ASK-IT": 21,
+      "AS-ASK-IT_active": 21,
+      "as-cloud-services": 35,
+      "as-cloud-services_active": 35,
+      "asitservices": 771,
       "asitservices_active": 500,
       "axelspringer": 4,
       "axelspringer_active": 4,
