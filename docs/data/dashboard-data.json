@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-11T01:43:13.837Z",
+  "generatedAt": "2026-03-11T09:42:59.045Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
@@ -7,7 +7,7 @@
       "activeRepos": 21,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-11T01:43:13.837Z"
+      "lastUpdated": "2026-03-11T09:42:59.045Z"
     },
     {
       "name": "as-cloud-services",
@@ -15,13 +15,13 @@
       "activeRepos": 35,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-11T01:43:13.837Z"
+      "lastUpdated": "2026-03-11T09:42:59.045Z"
     },
     {
       "name": "asitservices",
-      "totalRepos": 771,
-      "activeRepos": 510,
-      "inactiveRepos": 261,
+      "totalRepos": 772,
+      "activeRepos": 512,
+      "inactiveRepos": 260,
       "inactiveList": [
         {
           "repo": "ins-cd-terraform-aws-account-asit-security-controls",
@@ -1104,11 +1104,6 @@
           "repoOwner": "Please choose a valid option!"
         },
         {
-          "repo": "ww-plugins-StateCheck",
-          "url": "https://github.com/asitservices/ww-plugins-StateCheck",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
           "repo": "Jira-Search-Limitless-Exporter",
           "url": "https://github.com/asitservices/Jira-Search-Limitless-Exporter",
           "repoOwner": "Please choose a valid option!"
@@ -1329,7 +1324,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-11T01:43:13.837Z"
+      "lastUpdated": "2026-03-11T09:42:59.045Z"
     },
     {
       "name": "axelspringer",
@@ -1337,7 +1332,7 @@
       "activeRepos": 4,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-11T01:43:13.837Z"
+      "lastUpdated": "2026-03-11T09:42:59.045Z"
     },
     {
       "name": "Media-Impact",
@@ -1345,7 +1340,7 @@
       "activeRepos": 14,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-11T01:43:13.837Z"
+      "lastUpdated": "2026-03-11T09:42:59.045Z"
     },
     {
       "name": "spring-media",
@@ -1529,7 +1524,7 @@
           "repoOwner": "Please choose a valid option!  "
         }
       ],
-      "lastUpdated": "2026-03-11T01:43:13.837Z"
+      "lastUpdated": "2026-03-11T09:42:59.045Z"
     },
     {
       "name": "welttv",
@@ -1778,7 +1773,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-11T01:43:13.837Z"
+      "lastUpdated": "2026-03-11T09:42:59.045Z"
     },
     {
       "name": "sales-impact",
@@ -1792,7 +1787,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-11T01:43:13.837Z"
+      "lastUpdated": "2026-03-11T09:42:59.045Z"
     }
   ],
   "trends": [
@@ -2476,6 +2471,25 @@
       "as-cloud-services_active": 35,
       "asitservices": 771,
       "asitservices_active": 510,
+      "axelspringer": 4,
+      "axelspringer_active": 4,
+      "Media-Impact": 14,
+      "Media-Impact_active": 14,
+      "spring-media": 1140,
+      "spring-media_active": 1105,
+      "welttv": 48,
+      "welttv_active": 0,
+      "sales-impact": 151,
+      "sales-impact_active": 150
+    },
+    {
+      "date": "2026-03-11",
+      "AS-ASK-IT": 21,
+      "AS-ASK-IT_active": 21,
+      "as-cloud-services": 35,
+      "as-cloud-services_active": 35,
+      "asitservices": 772,
+      "asitservices_active": 512,
       "axelspringer": 4,
       "axelspringer_active": 4,
       "Media-Impact": 14,

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-11T01:43:13.837Z",
+  "generatedAt": "2026-03-11T09:42:59.045Z",
   "globalStats": {
     "totalOrgs": 8,
-    "totalRepos": 2184,
-    "totalInactiveRepos": 345,
+    "totalRepos": 2185,
+    "totalInactiveRepos": 344,
     "totalUniqueAdmins": 54,
     "totalUniqueTeams": 30
   },
@@ -297,42 +297,6 @@
       ]
     },
     {
-      "login": "AnkeAugustin",
-      "avatar": "https://avatars.githubusercontent.com/u/78349035?v=4",
-      "profileUrl": "https://github.com/AnkeAugustin",
-      "role": "admin",
-      "repoCount": 6,
-      "orgs": [
-        "asitservices"
-      ],
-      "repos": [
-        {
-          "org": "asitservices",
-          "repo": "zs_sammelpaket"
-        },
-        {
-          "org": "asitservices",
-          "repo": "zs_sammelpaket_packages"
-        },
-        {
-          "org": "asitservices",
-          "repo": "zs_scripts-plugins"
-        },
-        {
-          "org": "asitservices",
-          "repo": "zs_support"
-        },
-        {
-          "org": "asitservices",
-          "repo": "ww-plugins-StateCheck"
-        },
-        {
-          "org": "asitservices",
-          "repo": "zs_defaults_ID-IC"
-        }
-      ]
-    },
-    {
       "login": "NeekuAl",
       "avatar": "https://avatars.githubusercontent.com/u/62135056?v=4",
       "profileUrl": "https://github.com/NeekuAl",
@@ -433,6 +397,38 @@
         {
           "org": "asitservices",
           "repo": "ocp-connect"
+        }
+      ]
+    },
+    {
+      "login": "AnkeAugustin",
+      "avatar": "https://avatars.githubusercontent.com/u/78349035?v=4",
+      "profileUrl": "https://github.com/AnkeAugustin",
+      "role": "admin",
+      "repoCount": 5,
+      "orgs": [
+        "asitservices"
+      ],
+      "repos": [
+        {
+          "org": "asitservices",
+          "repo": "zs_sammelpaket"
+        },
+        {
+          "org": "asitservices",
+          "repo": "zs_sammelpaket_packages"
+        },
+        {
+          "org": "asitservices",
+          "repo": "zs_scripts-plugins"
+        },
+        {
+          "org": "asitservices",
+          "repo": "zs_support"
+        },
+        {
+          "org": "asitservices",
+          "repo": "zs_defaults_ID-IC"
         }
       ]
     },
@@ -1264,7 +1260,7 @@
       "description": "",
       "url": "https://github.com/orgs/asitservices/teams/admin-intern",
       "org": "asitservices",
-      "repoCount": 261,
+      "repoCount": 260,
       "repos": [
         {
           "repo": "ins-cd-terraform-aws-account-asit-security-controls",
@@ -2131,10 +2127,6 @@
           "permission": "pull"
         },
         {
-          "repo": "ww-plugins-StateCheck",
-          "permission": "pull"
-        },
-        {
           "repo": "Jira-Search-Limitless-Exporter",
           "permission": "pull"
         },
@@ -2312,7 +2304,7 @@
         }
       ],
       "permissions": {
-        "pull": 261
+        "pull": 260
       }
     },
     {
@@ -3087,7 +3079,7 @@
       "description": "Magazines",
       "url": "https://github.com/orgs/asitservices/teams/magazines",
       "org": "asitservices",
-      "repoCount": 11,
+      "repoCount": 10,
       "repos": [
         {
           "repo": "de.axelspringer.PRINTERPREFS",
@@ -3126,17 +3118,13 @@
           "permission": "maintain"
         },
         {
-          "repo": "ww-plugins-StateCheck",
-          "permission": "maintain"
-        },
-        {
           "repo": "zs_defaults_ID-IC",
           "permission": "maintain"
         }
       ],
       "permissions": {
         "admin": 5,
-        "maintain": 6
+        "maintain": 5
       }
     },
     {
@@ -3685,8 +3673,8 @@
     },
     {
       "org": "asitservices",
-      "totalRepos": 771,
-      "inactiveRepoCount": 261,
+      "totalRepos": 772,
+      "inactiveRepoCount": 260,
       "totalUniqueAdmins": 32,
       "totalUniqueTeams": 19,
       "repos": [
@@ -10270,46 +10258,6 @@
           ]
         },
         {
-          "repo": "ww-plugins-StateCheck",
-          "url": "https://github.com/asitservices/ww-plugins-StateCheck",
-          "repoOwner": "Please choose a valid option!",
-          "description": "Checkt beim Einchecken auf definierte Artikelstatus",
-          "language": "PHP",
-          "pushedAt": "2025-01-27T08:33:47Z",
-          "createdAt": "2023-11-28T10:04:11Z",
-          "visibility": "internal",
-          "size": 50,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 2,
-          "admins": [
-            {
-              "login": "AnkeAugustin",
-              "avatar": "https://avatars.githubusercontent.com/u/78349035?v=4",
-              "profileUrl": "https://github.com/AnkeAugustin",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Magazines",
-              "slug": "magazines",
-              "description": "Magazines",
-              "permission": "maintain",
-              "url": "https://github.com/orgs/asitservices/teams/magazines"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
           "repo": "Jira-Search-Limitless-Exporter",
           "url": "https://github.com/asitservices/Jira-Search-Limitless-Exporter",
           "repoOwner": "Please choose a valid option!",
@@ -11966,21 +11914,6 @@
           ]
         },
         {
-          "login": "AnkeAugustin",
-          "avatar": "https://avatars.githubusercontent.com/u/78349035?v=4",
-          "profileUrl": "https://github.com/AnkeAugustin",
-          "role": "admin",
-          "repoCount": 6,
-          "repos": [
-            "zs_sammelpaket",
-            "zs_sammelpaket_packages",
-            "zs_scripts-plugins",
-            "zs_support",
-            "ww-plugins-StateCheck",
-            "zs_defaults_ID-IC"
-          ]
-        },
-        {
           "login": "NeekuAl",
           "avatar": "https://avatars.githubusercontent.com/u/62135056?v=4",
           "profileUrl": "https://github.com/NeekuAl",
@@ -12007,6 +11940,20 @@
             "asit-revision",
             "asit-gh-action-combine-prs",
             "ocp-connect"
+          ]
+        },
+        {
+          "login": "AnkeAugustin",
+          "avatar": "https://avatars.githubusercontent.com/u/78349035?v=4",
+          "profileUrl": "https://github.com/AnkeAugustin",
+          "role": "admin",
+          "repoCount": 5,
+          "repos": [
+            "zs_sammelpaket",
+            "zs_sammelpaket_packages",
+            "zs_scripts-plugins",
+            "zs_support",
+            "zs_defaults_ID-IC"
           ]
         },
         {
@@ -12283,7 +12230,7 @@
           "slug": "admin-intern",
           "description": "",
           "url": "https://github.com/orgs/asitservices/teams/admin-intern",
-          "repoCount": 261,
+          "repoCount": 260,
           "repos": [
             {
               "repo": "ins-cd-terraform-aws-account-asit-security-controls",
@@ -13150,10 +13097,6 @@
               "permission": "pull"
             },
             {
-              "repo": "ww-plugins-StateCheck",
-              "permission": "pull"
-            },
-            {
               "repo": "Jira-Search-Limitless-Exporter",
               "permission": "pull"
             },
@@ -13331,7 +13274,7 @@
             }
           ],
           "permissions": {
-            "pull": 261
+            "pull": 260
           }
         },
         {
@@ -13591,7 +13534,7 @@
           "slug": "magazines",
           "description": "Magazines",
           "url": "https://github.com/orgs/asitservices/teams/magazines",
-          "repoCount": 11,
+          "repoCount": 10,
           "repos": [
             {
               "repo": "de.axelspringer.PRINTERPREFS",
@@ -13630,17 +13573,13 @@
               "permission": "maintain"
             },
             {
-              "repo": "ww-plugins-StateCheck",
-              "permission": "maintain"
-            },
-            {
               "repo": "zs_defaults_ID-IC",
               "permission": "maintain"
             }
           ],
           "permissions": {
             "admin": 5,
-            "maintain": 6
+            "maintain": 5
           }
         },
         {
@@ -15387,10 +15326,10 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "Chrome extension: Test APIs, parse curl commands, explore JSON/YAML/XML/CSV responses",
           "language": "JavaScript",
-          "pushedAt": "2026-03-10T17:03:34Z",
+          "pushedAt": "2026-03-11T08:34:39Z",
           "createdAt": "2026-03-06T09:09:59Z",
           "visibility": "internal",
-          "size": 394,
+          "size": 447,
           "openIssues": 0,
           "forks": 0,
           "stars": 0,
