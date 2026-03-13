@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-03-13T01:46:51.111Z",
+  "generatedAt": "2026-03-13T09:39:00.691Z",
   "globalStats": {
     "totalOrgs": 8,
-    "totalRepos": 2082,
-    "totalInactiveRepos": 146,
-    "totalUniqueAdmins": 33,
-    "totalUniqueTeams": 29
+    "totalRepos": 2080,
+    "totalInactiveRepos": 128,
+    "totalUniqueAdmins": 24,
+    "totalUniqueTeams": 26
   },
   "globalAdmins": [
     {
@@ -141,66 +141,6 @@
       ]
     },
     {
-      "login": "rayburrows",
-      "avatar": "https://avatars.githubusercontent.com/u/16387128?v=4",
-      "profileUrl": "https://github.com/rayburrows",
-      "role": "admin",
-      "repoCount": 5,
-      "orgs": [
-        "asitservices"
-      ],
-      "repos": [
-        {
-          "org": "asitservices",
-          "repo": "imagexmpextract"
-        },
-        {
-          "org": "asitservices",
-          "repo": "photo-uploadportal"
-        },
-        {
-          "org": "asitservices",
-          "repo": "idsocketservice"
-        },
-        {
-          "org": "asitservices",
-          "repo": "zxpbuilder"
-        },
-        {
-          "org": "asitservices",
-          "repo": "image-map-resizer"
-        }
-      ]
-    },
-    {
-      "login": "NeekuAl",
-      "avatar": "https://avatars.githubusercontent.com/u/62135056?v=4",
-      "profileUrl": "https://github.com/NeekuAl",
-      "role": "admin",
-      "repoCount": 4,
-      "orgs": [
-        "asitservices"
-      ],
-      "repos": [
-        {
-          "org": "asitservices",
-          "repo": "demo-toolkit"
-        },
-        {
-          "org": "asitservices",
-          "repo": "ivm-automation-toolkit"
-        },
-        {
-          "org": "asitservices",
-          "repo": "sts-pki-scripts"
-        },
-        {
-          "org": "asitservices",
-          "repo": "asit-cise-api"
-        }
-      ]
-    },
-    {
       "login": "noraiz-anwar",
       "avatar": "https://avatars.githubusercontent.com/u/22347092?v=4",
       "profileUrl": "https://github.com/noraiz-anwar",
@@ -257,26 +197,6 @@
       ]
     },
     {
-      "login": "j9magayanes",
-      "avatar": "https://avatars.githubusercontent.com/u/100691918?v=4",
-      "profileUrl": "https://github.com/j9magayanes",
-      "role": "admin",
-      "repoCount": 2,
-      "orgs": [
-        "asitservices"
-      ],
-      "repos": [
-        {
-          "org": "asitservices",
-          "repo": "pmaclient"
-        },
-        {
-          "org": "asitservices",
-          "repo": "pmaserver"
-        }
-      ]
-    },
-    {
       "login": "patrikrohrmann",
       "avatar": "https://avatars.githubusercontent.com/u/250340322?v=4",
       "profileUrl": "https://github.com/patrikrohrmann",
@@ -297,9 +217,9 @@
       ]
     },
     {
-      "login": "carstenappenheimer",
-      "avatar": "https://avatars.githubusercontent.com/u/67414974?v=4",
-      "profileUrl": "https://github.com/carstenappenheimer",
+      "login": "j9magayanes",
+      "avatar": "https://avatars.githubusercontent.com/u/100691918?v=4",
+      "profileUrl": "https://github.com/j9magayanes",
       "role": "admin",
       "repoCount": 1,
       "orgs": [
@@ -308,103 +228,7 @@
       "repos": [
         {
           "org": "asitservices",
-          "repo": "aws-as-asit-tableau-server"
-        }
-      ]
-    },
-    {
-      "login": "ipdarshi",
-      "avatar": "https://avatars.githubusercontent.com/u/75678577?v=4",
-      "profileUrl": "https://github.com/ipdarshi",
-      "role": "admin",
-      "repoCount": 1,
-      "orgs": [
-        "asitservices"
-      ],
-      "repos": [
-        {
-          "org": "asitservices",
-          "repo": "as-mulesoft-sl-advertising-api"
-        }
-      ]
-    },
-    {
-      "login": "Vincentbri",
-      "avatar": "https://avatars.githubusercontent.com/u/90624206?v=4",
-      "profileUrl": "https://github.com/Vincentbri",
-      "role": "admin",
-      "repoCount": 1,
-      "orgs": [
-        "asitservices"
-      ],
-      "repos": [
-        {
-          "org": "asitservices",
-          "repo": "COLLA_Vincent_Test"
-        }
-      ]
-    },
-    {
-      "login": "ewendele",
-      "avatar": "https://avatars.githubusercontent.com/u/74550025?v=4",
-      "profileUrl": "https://github.com/ewendele",
-      "role": "admin",
-      "repoCount": 1,
-      "orgs": [
-        "asitservices"
-      ],
-      "repos": [
-        {
-          "org": "asitservices",
-          "repo": "as-stammdaten"
-        }
-      ]
-    },
-    {
-      "login": "egoecmez",
-      "avatar": "https://avatars.githubusercontent.com/u/55242841?v=4",
-      "profileUrl": "https://github.com/egoecmez",
-      "role": "admin",
-      "repoCount": 1,
-      "orgs": [
-        "asitservices"
-      ],
-      "repos": [
-        {
-          "org": "asitservices",
-          "repo": "AS.O365.ASK"
-        }
-      ]
-    },
-    {
-      "login": "Sascha-Newbie",
-      "avatar": "https://avatars.githubusercontent.com/u/177003893?v=4",
-      "profileUrl": "https://github.com/Sascha-Newbie",
-      "role": "admin",
-      "repoCount": 1,
-      "orgs": [
-        "asitservices"
-      ],
-      "repos": [
-        {
-          "org": "asitservices",
-          "repo": "control_planungstool"
-        }
-      ]
-    },
-    {
-      "login": "BriwwWoxoW",
-      "avatar": "https://avatars.githubusercontent.com/u/110679604?v=4",
-      "profileUrl": "https://github.com/BriwwWoxoW",
-      "role": "admin",
-      "repoCount": 1,
-      "orgs": [
-        "asitservices"
-      ],
-      "repos": [
-        {
-          "org": "asitservices",
-          "repo": "ec_NextDAM_webhooks_customactions"
+          "repo": "pmaserver"
         }
       ]
     },
@@ -682,239 +506,6 @@
     }
   ],
   "globalTeams": [
-    {
-      "name": "Admin - Intern",
-      "slug": "admin-intern",
-      "description": "",
-      "url": "https://github.com/orgs/asitservices/teams/admin-intern",
-      "org": "asitservices",
-      "repoCount": 55,
-      "repos": [
-        {
-          "repo": "angebotsliste_discard",
-          "permission": "pull"
-        },
-        {
-          "repo": "angebotsliste",
-          "permission": "pull"
-        },
-        {
-          "repo": "zentral-ident",
-          "permission": "pull"
-        },
-        {
-          "repo": "aws-tableau-trusted-host",
-          "permission": "pull"
-        },
-        {
-          "repo": "de.axelspringer.PRINTERPREFS",
-          "permission": "pull"
-        },
-        {
-          "repo": "imagexmpextract",
-          "permission": "pull"
-        },
-        {
-          "repo": "photo-uploadportal",
-          "permission": "pull"
-        },
-        {
-          "repo": "idsocketservice",
-          "permission": "pull"
-        },
-        {
-          "repo": "zxpbuilder",
-          "permission": "pull"
-        },
-        {
-          "repo": "aws-as-asit-tableau-server",
-          "permission": "pull"
-        },
-        {
-          "repo": "jsu-labrep",
-          "permission": "pull"
-        },
-        {
-          "repo": "zahlungsanweisung",
-          "permission": "pull"
-        },
-        {
-          "repo": "as-sfdc-regio",
-          "permission": "pull"
-        },
-        {
-          "repo": "as-mulesoft-sl-advertising-api",
-          "permission": "pull"
-        },
-        {
-          "repo": "github-image-scanner-log4j",
-          "permission": "pull"
-        },
-        {
-          "repo": "Test-Colla-Amadeus",
-          "permission": "pull"
-        },
-        {
-          "repo": "image-map-resizer",
-          "permission": "pull"
-        },
-        {
-          "repo": "terraform-aws-module-workshop",
-          "permission": "pull"
-        },
-        {
-          "repo": "terragrunt-aws-development-host-cna",
-          "permission": "pull"
-        },
-        {
-          "repo": "KB_test",
-          "permission": "pull"
-        },
-        {
-          "repo": "COLLA_Vincent_Test",
-          "permission": "pull"
-        },
-        {
-          "repo": "ui5_fi_angebotsliste",
-          "permission": "pull"
-        },
-        {
-          "repo": "pmaclient",
-          "permission": "pull"
-        },
-        {
-          "repo": "pmaserver",
-          "permission": "pull"
-        },
-        {
-          "repo": "invoicecheck",
-          "permission": "pull"
-        },
-        {
-          "repo": "ansible-epc-WeltN24",
-          "permission": "pull"
-        },
-        {
-          "repo": "ww_server_packages",
-          "permission": "pull"
-        },
-        {
-          "repo": "Mail_EmailEvents_Reporting",
-          "permission": "pull"
-        },
-        {
-          "repo": "github-enterprise-licensereport",
-          "permission": "pull"
-        },
-        {
-          "repo": "da-docker",
-          "permission": "pull"
-        },
-        {
-          "repo": "Mail_SpamHandling_DailyReport",
-          "permission": "pull"
-        },
-        {
-          "repo": "as-stammdaten",
-          "permission": "pull"
-        },
-        {
-          "repo": "as-mulesoft-dwl-ASUtil",
-          "permission": "pull"
-        },
-        {
-          "repo": "AS.O365.ASK",
-          "permission": "pull"
-        },
-        {
-          "repo": "Confluence-Space-ID",
-          "permission": "pull"
-        },
-        {
-          "repo": "demo-toolkit",
-          "permission": "pull"
-        },
-        {
-          "repo": "ivm-automation-toolkit",
-          "permission": "pull"
-        },
-        {
-          "repo": "Jira-Search-Limitless-Exporter",
-          "permission": "pull"
-        },
-        {
-          "repo": "sts-pki-scripts",
-          "permission": "pull"
-        },
-        {
-          "repo": "asit-cise-api",
-          "permission": "pull"
-        },
-        {
-          "repo": "AzureFileProjektMigrationScripts",
-          "permission": "pull"
-        },
-        {
-          "repo": "AzureFiles_TearShareAnalytics",
-          "permission": "pull"
-        },
-        {
-          "repo": "HTML_Templates",
-          "permission": "pull"
-        },
-        {
-          "repo": "ansible-environment",
-          "permission": "pull"
-        },
-        {
-          "repo": "ccs-helm-charts",
-          "permission": "pull"
-        },
-        {
-          "repo": "ansible-vxrailmig",
-          "permission": "pull"
-        },
-        {
-          "repo": "monorepo_SAPUI5",
-          "permission": "pull"
-        },
-        {
-          "repo": "asit-vm-templates",
-          "permission": "pull"
-        },
-        {
-          "repo": "asit-vm-ansible",
-          "permission": "pull"
-        },
-        {
-          "repo": "migrationScriptsV8",
-          "permission": "pull"
-        },
-        {
-          "repo": "control_planungstool",
-          "permission": "pull"
-        },
-        {
-          "repo": "User-Remover-Rovo-Agent",
-          "permission": "pull"
-        },
-        {
-          "repo": "asit-config-ansible",
-          "permission": "pull"
-        },
-        {
-          "repo": "ec_NextDAM_webhooks_customactions",
-          "permission": "pull"
-        },
-        {
-          "repo": "SAP-FICO",
-          "permission": "pull"
-        }
-      ],
-      "permissions": {
-        "pull": 55
-      }
-    },
     {
       "name": "Admin - Intern",
       "slug": "admin-intern",
@@ -1475,6 +1066,167 @@
       }
     },
     {
+      "name": "Admin - Intern",
+      "slug": "admin-intern",
+      "description": "",
+      "url": "https://github.com/orgs/asitservices/teams/admin-intern",
+      "org": "asitservices",
+      "repoCount": 37,
+      "repos": [
+        {
+          "repo": "angebotsliste_discard",
+          "permission": "pull"
+        },
+        {
+          "repo": "angebotsliste",
+          "permission": "pull"
+        },
+        {
+          "repo": "zentral-ident",
+          "permission": "pull"
+        },
+        {
+          "repo": "aws-tableau-trusted-host",
+          "permission": "pull"
+        },
+        {
+          "repo": "de.axelspringer.PRINTERPREFS",
+          "permission": "pull"
+        },
+        {
+          "repo": "jsu-labrep",
+          "permission": "pull"
+        },
+        {
+          "repo": "zahlungsanweisung",
+          "permission": "pull"
+        },
+        {
+          "repo": "as-sfdc-regio",
+          "permission": "pull"
+        },
+        {
+          "repo": "github-image-scanner-log4j",
+          "permission": "pull"
+        },
+        {
+          "repo": "Test-Colla-Amadeus",
+          "permission": "pull"
+        },
+        {
+          "repo": "terraform-aws-module-workshop",
+          "permission": "pull"
+        },
+        {
+          "repo": "terragrunt-aws-development-host-cna",
+          "permission": "pull"
+        },
+        {
+          "repo": "KB_test",
+          "permission": "pull"
+        },
+        {
+          "repo": "ui5_fi_angebotsliste",
+          "permission": "pull"
+        },
+        {
+          "repo": "pmaserver",
+          "permission": "pull"
+        },
+        {
+          "repo": "invoicecheck",
+          "permission": "pull"
+        },
+        {
+          "repo": "ansible-epc-WeltN24",
+          "permission": "pull"
+        },
+        {
+          "repo": "ww_server_packages",
+          "permission": "pull"
+        },
+        {
+          "repo": "Mail_EmailEvents_Reporting",
+          "permission": "pull"
+        },
+        {
+          "repo": "github-enterprise-licensereport",
+          "permission": "pull"
+        },
+        {
+          "repo": "da-docker",
+          "permission": "pull"
+        },
+        {
+          "repo": "Mail_SpamHandling_DailyReport",
+          "permission": "pull"
+        },
+        {
+          "repo": "as-mulesoft-dwl-ASUtil",
+          "permission": "pull"
+        },
+        {
+          "repo": "Confluence-Space-ID",
+          "permission": "pull"
+        },
+        {
+          "repo": "Jira-Search-Limitless-Exporter",
+          "permission": "pull"
+        },
+        {
+          "repo": "AzureFileProjektMigrationScripts",
+          "permission": "pull"
+        },
+        {
+          "repo": "AzureFiles_TearShareAnalytics",
+          "permission": "pull"
+        },
+        {
+          "repo": "HTML_Templates",
+          "permission": "pull"
+        },
+        {
+          "repo": "ansible-environment",
+          "permission": "pull"
+        },
+        {
+          "repo": "ccs-helm-charts",
+          "permission": "pull"
+        },
+        {
+          "repo": "ansible-vxrailmig",
+          "permission": "pull"
+        },
+        {
+          "repo": "monorepo_SAPUI5",
+          "permission": "pull"
+        },
+        {
+          "repo": "asit-vm-templates",
+          "permission": "pull"
+        },
+        {
+          "repo": "asit-vm-ansible",
+          "permission": "pull"
+        },
+        {
+          "repo": "migrationScriptsV8",
+          "permission": "pull"
+        },
+        {
+          "repo": "asit-config-ansible",
+          "permission": "pull"
+        },
+        {
+          "repo": "SAP-FICO",
+          "permission": "pull"
+        }
+      ],
+      "permissions": {
+        "pull": 37
+      }
+    },
+    {
       "name": "Video & Audio",
       "slug": "video-audio",
       "description": "",
@@ -1672,61 +1424,6 @@
       }
     },
     {
-      "name": "Magazines",
-      "slug": "magazines",
-      "description": "Magazines",
-      "url": "https://github.com/orgs/asitservices/teams/magazines",
-      "org": "asitservices",
-      "repoCount": 4,
-      "repos": [
-        {
-          "repo": "de.axelspringer.PRINTERPREFS",
-          "permission": "admin"
-        },
-        {
-          "repo": "imagexmpextract",
-          "permission": "admin"
-        },
-        {
-          "repo": "idsocketservice",
-          "permission": "admin"
-        },
-        {
-          "repo": "zxpbuilder",
-          "permission": "admin"
-        }
-      ],
-      "permissions": {
-        "admin": 4
-      }
-    },
-    {
-      "name": "Connectivity",
-      "slug": "connectivity",
-      "description": "Team AS IT CCS Connectivity Management",
-      "url": "https://github.com/orgs/asitservices/teams/connectivity",
-      "org": "asitservices",
-      "repoCount": 3,
-      "repos": [
-        {
-          "repo": "ivm-automation-toolkit",
-          "permission": "pull"
-        },
-        {
-          "repo": "sts-pki-scripts",
-          "permission": "pull"
-        },
-        {
-          "repo": "asit-cise-api",
-          "permission": "maintain"
-        }
-      ],
-      "permissions": {
-        "pull": 2,
-        "maintain": 1
-      }
-    },
-    {
       "name": "SAPUI5_SD",
       "slug": "sapui5_sd",
       "description": "SD-Developer",
@@ -1761,27 +1458,6 @@
         },
         {
           "repo": "invoicecheck",
-          "permission": "admin"
-        }
-      ],
-      "permissions": {
-        "admin": 2
-      }
-    },
-    {
-      "name": "digitaleranstrich",
-      "slug": "digitaleranstrich",
-      "description": "digitaleranstrich project",
-      "url": "https://github.com/orgs/asitservices/teams/digitaleranstrich",
-      "org": "asitservices",
-      "repoCount": 2,
-      "repos": [
-        {
-          "repo": "image-map-resizer",
-          "permission": "admin"
-        },
-        {
-          "repo": "da-docker",
           "permission": "admin"
         }
       ],
@@ -1862,20 +1538,20 @@
       }
     },
     {
-      "name": "Editorial Content",
-      "slug": "editorial-content",
-      "description": "Editorial Content",
-      "url": "https://github.com/orgs/asitservices/teams/editorial-content",
+      "name": "Magazines",
+      "slug": "magazines",
+      "description": "Magazines",
+      "url": "https://github.com/orgs/asitservices/teams/magazines",
       "org": "asitservices",
       "repoCount": 1,
       "repos": [
         {
-          "repo": "photo-uploadportal",
-          "permission": "maintain"
+          "repo": "de.axelspringer.PRINTERPREFS",
+          "permission": "admin"
         }
       ],
       "permissions": {
-        "maintain": 1
+        "admin": 1
       }
     },
     {
@@ -1910,6 +1586,23 @@
       ],
       "permissions": {
         "pull": 1
+      }
+    },
+    {
+      "name": "digitaleranstrich",
+      "slug": "digitaleranstrich",
+      "description": "digitaleranstrich project",
+      "url": "https://github.com/orgs/asitservices/teams/digitaleranstrich",
+      "org": "asitservices",
+      "repoCount": 1,
+      "repos": [
+        {
+          "repo": "da-docker",
+          "permission": "admin"
+        }
+      ],
+      "permissions": {
+        "admin": 1
       }
     },
     {
@@ -1961,23 +1654,6 @@
       ],
       "permissions": {
         "maintain": 1
-      }
-    },
-    {
-      "name": "Controlling",
-      "slug": "controlling",
-      "description": "",
-      "url": "https://github.com/orgs/asitservices/teams/controlling",
-      "org": "asitservices",
-      "repoCount": 1,
-      "repos": [
-        {
-          "repo": "control_planungstool",
-          "permission": "admin"
-        }
-      ],
-      "permissions": {
-        "admin": 1
       }
     },
     {
@@ -2162,10 +1838,10 @@
     },
     {
       "org": "asitservices",
-      "totalRepos": 662,
-      "inactiveRepoCount": 55,
-      "totalUniqueAdmins": 10,
-      "totalUniqueTeams": 15,
+      "totalRepos": 660,
+      "inactiveRepoCount": 37,
+      "totalUniqueAdmins": 1,
+      "totalUniqueTeams": 12,
       "repos": [
         {
           "repo": "angebotsliste_discard",
@@ -2333,199 +2009,6 @@
           ]
         },
         {
-          "repo": "imagexmpextract",
-          "url": "https://github.com/asitservices/imagexmpextract",
-          "repoOwner": "Please choose a valid option!",
-          "description": "",
-          "language": "C",
-          "pushedAt": "2024-05-10T12:26:37Z",
-          "createdAt": "2020-06-09T15:10:25Z",
-          "visibility": "private",
-          "size": 11876,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 2,
-          "admins": [
-            {
-              "login": "rayburrows",
-              "avatar": "https://avatars.githubusercontent.com/u/16387128?v=4",
-              "profileUrl": "https://github.com/rayburrows",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Magazines",
-              "slug": "magazines",
-              "description": "Magazines",
-              "permission": "admin",
-              "url": "https://github.com/orgs/asitservices/teams/magazines"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
-          "repo": "photo-uploadportal",
-          "url": "https://github.com/asitservices/photo-uploadportal",
-          "repoOwner": "Please choose a valid option!",
-          "description": "photograph upload portal ",
-          "language": "TSQL",
-          "pushedAt": "2026-02-20T12:40:12Z",
-          "createdAt": "2020-08-04T07:12:33Z",
-          "visibility": "internal",
-          "size": 9985,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 2,
-          "admins": [
-            {
-              "login": "rayburrows",
-              "avatar": "https://avatars.githubusercontent.com/u/16387128?v=4",
-              "profileUrl": "https://github.com/rayburrows",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Editorial Content",
-              "slug": "editorial-content",
-              "description": "Editorial Content",
-              "permission": "maintain",
-              "url": "https://github.com/orgs/asitservices/teams/editorial-content"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
-          "repo": "idsocketservice",
-          "url": "https://github.com/asitservices/idsocketservice",
-          "repoOwner": "Please choose a valid option!",
-          "description": "web socket service for indesign",
-          "language": "JavaScript",
-          "pushedAt": "2023-07-12T08:19:31Z",
-          "createdAt": "2020-08-04T08:00:02Z",
-          "visibility": "internal",
-          "size": 18762,
-          "openIssues": 4,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 2,
-          "admins": [
-            {
-              "login": "rayburrows",
-              "avatar": "https://avatars.githubusercontent.com/u/16387128?v=4",
-              "profileUrl": "https://github.com/rayburrows",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Magazines",
-              "slug": "magazines",
-              "description": "Magazines",
-              "permission": "admin",
-              "url": "https://github.com/orgs/asitservices/teams/magazines"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
-          "repo": "zxpbuilder",
-          "url": "https://github.com/asitservices/zxpbuilder",
-          "repoOwner": "Please choose a valid option!",
-          "description": "zxp build script",
-          "language": "Objective-C",
-          "pushedAt": "2024-03-14T09:23:16Z",
-          "createdAt": "2020-08-04T08:13:20Z",
-          "visibility": "internal",
-          "size": 79629,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 2,
-          "admins": [
-            {
-              "login": "rayburrows",
-              "avatar": "https://avatars.githubusercontent.com/u/16387128?v=4",
-              "profileUrl": "https://github.com/rayburrows",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Magazines",
-              "slug": "magazines",
-              "description": "Magazines",
-              "permission": "admin",
-              "url": "https://github.com/orgs/asitservices/teams/magazines"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
-          "repo": "aws-as-asit-tableau-server",
-          "url": "https://github.com/asitservices/aws-as-asit-tableau-server",
-          "repoOwner": "Please choose a valid option!",
-          "description": "",
-          "language": "Unknown",
-          "pushedAt": "2025-06-11T08:58:43Z",
-          "createdAt": "2020-11-04T10:17:47Z",
-          "visibility": "internal",
-          "size": 0,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 1,
-          "admins": [
-            {
-              "login": "carstenappenheimer",
-              "avatar": "https://avatars.githubusercontent.com/u/67414974?v=4",
-              "profileUrl": "https://github.com/carstenappenheimer",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
           "repo": "jsu-labrep",
           "url": "https://github.com/asitservices/jsu-labrep",
           "repoOwner": "Please choose a valid option!",
@@ -2618,39 +2101,6 @@
           ]
         },
         {
-          "repo": "as-mulesoft-sl-advertising-api",
-          "url": "https://github.com/asitservices/as-mulesoft-sl-advertising-api",
-          "repoOwner": "Please choose a valid option!",
-          "description": "",
-          "language": "Unknown",
-          "pushedAt": "2021-09-15T11:38:27Z",
-          "createdAt": "2021-09-15T11:38:26Z",
-          "visibility": "internal",
-          "size": 0,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 1,
-          "admins": [
-            {
-              "login": "ipdarshi",
-              "avatar": "https://avatars.githubusercontent.com/u/75678577?v=4",
-              "profileUrl": "https://github.com/ipdarshi",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
           "repo": "github-image-scanner-log4j",
           "url": "https://github.com/asitservices/github-image-scanner-log4j",
           "repoOwner": "Please choose a valid option!",
@@ -2699,46 +2149,6 @@
               "description": "Dieses Team wird nur zu Testzwecken genutzt",
               "permission": "pull",
               "url": "https://github.com/orgs/asitservices/teams/test-team-colla"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
-          "repo": "image-map-resizer",
-          "url": "https://github.com/asitservices/image-map-resizer",
-          "repoOwner": "Please choose a valid option!",
-          "description": "fork image-map-resizer",
-          "language": "JavaScript",
-          "pushedAt": "2026-02-23T05:25:10Z",
-          "createdAt": "2022-01-19T16:42:29Z",
-          "visibility": "internal",
-          "size": 171,
-          "openIssues": 4,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 2,
-          "admins": [
-            {
-              "login": "rayburrows",
-              "avatar": "https://avatars.githubusercontent.com/u/16387128?v=4",
-              "profileUrl": "https://github.com/rayburrows",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "digitaleranstrich",
-              "slug": "digitaleranstrich",
-              "description": "digitaleranstrich project",
-              "permission": "admin",
-              "url": "https://github.com/orgs/asitservices/teams/digitaleranstrich"
             },
             {
               "name": "Admin - Intern",
@@ -2828,39 +2238,6 @@
           ]
         },
         {
-          "repo": "COLLA_Vincent_Test",
-          "url": "https://github.com/asitservices/COLLA_Vincent_Test",
-          "repoOwner": "Please choose a valid option!",
-          "description": "Webserver von Vincent",
-          "language": "HTML",
-          "pushedAt": "2022-06-30T12:39:59Z",
-          "createdAt": "2022-05-20T06:19:31Z",
-          "visibility": "internal",
-          "size": 7,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 1,
-          "admins": [
-            {
-              "login": "Vincentbri",
-              "avatar": "https://avatars.githubusercontent.com/u/90624206?v=4",
-              "profileUrl": "https://github.com/Vincentbri",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
           "repo": "ui5_fi_angebotsliste",
           "url": "https://github.com/asitservices/ui5_fi_angebotsliste",
           "repoOwner": "Please choose a valid option!",
@@ -2876,39 +2253,6 @@
           "adminCount": 0,
           "teamCount": 1,
           "admins": [],
-          "teams": [
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
-          "repo": "pmaclient",
-          "url": "https://github.com/asitservices/pmaclient",
-          "repoOwner": "Please choose a valid option!",
-          "description": "",
-          "language": "JavaScript",
-          "pushedAt": "2023-07-19T21:51:08Z",
-          "createdAt": "2022-09-01T09:29:04Z",
-          "visibility": "internal",
-          "size": 42442,
-          "openIssues": 16,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 1,
-          "admins": [
-            {
-              "login": "j9magayanes",
-              "avatar": "https://avatars.githubusercontent.com/u/100691918?v=4",
-              "profileUrl": "https://github.com/j9magayanes",
-              "role": "admin"
-            }
-          ],
           "teams": [
             {
               "name": "Admin - Intern",
@@ -3149,39 +2493,6 @@
           ]
         },
         {
-          "repo": "as-stammdaten",
-          "url": "https://github.com/asitservices/as-stammdaten",
-          "repoOwner": "Please choose a valid option!",
-          "description": "Home of AS-Stammdaten-DB",
-          "language": "TXL",
-          "pushedAt": "2026-01-13T15:49:34Z",
-          "createdAt": "2023-04-26T08:59:48Z",
-          "visibility": "internal",
-          "size": 3700,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 1,
-          "admins": [
-            {
-              "login": "ewendele",
-              "avatar": "https://avatars.githubusercontent.com/u/74550025?v=4",
-              "profileUrl": "https://github.com/ewendele",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
           "repo": "as-mulesoft-dwl-ASUtil",
           "url": "https://github.com/asitservices/as-mulesoft-dwl-ASUtil",
           "repoOwner": "Please choose a valid option!",
@@ -3197,39 +2508,6 @@
           "adminCount": 0,
           "teamCount": 1,
           "admins": [],
-          "teams": [
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
-          "repo": "AS.O365.ASK",
-          "url": "https://github.com/asitservices/AS.O365.ASK",
-          "repoOwner": "Please choose a valid option!",
-          "description": "Axel Springer Kundenservice (ASK) iMail",
-          "language": "Unknown",
-          "pushedAt": "2024-08-19T15:15:24Z",
-          "createdAt": "2023-10-10T08:26:58Z",
-          "visibility": "internal",
-          "size": 19,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 1,
-          "admins": [
-            {
-              "login": "egoecmez",
-              "avatar": "https://avatars.githubusercontent.com/u/55242841?v=4",
-              "profileUrl": "https://github.com/egoecmez",
-              "role": "admin"
-            }
-          ],
           "teams": [
             {
               "name": "Admin - Intern",
@@ -3267,79 +2545,6 @@
           ]
         },
         {
-          "repo": "demo-toolkit",
-          "url": "https://github.com/asitservices/demo-toolkit",
-          "repoOwner": "Please choose a valid option!",
-          "description": "Demo",
-          "language": "Unknown",
-          "pushedAt": "2023-11-13T08:51:35Z",
-          "createdAt": "2023-11-13T08:51:34Z",
-          "visibility": "private",
-          "size": 2,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 1,
-          "admins": [
-            {
-              "login": "NeekuAl",
-              "avatar": "https://avatars.githubusercontent.com/u/62135056?v=4",
-              "profileUrl": "https://github.com/NeekuAl",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
-          "repo": "ivm-automation-toolkit",
-          "url": "https://github.com/asitservices/ivm-automation-toolkit",
-          "repoOwner": "Please choose a valid option!",
-          "description": "Automation Toolkit for InsightVM",
-          "language": "Python",
-          "pushedAt": "2025-04-28T13:34:55Z",
-          "createdAt": "2023-11-13T13:25:44Z",
-          "visibility": "private",
-          "size": 3016,
-          "openIssues": 3,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 2,
-          "admins": [
-            {
-              "login": "NeekuAl",
-              "avatar": "https://avatars.githubusercontent.com/u/62135056?v=4",
-              "profileUrl": "https://github.com/NeekuAl",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Connectivity",
-              "slug": "connectivity",
-              "description": "Team AS IT CCS Connectivity Management",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/connectivity"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
           "repo": "Jira-Search-Limitless-Exporter",
           "url": "https://github.com/asitservices/Jira-Search-Limitless-Exporter",
           "repoOwner": "Please choose a valid option!",
@@ -3356,86 +2561,6 @@
           "teamCount": 1,
           "admins": [],
           "teams": [
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
-          "repo": "sts-pki-scripts",
-          "url": "https://github.com/asitservices/sts-pki-scripts",
-          "repoOwner": "Please choose a valid option!",
-          "description": "Security Toolsuite - PKI Scripting",
-          "language": "PowerShell",
-          "pushedAt": "2024-01-21T18:34:18Z",
-          "createdAt": "2024-01-15T07:44:09Z",
-          "visibility": "private",
-          "size": 28,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 2,
-          "admins": [
-            {
-              "login": "NeekuAl",
-              "avatar": "https://avatars.githubusercontent.com/u/62135056?v=4",
-              "profileUrl": "https://github.com/NeekuAl",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Connectivity",
-              "slug": "connectivity",
-              "description": "Team AS IT CCS Connectivity Management",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/connectivity"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
-          "repo": "asit-cise-api",
-          "url": "https://github.com/asitservices/asit-cise-api",
-          "repoOwner": "Please choose a valid option!",
-          "description": "Exporting and Parsing of dACL and EPG for Cisco ISE deployment",
-          "language": "Python",
-          "pushedAt": "2026-03-02T10:33:27Z",
-          "createdAt": "2024-03-17T19:03:52Z",
-          "visibility": "private",
-          "size": 47,
-          "openIssues": 2,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 2,
-          "admins": [
-            {
-              "login": "NeekuAl",
-              "avatar": "https://avatars.githubusercontent.com/u/62135056?v=4",
-              "profileUrl": "https://github.com/NeekuAl",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Connectivity",
-              "slug": "connectivity",
-              "description": "Team AS IT CCS Connectivity Management",
-              "permission": "maintain",
-              "url": "https://github.com/orgs/asitservices/teams/connectivity"
-            },
             {
               "name": "Admin - Intern",
               "slug": "admin-intern",
@@ -3769,72 +2894,6 @@
           ]
         },
         {
-          "repo": "control_planungstool",
-          "url": "https://github.com/asitservices/control_planungstool",
-          "repoOwner": "Please choose a valid option!",
-          "description": "",
-          "language": "HTML",
-          "pushedAt": "2025-07-30T08:00:06Z",
-          "createdAt": "2025-07-30T07:42:12Z",
-          "visibility": "internal",
-          "size": 46572,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 2,
-          "admins": [
-            {
-              "login": "Sascha-Newbie",
-              "avatar": "https://avatars.githubusercontent.com/u/177003893?v=4",
-              "profileUrl": "https://github.com/Sascha-Newbie",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Controlling",
-              "slug": "controlling",
-              "description": "",
-              "permission": "admin",
-              "url": "https://github.com/orgs/asitservices/teams/controlling"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
-          "repo": "User-Remover-Rovo-Agent",
-          "url": "https://github.com/asitservices/User-Remover-Rovo-Agent",
-          "repoOwner": "Please choose a valid option!",
-          "description": "",
-          "language": "JavaScript",
-          "pushedAt": "2026-03-03T03:28:36Z",
-          "createdAt": "2025-10-20T12:01:52Z",
-          "visibility": "internal",
-          "size": 120,
-          "openIssues": 5,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 0,
-          "teamCount": 1,
-          "admins": [],
-          "teams": [
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
           "repo": "asit-config-ansible",
           "url": "https://github.com/asitservices/asit-config-ansible",
           "repoOwner": "Please choose a valid option!",
@@ -3875,39 +2934,6 @@
           ]
         },
         {
-          "repo": "ec_NextDAM_webhooks_customactions",
-          "url": "https://github.com/asitservices/ec_NextDAM_webhooks_customactions",
-          "repoOwner": "Please choose a valid option!",
-          "description": "Mimir Webhook und Customaction Verarbeitung",
-          "language": "Unknown",
-          "pushedAt": "2026-01-12T07:05:15Z",
-          "createdAt": "2026-01-12T07:05:13Z",
-          "visibility": "private",
-          "size": 0,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 1,
-          "admins": [
-            {
-              "login": "BriwwWoxoW",
-              "avatar": "https://avatars.githubusercontent.com/u/110679604?v=4",
-              "profileUrl": "https://github.com/BriwwWoxoW",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        },
-        {
           "repo": "SAP-FICO",
           "url": "https://github.com/asitservices/SAP-FICO",
           "repoOwner": "Please choose a valid option!",
@@ -3936,111 +2962,13 @@
       ],
       "admins": [
         {
-          "login": "rayburrows",
-          "avatar": "https://avatars.githubusercontent.com/u/16387128?v=4",
-          "profileUrl": "https://github.com/rayburrows",
-          "role": "admin",
-          "repoCount": 5,
-          "repos": [
-            "imagexmpextract",
-            "photo-uploadportal",
-            "idsocketservice",
-            "zxpbuilder",
-            "image-map-resizer"
-          ]
-        },
-        {
-          "login": "NeekuAl",
-          "avatar": "https://avatars.githubusercontent.com/u/62135056?v=4",
-          "profileUrl": "https://github.com/NeekuAl",
-          "role": "admin",
-          "repoCount": 4,
-          "repos": [
-            "demo-toolkit",
-            "ivm-automation-toolkit",
-            "sts-pki-scripts",
-            "asit-cise-api"
-          ]
-        },
-        {
           "login": "j9magayanes",
           "avatar": "https://avatars.githubusercontent.com/u/100691918?v=4",
           "profileUrl": "https://github.com/j9magayanes",
           "role": "admin",
-          "repoCount": 2,
+          "repoCount": 1,
           "repos": [
-            "pmaclient",
             "pmaserver"
-          ]
-        },
-        {
-          "login": "carstenappenheimer",
-          "avatar": "https://avatars.githubusercontent.com/u/67414974?v=4",
-          "profileUrl": "https://github.com/carstenappenheimer",
-          "role": "admin",
-          "repoCount": 1,
-          "repos": [
-            "aws-as-asit-tableau-server"
-          ]
-        },
-        {
-          "login": "ipdarshi",
-          "avatar": "https://avatars.githubusercontent.com/u/75678577?v=4",
-          "profileUrl": "https://github.com/ipdarshi",
-          "role": "admin",
-          "repoCount": 1,
-          "repos": [
-            "as-mulesoft-sl-advertising-api"
-          ]
-        },
-        {
-          "login": "Vincentbri",
-          "avatar": "https://avatars.githubusercontent.com/u/90624206?v=4",
-          "profileUrl": "https://github.com/Vincentbri",
-          "role": "admin",
-          "repoCount": 1,
-          "repos": [
-            "COLLA_Vincent_Test"
-          ]
-        },
-        {
-          "login": "ewendele",
-          "avatar": "https://avatars.githubusercontent.com/u/74550025?v=4",
-          "profileUrl": "https://github.com/ewendele",
-          "role": "admin",
-          "repoCount": 1,
-          "repos": [
-            "as-stammdaten"
-          ]
-        },
-        {
-          "login": "egoecmez",
-          "avatar": "https://avatars.githubusercontent.com/u/55242841?v=4",
-          "profileUrl": "https://github.com/egoecmez",
-          "role": "admin",
-          "repoCount": 1,
-          "repos": [
-            "AS.O365.ASK"
-          ]
-        },
-        {
-          "login": "Sascha-Newbie",
-          "avatar": "https://avatars.githubusercontent.com/u/177003893?v=4",
-          "profileUrl": "https://github.com/Sascha-Newbie",
-          "role": "admin",
-          "repoCount": 1,
-          "repos": [
-            "control_planungstool"
-          ]
-        },
-        {
-          "login": "BriwwWoxoW",
-          "avatar": "https://avatars.githubusercontent.com/u/110679604?v=4",
-          "profileUrl": "https://github.com/BriwwWoxoW",
-          "role": "admin",
-          "repoCount": 1,
-          "repos": [
-            "ec_NextDAM_webhooks_customactions"
           ]
         }
       ],
@@ -4050,7 +2978,7 @@
           "slug": "admin-intern",
           "description": "",
           "url": "https://github.com/orgs/asitservices/teams/admin-intern",
-          "repoCount": 55,
+          "repoCount": 37,
           "repos": [
             {
               "repo": "angebotsliste_discard",
@@ -4073,26 +3001,6 @@
               "permission": "pull"
             },
             {
-              "repo": "imagexmpextract",
-              "permission": "pull"
-            },
-            {
-              "repo": "photo-uploadportal",
-              "permission": "pull"
-            },
-            {
-              "repo": "idsocketservice",
-              "permission": "pull"
-            },
-            {
-              "repo": "zxpbuilder",
-              "permission": "pull"
-            },
-            {
-              "repo": "aws-as-asit-tableau-server",
-              "permission": "pull"
-            },
-            {
               "repo": "jsu-labrep",
               "permission": "pull"
             },
@@ -4105,19 +3013,11 @@
               "permission": "pull"
             },
             {
-              "repo": "as-mulesoft-sl-advertising-api",
-              "permission": "pull"
-            },
-            {
               "repo": "github-image-scanner-log4j",
               "permission": "pull"
             },
             {
               "repo": "Test-Colla-Amadeus",
-              "permission": "pull"
-            },
-            {
-              "repo": "image-map-resizer",
               "permission": "pull"
             },
             {
@@ -4133,15 +3033,7 @@
               "permission": "pull"
             },
             {
-              "repo": "COLLA_Vincent_Test",
-              "permission": "pull"
-            },
-            {
               "repo": "ui5_fi_angebotsliste",
-              "permission": "pull"
-            },
-            {
-              "repo": "pmaclient",
               "permission": "pull"
             },
             {
@@ -4177,15 +3069,7 @@
               "permission": "pull"
             },
             {
-              "repo": "as-stammdaten",
-              "permission": "pull"
-            },
-            {
               "repo": "as-mulesoft-dwl-ASUtil",
-              "permission": "pull"
-            },
-            {
-              "repo": "AS.O365.ASK",
               "permission": "pull"
             },
             {
@@ -4193,23 +3077,7 @@
               "permission": "pull"
             },
             {
-              "repo": "demo-toolkit",
-              "permission": "pull"
-            },
-            {
-              "repo": "ivm-automation-toolkit",
-              "permission": "pull"
-            },
-            {
               "repo": "Jira-Search-Limitless-Exporter",
-              "permission": "pull"
-            },
-            {
-              "repo": "sts-pki-scripts",
-              "permission": "pull"
-            },
-            {
-              "repo": "asit-cise-api",
               "permission": "pull"
             },
             {
@@ -4253,19 +3121,7 @@
               "permission": "pull"
             },
             {
-              "repo": "control_planungstool",
-              "permission": "pull"
-            },
-            {
-              "repo": "User-Remover-Rovo-Agent",
-              "permission": "pull"
-            },
-            {
               "repo": "asit-config-ansible",
-              "permission": "pull"
-            },
-            {
-              "repo": "ec_NextDAM_webhooks_customactions",
               "permission": "pull"
             },
             {
@@ -4274,7 +3130,7 @@
             }
           ],
           "permissions": {
-            "pull": 55
+            "pull": 37
           }
         },
         {
@@ -4342,59 +3198,6 @@
           }
         },
         {
-          "name": "Magazines",
-          "slug": "magazines",
-          "description": "Magazines",
-          "url": "https://github.com/orgs/asitservices/teams/magazines",
-          "repoCount": 4,
-          "repos": [
-            {
-              "repo": "de.axelspringer.PRINTERPREFS",
-              "permission": "admin"
-            },
-            {
-              "repo": "imagexmpextract",
-              "permission": "admin"
-            },
-            {
-              "repo": "idsocketservice",
-              "permission": "admin"
-            },
-            {
-              "repo": "zxpbuilder",
-              "permission": "admin"
-            }
-          ],
-          "permissions": {
-            "admin": 4
-          }
-        },
-        {
-          "name": "Connectivity",
-          "slug": "connectivity",
-          "description": "Team AS IT CCS Connectivity Management",
-          "url": "https://github.com/orgs/asitservices/teams/connectivity",
-          "repoCount": 3,
-          "repos": [
-            {
-              "repo": "ivm-automation-toolkit",
-              "permission": "pull"
-            },
-            {
-              "repo": "sts-pki-scripts",
-              "permission": "pull"
-            },
-            {
-              "repo": "asit-cise-api",
-              "permission": "maintain"
-            }
-          ],
-          "permissions": {
-            "pull": 2,
-            "maintain": 1
-          }
-        },
-        {
           "name": "SAPUI5_SD",
           "slug": "sapui5_sd",
           "description": "SD-Developer",
@@ -4435,39 +3238,19 @@
           }
         },
         {
-          "name": "digitaleranstrich",
-          "slug": "digitaleranstrich",
-          "description": "digitaleranstrich project",
-          "url": "https://github.com/orgs/asitservices/teams/digitaleranstrich",
-          "repoCount": 2,
-          "repos": [
-            {
-              "repo": "image-map-resizer",
-              "permission": "admin"
-            },
-            {
-              "repo": "da-docker",
-              "permission": "admin"
-            }
-          ],
-          "permissions": {
-            "admin": 2
-          }
-        },
-        {
-          "name": "Editorial Content",
-          "slug": "editorial-content",
-          "description": "Editorial Content",
-          "url": "https://github.com/orgs/asitservices/teams/editorial-content",
+          "name": "Magazines",
+          "slug": "magazines",
+          "description": "Magazines",
+          "url": "https://github.com/orgs/asitservices/teams/magazines",
           "repoCount": 1,
           "repos": [
             {
-              "repo": "photo-uploadportal",
-              "permission": "maintain"
+              "repo": "de.axelspringer.PRINTERPREFS",
+              "permission": "admin"
             }
           ],
           "permissions": {
-            "maintain": 1
+            "admin": 1
           }
         },
         {
@@ -4500,6 +3283,22 @@
           ],
           "permissions": {
             "pull": 1
+          }
+        },
+        {
+          "name": "digitaleranstrich",
+          "slug": "digitaleranstrich",
+          "description": "digitaleranstrich project",
+          "url": "https://github.com/orgs/asitservices/teams/digitaleranstrich",
+          "repoCount": 1,
+          "repos": [
+            {
+              "repo": "da-docker",
+              "permission": "admin"
+            }
+          ],
+          "permissions": {
+            "admin": 1
           }
         },
         {
@@ -4548,22 +3347,6 @@
           ],
           "permissions": {
             "maintain": 1
-          }
-        },
-        {
-          "name": "Controlling",
-          "slug": "controlling",
-          "description": "",
-          "url": "https://github.com/orgs/asitservices/teams/controlling",
-          "repoCount": 1,
-          "repos": [
-            {
-              "repo": "control_planungstool",
-              "permission": "admin"
-            }
-          ],
-          "permissions": {
-            "admin": 1
           }
         }
       ]
@@ -4914,10 +3697,10 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "Generation of reports on live events",
           "language": "Go",
-          "pushedAt": "2026-03-09T04:22:12Z",
+          "pushedAt": "2026-03-13T04:19:53Z",
           "createdAt": "2025-08-15T08:19:07Z",
           "visibility": "private",
-          "size": 285,
+          "size": 297,
           "openIssues": 0,
           "forks": 0,
           "stars": 0,
@@ -5963,7 +4746,7 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "Hey_ Analytics Dashboard — Adobe Analytics + AI Insights",
           "language": "TypeScript",
-          "pushedAt": "2026-03-07T06:58:18Z",
+          "pushedAt": "2026-03-13T09:42:36Z",
           "createdAt": "2026-03-05T16:45:22Z",
           "visibility": "private",
           "size": 359,

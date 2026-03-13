@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-13T01:46:51.111Z",
+  "generatedAt": "2026-03-13T09:39:00.691Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
@@ -7,7 +7,7 @@
       "activeRepos": 21,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-13T01:46:51.111Z"
+      "lastUpdated": "2026-03-13T09:39:00.691Z"
     },
     {
       "name": "as-cloud-services",
@@ -21,13 +21,13 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-13T01:46:51.111Z"
+      "lastUpdated": "2026-03-13T09:39:00.691Z"
     },
     {
       "name": "asitservices",
-      "totalRepos": 662,
-      "activeRepos": 607,
-      "inactiveRepos": 55,
+      "totalRepos": 660,
+      "activeRepos": 623,
+      "inactiveRepos": 37,
       "inactiveList": [
         {
           "repo": "angebotsliste_discard",
@@ -55,31 +55,6 @@
           "repoOwner": "Please choose a valid option!"
         },
         {
-          "repo": "imagexmpextract",
-          "url": "https://github.com/asitservices/imagexmpextract",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "photo-uploadportal",
-          "url": "https://github.com/asitservices/photo-uploadportal",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "idsocketservice",
-          "url": "https://github.com/asitservices/idsocketservice",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "zxpbuilder",
-          "url": "https://github.com/asitservices/zxpbuilder",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "aws-as-asit-tableau-server",
-          "url": "https://github.com/asitservices/aws-as-asit-tableau-server",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
           "repo": "jsu-labrep",
           "url": "https://github.com/asitservices/jsu-labrep",
           "repoOwner": "Please choose a valid option!"
@@ -95,11 +70,6 @@
           "repoOwner": "Please choose a valid option!"
         },
         {
-          "repo": "as-mulesoft-sl-advertising-api",
-          "url": "https://github.com/asitservices/as-mulesoft-sl-advertising-api",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
           "repo": "github-image-scanner-log4j",
           "url": "https://github.com/asitservices/github-image-scanner-log4j",
           "repoOwner": "Please choose a valid option!"
@@ -107,11 +77,6 @@
         {
           "repo": "Test-Colla-Amadeus",
           "url": "https://github.com/asitservices/Test-Colla-Amadeus",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "image-map-resizer",
-          "url": "https://github.com/asitservices/image-map-resizer",
           "repoOwner": "Please choose a valid option!"
         },
         {
@@ -130,18 +95,8 @@
           "repoOwner": "Please choose a valid option!"
         },
         {
-          "repo": "COLLA_Vincent_Test",
-          "url": "https://github.com/asitservices/COLLA_Vincent_Test",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
           "repo": "ui5_fi_angebotsliste",
           "url": "https://github.com/asitservices/ui5_fi_angebotsliste",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "pmaclient",
-          "url": "https://github.com/asitservices/pmaclient",
           "repoOwner": "Please choose a valid option!"
         },
         {
@@ -185,18 +140,8 @@
           "repoOwner": "Please choose a valid option!"
         },
         {
-          "repo": "as-stammdaten",
-          "url": "https://github.com/asitservices/as-stammdaten",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
           "repo": "as-mulesoft-dwl-ASUtil",
           "url": "https://github.com/asitservices/as-mulesoft-dwl-ASUtil",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "AS.O365.ASK",
-          "url": "https://github.com/asitservices/AS.O365.ASK",
           "repoOwner": "Please choose a valid option!"
         },
         {
@@ -205,28 +150,8 @@
           "repoOwner": "Please choose a valid option!"
         },
         {
-          "repo": "demo-toolkit",
-          "url": "https://github.com/asitservices/demo-toolkit",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ivm-automation-toolkit",
-          "url": "https://github.com/asitservices/ivm-automation-toolkit",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
           "repo": "Jira-Search-Limitless-Exporter",
           "url": "https://github.com/asitservices/Jira-Search-Limitless-Exporter",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "sts-pki-scripts",
-          "url": "https://github.com/asitservices/sts-pki-scripts",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "asit-cise-api",
-          "url": "https://github.com/asitservices/asit-cise-api",
           "repoOwner": "Please choose a valid option!"
         },
         {
@@ -280,23 +205,8 @@
           "repoOwner": "Please choose a valid option!"
         },
         {
-          "repo": "control_planungstool",
-          "url": "https://github.com/asitservices/control_planungstool",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "User-Remover-Rovo-Agent",
-          "url": "https://github.com/asitservices/User-Remover-Rovo-Agent",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
           "repo": "asit-config-ansible",
           "url": "https://github.com/asitservices/asit-config-ansible",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ec_NextDAM_webhooks_customactions",
-          "url": "https://github.com/asitservices/ec_NextDAM_webhooks_customactions",
           "repoOwner": "Please choose a valid option!"
         },
         {
@@ -305,7 +215,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-13T01:46:51.111Z"
+      "lastUpdated": "2026-03-13T09:39:00.691Z"
     },
     {
       "name": "axelspringer",
@@ -313,7 +223,7 @@
       "activeRepos": 4,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-13T01:46:51.111Z"
+      "lastUpdated": "2026-03-13T09:39:00.691Z"
     },
     {
       "name": "Media-Impact",
@@ -321,7 +231,7 @@
       "activeRepos": 14,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-13T01:46:51.111Z"
+      "lastUpdated": "2026-03-13T09:39:00.691Z"
     },
     {
       "name": "spring-media",
@@ -535,7 +445,7 @@
           "repoOwner": "Please choose a valid option!  "
         }
       ],
-      "lastUpdated": "2026-03-13T01:46:51.111Z"
+      "lastUpdated": "2026-03-13T09:39:00.691Z"
     },
     {
       "name": "welttv",
@@ -784,7 +694,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-13T01:46:51.111Z"
+      "lastUpdated": "2026-03-13T09:39:00.691Z"
     },
     {
       "name": "sales-impact",
@@ -798,7 +708,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-13T01:46:51.111Z"
+      "lastUpdated": "2026-03-13T09:39:00.691Z"
     }
   ],
   "trends": [
@@ -1558,6 +1468,25 @@
       "as-cloud-services_active": 34,
       "asitservices": 662,
       "asitservices_active": 607,
+      "axelspringer": 4,
+      "axelspringer_active": 4,
+      "Media-Impact": 14,
+      "Media-Impact_active": 14,
+      "spring-media": 1147,
+      "spring-media_active": 1106,
+      "welttv": 48,
+      "welttv_active": 0,
+      "sales-impact": 151,
+      "sales-impact_active": 150
+    },
+    {
+      "date": "2026-03-13",
+      "AS-ASK-IT": 21,
+      "AS-ASK-IT_active": 21,
+      "as-cloud-services": 35,
+      "as-cloud-services_active": 34,
+      "asitservices": 660,
+      "asitservices_active": 623,
       "axelspringer": 4,
       "axelspringer_active": 4,
       "Media-Impact": 14,
