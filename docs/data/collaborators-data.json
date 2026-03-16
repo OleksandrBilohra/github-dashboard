@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-03-16T02:01:53.715Z",
+  "generatedAt": "2026-03-16T10:06:46.180Z",
   "globalStats": {
     "totalOrgs": 8,
-    "totalRepos": 2064,
-    "totalInactiveRepos": 91,
-    "totalUniqueAdmins": 23,
+    "totalRepos": 2067,
+    "totalInactiveRepos": 92,
+    "totalUniqueAdmins": 24,
     "totalUniqueTeams": 14
   },
   "globalAdmins": [
@@ -473,6 +473,22 @@
       ]
     },
     {
+      "login": "arindam312",
+      "avatar": "https://avatars.githubusercontent.com/u/20879791?v=4",
+      "profileUrl": "https://github.com/arindam312",
+      "role": "admin",
+      "repoCount": 1,
+      "orgs": [
+        "spring-media"
+      ],
+      "repos": [
+        {
+          "org": "spring-media",
+          "repo": "storyradar-prototype"
+        }
+      ]
+    },
+    {
       "login": "Budenloui",
       "avatar": "https://avatars.githubusercontent.com/u/45824642?v=4",
       "profileUrl": "https://github.com/Budenloui",
@@ -701,7 +717,7 @@
       "description": "",
       "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers",
       "org": "spring-media",
-      "repoCount": 41,
+      "repoCount": 42,
       "repos": [
         {
           "repo": "DeepPhonemizer",
@@ -866,10 +882,14 @@
         {
           "repo": "next-james-2.0-alpha",
           "permission": "push"
+        },
+        {
+          "repo": "storyradar-prototype",
+          "permission": "push"
         }
       ],
       "permissions": {
-        "push": 41
+        "push": 42
       }
     },
     {
@@ -878,7 +898,7 @@
       "description": "",
       "url": "https://github.com/orgs/spring-media/teams/admin-intern",
       "org": "spring-media",
-      "repoCount": 41,
+      "repoCount": 42,
       "repos": [
         {
           "repo": "DeepPhonemizer",
@@ -1043,10 +1063,14 @@
         {
           "repo": "next-james-2.0-alpha",
           "permission": "pull"
+        },
+        {
+          "repo": "storyradar-prototype",
+          "permission": "pull"
         }
       ],
       "permissions": {
-        "pull": 41
+        "pull": 42
       }
     },
     {
@@ -1434,7 +1458,7 @@
     },
     {
       "org": "asitservices",
-      "totalRepos": 643,
+      "totalRepos": 642,
       "inactiveRepoCount": 0,
       "totalUniqueAdmins": 0,
       "totalUniqueTeams": 0,
@@ -1464,9 +1488,9 @@
     },
     {
       "org": "spring-media",
-      "totalRepos": 1147,
-      "inactiveRepoCount": 41,
-      "totalUniqueAdmins": 20,
+      "totalRepos": 1150,
+      "inactiveRepoCount": 42,
+      "totalUniqueAdmins": 21,
       "totalUniqueTeams": 10,
       "repos": [
         {
@@ -1889,10 +1913,10 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "An UI to discover audio and video on-demand content.",
           "language": "TypeScript",
-          "pushedAt": "2026-03-10T16:27:19Z",
+          "pushedAt": "2026-03-16T09:55:11Z",
           "createdAt": "2025-09-19T09:28:37Z",
           "visibility": "private",
-          "size": 14286,
+          "size": 14339,
           "openIssues": 0,
           "forks": 0,
           "stars": 1,
@@ -3271,6 +3295,46 @@
               "url": "https://github.com/orgs/spring-media/teams/bild-next_ad"
             }
           ]
+        },
+        {
+          "repo": "storyradar-prototype",
+          "url": "https://github.com/spring-media/storyradar-prototype",
+          "repoOwner": "Please choose a valid option!  ",
+          "description": "",
+          "language": "TypeScript",
+          "pushedAt": "2026-03-16T08:53:59Z",
+          "createdAt": "2026-03-16T08:53:31Z",
+          "visibility": "internal",
+          "size": 359,
+          "openIssues": 0,
+          "forks": 0,
+          "stars": 0,
+          "adminCount": 1,
+          "teamCount": 2,
+          "admins": [
+            {
+              "login": "arindam312",
+              "avatar": "https://avatars.githubusercontent.com/u/20879791?v=4",
+              "profileUrl": "https://github.com/arindam312",
+              "role": "admin"
+            }
+          ],
+          "teams": [
+            {
+              "name": "Admin - Principle Engineers",
+              "slug": "admin-principle-engineers",
+              "description": "",
+              "permission": "push",
+              "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers"
+            },
+            {
+              "name": "Admin - Intern",
+              "slug": "admin-intern",
+              "description": "",
+              "permission": "pull",
+              "url": "https://github.com/orgs/spring-media/teams/admin-intern"
+            }
+          ]
         }
       ],
       "admins": [
@@ -3489,6 +3553,16 @@
           "repos": [
             "next-hey-feedback"
           ]
+        },
+        {
+          "login": "arindam312",
+          "avatar": "https://avatars.githubusercontent.com/u/20879791?v=4",
+          "profileUrl": "https://github.com/arindam312",
+          "role": "admin",
+          "repoCount": 1,
+          "repos": [
+            "storyradar-prototype"
+          ]
         }
       ],
       "teams": [
@@ -3497,7 +3571,7 @@
           "slug": "admin-principle-engineers",
           "description": "",
           "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers",
-          "repoCount": 41,
+          "repoCount": 42,
           "repos": [
             {
               "repo": "DeepPhonemizer",
@@ -3662,10 +3736,14 @@
             {
               "repo": "next-james-2.0-alpha",
               "permission": "push"
+            },
+            {
+              "repo": "storyradar-prototype",
+              "permission": "push"
             }
           ],
           "permissions": {
-            "push": 41
+            "push": 42
           }
         },
         {
@@ -3673,7 +3751,7 @@
           "slug": "admin-intern",
           "description": "",
           "url": "https://github.com/orgs/spring-media/teams/admin-intern",
-          "repoCount": 41,
+          "repoCount": 42,
           "repos": [
             {
               "repo": "DeepPhonemizer",
@@ -3838,10 +3916,14 @@
             {
               "repo": "next-james-2.0-alpha",
               "permission": "pull"
+            },
+            {
+              "repo": "storyradar-prototype",
+              "permission": "pull"
             }
           ],
           "permissions": {
-            "pull": 41
+            "pull": 42
           }
         },
         {
@@ -5668,7 +5750,7 @@
     },
     {
       "org": "sales-impact",
-      "totalRepos": 151,
+      "totalRepos": 152,
       "inactiveRepoCount": 1,
       "totalUniqueAdmins": 0,
       "totalUniqueTeams": 0,
