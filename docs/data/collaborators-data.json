@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-03-17T09:56:24.027Z",
+  "generatedAt": "2026-03-18T01:53:31.992Z",
   "globalStats": {
     "totalOrgs": 8,
-    "totalRepos": 2068,
-    "totalInactiveRepos": 93,
+    "totalRepos": 2065,
+    "totalInactiveRepos": 94,
     "totalUniqueAdmins": 25,
-    "totalUniqueTeams": 14
+    "totalUniqueTeams": 18
   },
   "globalAdmins": [
     {
@@ -733,12 +733,8 @@
       "description": "",
       "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers",
       "org": "spring-media",
-      "repoCount": 43,
+      "repoCount": 42,
       "repos": [
-        {
-          "repo": "DeepPhonemizer",
-          "permission": "push"
-        },
         {
           "repo": "Affiliate-Link-Builder",
           "permission": "push"
@@ -909,7 +905,7 @@
         }
       ],
       "permissions": {
-        "push": 43
+        "push": 42
       }
     },
     {
@@ -918,12 +914,8 @@
       "description": "",
       "url": "https://github.com/orgs/spring-media/teams/admin-intern",
       "org": "spring-media",
-      "repoCount": 43,
+      "repoCount": 42,
       "repos": [
-        {
-          "repo": "DeepPhonemizer",
-          "permission": "pull"
-        },
         {
           "repo": "Affiliate-Link-Builder",
           "permission": "pull"
@@ -1094,7 +1086,7 @@
         }
       ],
       "permissions": {
-        "pull": 43
+        "pull": 42
       }
     },
     {
@@ -1229,6 +1221,69 @@
       }
     },
     {
+      "name": "Admin Roles",
+      "slug": "admin-roles",
+      "description": "",
+      "url": "https://github.com/orgs/axelspringer/teams/admin-roles",
+      "org": "axelspringer",
+      "repoCount": 2,
+      "repos": [
+        {
+          "repo": "ForwardTacotron",
+          "permission": "pull"
+        },
+        {
+          "repo": "DeepPhonemizer",
+          "permission": "pull"
+        }
+      ],
+      "permissions": {
+        "pull": 2
+      }
+    },
+    {
+      "name": "Admin - Intern",
+      "slug": "admin-intern",
+      "description": "",
+      "url": "https://github.com/orgs/axelspringer/teams/admin-intern",
+      "org": "axelspringer",
+      "repoCount": 2,
+      "repos": [
+        {
+          "repo": "ForwardTacotron",
+          "permission": "pull"
+        },
+        {
+          "repo": "DeepPhonemizer",
+          "permission": "pull"
+        }
+      ],
+      "permissions": {
+        "pull": 2
+      }
+    },
+    {
+      "name": "Admin - Org Owner",
+      "slug": "admin-org-owner",
+      "description": "",
+      "url": "https://github.com/orgs/axelspringer/teams/admin-org-owner",
+      "org": "axelspringer",
+      "repoCount": 2,
+      "repos": [
+        {
+          "repo": "ForwardTacotron",
+          "permission": "pull"
+        },
+        {
+          "repo": "DeepPhonemizer",
+          "permission": "pull"
+        }
+      ],
+      "permissions": {
+        "pull": 2
+      }
+    },
+    {
       "name": "OTT",
       "slug": "ott",
       "description": "Over The Top",
@@ -1293,6 +1348,23 @@
       "repos": [
         {
           "repo": "terraform-aws-control_tower_account_factory",
+          "permission": "pull"
+        }
+      ],
+      "permissions": {
+        "pull": 1
+      }
+    },
+    {
+      "name": "Admin - Copilot",
+      "slug": "admin-copilot",
+      "description": "",
+      "url": "https://github.com/orgs/axelspringer/teams/admin-copilot",
+      "org": "axelspringer",
+      "repoCount": 1,
+      "repos": [
+        {
+          "repo": "DeepPhonemizer",
           "permission": "pull"
         }
       ],
@@ -1393,11 +1465,11 @@
           "repoOwner": "Please choose a valid option!",
           "description": "AWS Control Tower Account Factory",
           "language": "Unknown",
-          "pushedAt": "2026-03-12T20:16:59Z",
+          "pushedAt": "2026-03-17T18:13:33Z",
           "createdAt": "2026-03-12T19:24:43Z",
           "visibility": "public",
-          "size": 654,
-          "openIssues": 0,
+          "size": 657,
+          "openIssues": 1,
           "forks": 0,
           "stars": 0,
           "adminCount": 0,
@@ -1492,13 +1564,178 @@
     },
     {
       "org": "axelspringer",
-      "totalRepos": 4,
-      "inactiveRepoCount": 0,
+      "totalRepos": 6,
+      "inactiveRepoCount": 2,
       "totalUniqueAdmins": 0,
-      "totalUniqueTeams": 0,
-      "repos": [],
+      "totalUniqueTeams": 4,
+      "repos": [
+        {
+          "repo": "ForwardTacotron",
+          "url": "https://github.com/axelspringer/ForwardTacotron",
+          "repoOwner": "Please choose a valid option! ",
+          "description": "⏩ Generating speech in a single forward pass without any attention!",
+          "language": "Python",
+          "pushedAt": "2026-03-15T23:59:56Z",
+          "createdAt": "2020-03-03T12:33:51Z",
+          "visibility": "public",
+          "size": 213140,
+          "openIssues": 44,
+          "forks": 109,
+          "stars": 581,
+          "adminCount": 0,
+          "teamCount": 3,
+          "admins": [],
+          "teams": [
+            {
+              "name": "Admin Roles",
+              "slug": "admin-roles",
+              "description": "",
+              "permission": "pull",
+              "url": "https://github.com/orgs/axelspringer/teams/admin-roles"
+            },
+            {
+              "name": "Admin - Intern",
+              "slug": "admin-intern",
+              "description": "",
+              "permission": "pull",
+              "url": "https://github.com/orgs/axelspringer/teams/admin-intern"
+            },
+            {
+              "name": "Admin - Org Owner",
+              "slug": "admin-org-owner",
+              "description": "",
+              "permission": "pull",
+              "url": "https://github.com/orgs/axelspringer/teams/admin-org-owner"
+            }
+          ]
+        },
+        {
+          "repo": "DeepPhonemizer",
+          "url": "https://github.com/axelspringer/DeepPhonemizer",
+          "repoOwner": "Please choose a valid option! ",
+          "description": "Grapheme to phoneme conversion with deep learning.",
+          "language": "Python",
+          "pushedAt": "2023-12-08T01:21:20Z",
+          "createdAt": "2021-04-06T13:03:47Z",
+          "visibility": "public",
+          "size": 1404,
+          "openIssues": 21,
+          "forks": 57,
+          "stars": 422,
+          "adminCount": 0,
+          "teamCount": 4,
+          "admins": [],
+          "teams": [
+            {
+              "name": "Admin Roles",
+              "slug": "admin-roles",
+              "description": "",
+              "permission": "pull",
+              "url": "https://github.com/orgs/axelspringer/teams/admin-roles"
+            },
+            {
+              "name": "Admin - Intern",
+              "slug": "admin-intern",
+              "description": "",
+              "permission": "pull",
+              "url": "https://github.com/orgs/axelspringer/teams/admin-intern"
+            },
+            {
+              "name": "Admin - Org Owner",
+              "slug": "admin-org-owner",
+              "description": "",
+              "permission": "pull",
+              "url": "https://github.com/orgs/axelspringer/teams/admin-org-owner"
+            },
+            {
+              "name": "Admin - Copilot",
+              "slug": "admin-copilot",
+              "description": "",
+              "permission": "pull",
+              "url": "https://github.com/orgs/axelspringer/teams/admin-copilot"
+            }
+          ]
+        }
+      ],
       "admins": [],
-      "teams": []
+      "teams": [
+        {
+          "name": "Admin Roles",
+          "slug": "admin-roles",
+          "description": "",
+          "url": "https://github.com/orgs/axelspringer/teams/admin-roles",
+          "repoCount": 2,
+          "repos": [
+            {
+              "repo": "ForwardTacotron",
+              "permission": "pull"
+            },
+            {
+              "repo": "DeepPhonemizer",
+              "permission": "pull"
+            }
+          ],
+          "permissions": {
+            "pull": 2
+          }
+        },
+        {
+          "name": "Admin - Intern",
+          "slug": "admin-intern",
+          "description": "",
+          "url": "https://github.com/orgs/axelspringer/teams/admin-intern",
+          "repoCount": 2,
+          "repos": [
+            {
+              "repo": "ForwardTacotron",
+              "permission": "pull"
+            },
+            {
+              "repo": "DeepPhonemizer",
+              "permission": "pull"
+            }
+          ],
+          "permissions": {
+            "pull": 2
+          }
+        },
+        {
+          "name": "Admin - Org Owner",
+          "slug": "admin-org-owner",
+          "description": "",
+          "url": "https://github.com/orgs/axelspringer/teams/admin-org-owner",
+          "repoCount": 2,
+          "repos": [
+            {
+              "repo": "ForwardTacotron",
+              "permission": "pull"
+            },
+            {
+              "repo": "DeepPhonemizer",
+              "permission": "pull"
+            }
+          ],
+          "permissions": {
+            "pull": 2
+          }
+        },
+        {
+          "name": "Admin - Copilot",
+          "slug": "admin-copilot",
+          "description": "",
+          "url": "https://github.com/orgs/axelspringer/teams/admin-copilot",
+          "repoCount": 1,
+          "repos": [
+            {
+              "repo": "DeepPhonemizer",
+              "permission": "pull"
+            }
+          ],
+          "permissions": {
+            "pull": 1
+          }
+        }
+      ]
     },
     {
       "org": "Media-Impact",
@@ -1512,44 +1749,11 @@
     },
     {
       "org": "spring-media",
-      "totalRepos": 1151,
-      "inactiveRepoCount": 43,
+      "totalRepos": 1146,
+      "inactiveRepoCount": 42,
       "totalUniqueAdmins": 22,
       "totalUniqueTeams": 10,
       "repos": [
-        {
-          "repo": "DeepPhonemizer",
-          "url": "https://github.com/spring-media/DeepPhonemizer",
-          "repoOwner": "Please choose a valid option!  ",
-          "description": "Grapheme to phoneme conversion with deep learning.",
-          "language": "Python",
-          "pushedAt": "2023-12-08T01:21:20Z",
-          "createdAt": "2021-04-06T13:03:47Z",
-          "visibility": "public",
-          "size": 1404,
-          "openIssues": 21,
-          "forks": 57,
-          "stars": 422,
-          "adminCount": 0,
-          "teamCount": 2,
-          "admins": [],
-          "teams": [
-            {
-              "name": "Admin - Principle Engineers",
-              "slug": "admin-principle-engineers",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/spring-media/teams/admin-intern"
-            }
-          ]
-        },
         {
           "repo": "Affiliate-Link-Builder",
           "url": "https://github.com/spring-media/Affiliate-Link-Builder",
@@ -2125,10 +2329,10 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "Notification hub for video platform events",
           "language": "Go",
-          "pushedAt": "2026-03-03T16:44:41Z",
+          "pushedAt": "2026-03-17T10:17:13Z",
           "createdAt": "2025-11-11T15:00:11Z",
           "visibility": "private",
-          "size": 164,
+          "size": 165,
           "openIssues": 0,
           "forks": 0,
           "stars": 0,
@@ -2259,10 +2463,10 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "EditorialOne TTS ingest workflow",
           "language": "Go",
-          "pushedAt": "2026-03-16T15:59:05Z",
+          "pushedAt": "2026-03-17T10:43:26Z",
           "createdAt": "2025-11-20T16:24:16Z",
           "visibility": "private",
-          "size": 272,
+          "size": 274,
           "openIssues": 0,
           "forks": 0,
           "stars": 1,
@@ -2520,10 +2724,10 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "",
           "language": "HTML",
-          "pushedAt": "2026-03-17T09:09:17Z",
+          "pushedAt": "2026-03-17T12:56:37Z",
           "createdAt": "2026-02-13T14:30:16Z",
           "visibility": "internal",
-          "size": 2060,
+          "size": 2087,
           "openIssues": 0,
           "forks": 0,
           "stars": 0,
@@ -2885,10 +3089,10 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "Hey_ Analytics Dashboard — Adobe Analytics + AI Insights",
           "language": "TypeScript",
-          "pushedAt": "2026-03-17T08:32:37Z",
+          "pushedAt": "2026-03-17T16:21:30Z",
           "createdAt": "2026-03-05T16:45:22Z",
           "visibility": "private",
-          "size": 395,
+          "size": 407,
           "openIssues": 0,
           "forks": 0,
           "stars": 0,
@@ -3279,10 +3483,10 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "Newsroom Intelligence Bot — Redaktions-Assistent für BILD",
           "language": "Python",
-          "pushedAt": "2026-03-16T16:43:13Z",
+          "pushedAt": "2026-03-17T13:32:54Z",
           "createdAt": "2026-03-12T14:38:20Z",
           "visibility": "private",
-          "size": 98,
+          "size": 131,
           "openIssues": 0,
           "forks": 0,
           "stars": 0,
@@ -3645,12 +3849,8 @@
           "slug": "admin-principle-engineers",
           "description": "",
           "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers",
-          "repoCount": 43,
+          "repoCount": 42,
           "repos": [
-            {
-              "repo": "DeepPhonemizer",
-              "permission": "push"
-            },
             {
               "repo": "Affiliate-Link-Builder",
               "permission": "push"
@@ -3821,7 +4021,7 @@
             }
           ],
           "permissions": {
-            "push": 43
+            "push": 42
           }
         },
         {
@@ -3829,12 +4029,8 @@
           "slug": "admin-intern",
           "description": "",
           "url": "https://github.com/orgs/spring-media/teams/admin-intern",
-          "repoCount": 43,
+          "repoCount": 42,
           "repos": [
-            {
-              "repo": "DeepPhonemizer",
-              "permission": "pull"
-            },
             {
               "repo": "Affiliate-Link-Builder",
               "permission": "pull"
@@ -4005,7 +4201,7 @@
             }
           ],
           "permissions": {
-            "pull": 43
+            "pull": 42
           }
         },
         {
@@ -5480,11 +5676,11 @@
           "repoOwner": "Please choose a valid option!",
           "description": "Touchscreen Application with rundown functionality",
           "language": "TypeScript",
-          "pushedAt": "2026-03-17T09:39:41Z",
+          "pushedAt": "2026-03-17T14:21:40Z",
           "createdAt": "2025-11-19T13:46:23Z",
           "visibility": "internal",
-          "size": 95587,
-          "openIssues": 11,
+          "size": 95599,
+          "openIssues": 10,
           "forks": 0,
           "stars": 0,
           "adminCount": 0,
