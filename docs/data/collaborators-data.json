@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-19T01:54:36.264Z",
+  "generatedAt": "2026-03-19T09:43:53.681Z",
   "globalStats": {
     "totalOrgs": 8,
-    "totalRepos": 2058,
-    "totalInactiveRepos": 94,
+    "totalRepos": 2061,
+    "totalInactiveRepos": 95,
     "totalUniqueAdmins": 24,
     "totalUniqueTeams": 18
   },
@@ -65,7 +65,7 @@
       "avatar": "https://avatars.githubusercontent.com/u/261443335?v=4",
       "profileUrl": "https://github.com/fabiangehrmann",
       "role": "admin",
-      "repoCount": 8,
+      "repoCount": 9,
       "orgs": [
         "spring-media"
       ],
@@ -101,6 +101,10 @@
         {
           "org": "spring-media",
           "repo": "next-james-2.0-alpha"
+        },
+        {
+          "org": "spring-media",
+          "repo": "next-james-go"
         }
       ]
     },
@@ -713,7 +717,7 @@
       "description": "",
       "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers",
       "org": "spring-media",
-      "repoCount": 41,
+      "repoCount": 42,
       "repos": [
         {
           "repo": "Affiliate-Link-Builder",
@@ -878,10 +882,14 @@
         {
           "repo": "hello-jannik-service",
           "permission": "push"
+        },
+        {
+          "repo": "next-james-go",
+          "permission": "push"
         }
       ],
       "permissions": {
-        "push": 41
+        "push": 42
       }
     },
     {
@@ -890,7 +898,7 @@
       "description": "",
       "url": "https://github.com/orgs/spring-media/teams/admin-intern",
       "org": "spring-media",
-      "repoCount": 41,
+      "repoCount": 42,
       "repos": [
         {
           "repo": "Affiliate-Link-Builder",
@@ -1055,10 +1063,14 @@
         {
           "repo": "hello-jannik-service",
           "permission": "pull"
+        },
+        {
+          "repo": "next-james-go",
+          "permission": "pull"
         }
       ],
       "permissions": {
-        "pull": 41
+        "pull": 42
       }
     },
     {
@@ -1783,8 +1795,8 @@
     },
     {
       "org": "spring-media",
-      "totalRepos": 1145,
-      "inactiveRepoCount": 41,
+      "totalRepos": 1147,
+      "inactiveRepoCount": 42,
       "totalUniqueAdmins": 20,
       "totalUniqueTeams": 9,
       "repos": [
@@ -3458,7 +3470,7 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "Newsroom Intelligence Bot — Redaktions-Assistent für BILD",
           "language": "Python",
-          "pushedAt": "2026-03-18T16:39:25Z",
+          "pushedAt": "2026-03-19T08:08:57Z",
           "createdAt": "2026-03-12T14:38:20Z",
           "visibility": "private",
           "size": 223,
@@ -3578,6 +3590,46 @@
               "url": "https://github.com/orgs/spring-media/teams/admin-intern"
             }
           ]
+        },
+        {
+          "repo": "next-james-go",
+          "url": "https://github.com/spring-media/next-james-go",
+          "repoOwner": "Please choose a valid option!  ",
+          "description": "Newsroom Intelligence Bot — Go port (low-resource production binary)",
+          "language": "Go",
+          "pushedAt": "2026-03-19T09:43:31Z",
+          "createdAt": "2026-03-19T08:33:26Z",
+          "visibility": "private",
+          "size": 9594,
+          "openIssues": 0,
+          "forks": 0,
+          "stars": 0,
+          "adminCount": 1,
+          "teamCount": 2,
+          "admins": [
+            {
+              "login": "fabiangehrmann",
+              "avatar": "https://avatars.githubusercontent.com/u/261443335?v=4",
+              "profileUrl": "https://github.com/fabiangehrmann",
+              "role": "admin"
+            }
+          ],
+          "teams": [
+            {
+              "name": "Admin - Principle Engineers",
+              "slug": "admin-principle-engineers",
+              "description": "",
+              "permission": "push",
+              "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers"
+            },
+            {
+              "name": "Admin - Intern",
+              "slug": "admin-intern",
+              "description": "",
+              "permission": "pull",
+              "url": "https://github.com/orgs/spring-media/teams/admin-intern"
+            }
+          ]
         }
       ],
       "admins": [
@@ -3586,7 +3638,7 @@
           "avatar": "https://avatars.githubusercontent.com/u/261443335?v=4",
           "profileUrl": "https://github.com/fabiangehrmann",
           "role": "admin",
-          "repoCount": 8,
+          "repoCount": 9,
           "repos": [
             "next-test-backseat-wetter-local-clone",
             "next-hey-adobe",
@@ -3595,7 +3647,8 @@
             "hey-feedback-monitor",
             "next-hey-feedback",
             "next-hey-matcher",
-            "next-james-2.0-alpha"
+            "next-james-2.0-alpha",
+            "next-james-go"
           ]
         },
         {
@@ -3803,7 +3856,7 @@
           "slug": "admin-principle-engineers",
           "description": "",
           "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers",
-          "repoCount": 41,
+          "repoCount": 42,
           "repos": [
             {
               "repo": "Affiliate-Link-Builder",
@@ -3968,10 +4021,14 @@
             {
               "repo": "hello-jannik-service",
               "permission": "push"
+            },
+            {
+              "repo": "next-james-go",
+              "permission": "push"
             }
           ],
           "permissions": {
-            "push": 41
+            "push": 42
           }
         },
         {
@@ -3979,7 +4036,7 @@
           "slug": "admin-intern",
           "description": "",
           "url": "https://github.com/orgs/spring-media/teams/admin-intern",
-          "repoCount": 41,
+          "repoCount": 42,
           "repos": [
             {
               "repo": "Affiliate-Link-Builder",
@@ -4144,10 +4201,14 @@
             {
               "repo": "hello-jannik-service",
               "permission": "pull"
+            },
+            {
+              "repo": "next-james-go",
+              "permission": "pull"
             }
           ],
           "permissions": {
-            "pull": 41
+            "pull": 42
           }
         },
         {
@@ -5606,7 +5667,7 @@
           "repoOwner": "Please choose a valid option!",
           "description": "Touchscreen Application with rundown functionality",
           "language": "TypeScript",
-          "pushedAt": "2026-03-18T13:36:26Z",
+          "pushedAt": "2026-03-19T09:45:31Z",
           "createdAt": "2025-11-19T13:46:23Z",
           "visibility": "internal",
           "size": 95605,
@@ -5958,7 +6019,7 @@
     },
     {
       "org": "sales-impact",
-      "totalRepos": 152,
+      "totalRepos": 153,
       "inactiveRepoCount": 1,
       "totalUniqueAdmins": 0,
       "totalUniqueTeams": 0,

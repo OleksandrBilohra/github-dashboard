@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T01:54:36.264Z",
+  "generatedAt": "2026-03-19T09:43:53.681Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
@@ -7,7 +7,7 @@
       "activeRepos": 21,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-19T01:54:36.264Z"
+      "lastUpdated": "2026-03-19T09:43:53.681Z"
     },
     {
       "name": "as-cloud-services",
@@ -21,7 +21,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-19T01:54:36.264Z"
+      "lastUpdated": "2026-03-19T09:43:53.681Z"
     },
     {
       "name": "asitservices",
@@ -35,7 +35,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-19T01:54:36.264Z"
+      "lastUpdated": "2026-03-19T09:43:53.681Z"
     },
     {
       "name": "axelspringer",
@@ -54,7 +54,7 @@
           "repoOwner": "Please choose a valid option! "
         }
       ],
-      "lastUpdated": "2026-03-19T01:54:36.264Z"
+      "lastUpdated": "2026-03-19T09:43:53.681Z"
     },
     {
       "name": "Media-Impact",
@@ -62,13 +62,13 @@
       "activeRepos": 7,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-19T01:54:36.264Z"
+      "lastUpdated": "2026-03-19T09:43:53.681Z"
     },
     {
       "name": "spring-media",
-      "totalRepos": 1145,
-      "activeRepos": 1104,
-      "inactiveRepos": 41,
+      "totalRepos": 1147,
+      "activeRepos": 1105,
+      "inactiveRepos": 42,
       "inactiveList": [
         {
           "repo": "Affiliate-Link-Builder",
@@ -274,9 +274,14 @@
           "repo": "hello-jannik-service",
           "url": "https://github.com/spring-media/hello-jannik-service",
           "repoOwner": "Please choose a valid option!  "
+        },
+        {
+          "repo": "next-james-go",
+          "url": "https://github.com/spring-media/next-james-go",
+          "repoOwner": "Please choose a valid option!  "
         }
       ],
-      "lastUpdated": "2026-03-19T01:54:36.264Z"
+      "lastUpdated": "2026-03-19T09:43:53.681Z"
     },
     {
       "name": "welttv",
@@ -525,12 +530,12 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-19T01:54:36.264Z"
+      "lastUpdated": "2026-03-19T09:43:53.681Z"
     },
     {
       "name": "sales-impact",
-      "totalRepos": 152,
-      "activeRepos": 151,
+      "totalRepos": 153,
+      "activeRepos": 152,
       "inactiveRepos": 1,
       "inactiveList": [
         {
@@ -539,7 +544,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-19T01:54:36.264Z"
+      "lastUpdated": "2026-03-19T09:43:53.681Z"
     }
   ],
   "trends": [
@@ -1537,6 +1542,25 @@
       "welttv_active": 0,
       "sales-impact": 152,
       "sales-impact_active": 151
+    },
+    {
+      "date": "2026-03-19",
+      "AS-ASK-IT": 21,
+      "AS-ASK-IT_active": 21,
+      "as-cloud-services": 36,
+      "as-cloud-services_active": 35,
+      "asitservices": 644,
+      "asitservices_active": 643,
+      "axelspringer": 5,
+      "axelspringer_active": 3,
+      "Media-Impact": 7,
+      "Media-Impact_active": 7,
+      "spring-media": 1147,
+      "spring-media_active": 1105,
+      "welttv": 48,
+      "welttv_active": 0,
+      "sales-impact": 153,
+      "sales-impact_active": 152
     }
   ]
 }
