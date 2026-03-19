@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-18T09:56:11.121Z",
+  "generatedAt": "2026-03-19T01:54:36.264Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
@@ -7,7 +7,7 @@
       "activeRepos": 21,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-18T09:56:11.121Z"
+      "lastUpdated": "2026-03-19T01:54:36.264Z"
     },
     {
       "name": "as-cloud-services",
@@ -21,20 +21,26 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-18T09:56:11.121Z"
+      "lastUpdated": "2026-03-19T01:54:36.264Z"
     },
     {
       "name": "asitservices",
-      "totalRepos": 642,
-      "activeRepos": 642,
-      "inactiveRepos": 0,
-      "inactiveList": [],
-      "lastUpdated": "2026-03-18T09:56:11.121Z"
+      "totalRepos": 644,
+      "activeRepos": 643,
+      "inactiveRepos": 1,
+      "inactiveList": [
+        {
+          "repo": "ec_nextdam_aws_backend",
+          "url": "https://github.com/asitservices/ec_nextdam_aws_backend",
+          "repoOwner": "Please choose a valid option!"
+        }
+      ],
+      "lastUpdated": "2026-03-19T01:54:36.264Z"
     },
     {
       "name": "axelspringer",
-      "totalRepos": 6,
-      "activeRepos": 4,
+      "totalRepos": 5,
+      "activeRepos": 3,
       "inactiveRepos": 2,
       "inactiveList": [
         {
@@ -48,21 +54,21 @@
           "repoOwner": "Please choose a valid option! "
         }
       ],
-      "lastUpdated": "2026-03-18T09:56:11.121Z"
+      "lastUpdated": "2026-03-19T01:54:36.264Z"
     },
     {
       "name": "Media-Impact",
-      "totalRepos": 14,
-      "activeRepos": 14,
+      "totalRepos": 7,
+      "activeRepos": 7,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-18T09:56:11.121Z"
+      "lastUpdated": "2026-03-19T01:54:36.264Z"
     },
     {
       "name": "spring-media",
-      "totalRepos": 1146,
+      "totalRepos": 1145,
       "activeRepos": 1104,
-      "inactiveRepos": 42,
+      "inactiveRepos": 41,
       "inactiveList": [
         {
           "repo": "Affiliate-Link-Builder",
@@ -175,11 +181,6 @@
           "repoOwner": "Please choose a valid option!  "
         },
         {
-          "repo": "next-homeplanung",
-          "url": "https://github.com/spring-media/next-homeplanung",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
           "repo": "foundry-kinesis-connector",
           "url": "https://github.com/spring-media/foundry-kinesis-connector",
           "repoOwner": "Please choose a valid option!  "
@@ -275,7 +276,7 @@
           "repoOwner": "Please choose a valid option!  "
         }
       ],
-      "lastUpdated": "2026-03-18T09:56:11.121Z"
+      "lastUpdated": "2026-03-19T01:54:36.264Z"
     },
     {
       "name": "welttv",
@@ -524,7 +525,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-18T09:56:11.121Z"
+      "lastUpdated": "2026-03-19T01:54:36.264Z"
     },
     {
       "name": "sales-impact",
@@ -538,7 +539,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-18T09:56:11.121Z"
+      "lastUpdated": "2026-03-19T01:54:36.264Z"
     }
   ],
   "trends": [
@@ -1512,6 +1513,25 @@
       "Media-Impact": 14,
       "Media-Impact_active": 14,
       "spring-media": 1146,
+      "spring-media_active": 1104,
+      "welttv": 48,
+      "welttv_active": 0,
+      "sales-impact": 152,
+      "sales-impact_active": 151
+    },
+    {
+      "date": "2026-03-19",
+      "AS-ASK-IT": 21,
+      "AS-ASK-IT_active": 21,
+      "as-cloud-services": 36,
+      "as-cloud-services_active": 35,
+      "asitservices": 644,
+      "asitservices_active": 643,
+      "axelspringer": 5,
+      "axelspringer_active": 3,
+      "Media-Impact": 7,
+      "Media-Impact_active": 7,
+      "spring-media": 1145,
       "spring-media_active": 1104,
       "welttv": 48,
       "welttv_active": 0,

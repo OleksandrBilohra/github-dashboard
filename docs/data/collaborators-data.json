@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-03-18T09:56:11.121Z",
+  "generatedAt": "2026-03-19T01:54:36.264Z",
   "globalStats": {
     "totalOrgs": 8,
-    "totalRepos": 2065,
+    "totalRepos": 2058,
     "totalInactiveRepos": 94,
-    "totalUniqueAdmins": 25,
+    "totalUniqueAdmins": 24,
     "totalUniqueTeams": 18
   },
   "globalAdmins": [
@@ -197,22 +197,18 @@
       ]
     },
     {
-      "login": "patrikrohrmann",
-      "avatar": "https://avatars.githubusercontent.com/u/250340322?v=4",
-      "profileUrl": "https://github.com/patrikrohrmann",
+      "login": "BriwwWoxoW",
+      "avatar": "https://avatars.githubusercontent.com/u/110679604?v=4",
+      "profileUrl": "https://github.com/BriwwWoxoW",
       "role": "admin",
-      "repoCount": 2,
+      "repoCount": 1,
       "orgs": [
-        "spring-media"
+        "asitservices"
       ],
       "repos": [
         {
-          "org": "spring-media",
-          "repo": "next-homeplanung"
-        },
-        {
-          "org": "spring-media",
-          "repo": "next-hey-grafiktool"
+          "org": "asitservices",
+          "repo": "ec_nextdam_aws_backend"
         }
       ]
     },
@@ -361,9 +357,9 @@
       ]
     },
     {
-      "login": "dbpprt",
-      "avatar": "https://avatars.githubusercontent.com/u/7000188?v=4",
-      "profileUrl": "https://github.com/dbpprt",
+      "login": "patrikrohrmann",
+      "avatar": "https://avatars.githubusercontent.com/u/250340322?v=4",
+      "profileUrl": "https://github.com/patrikrohrmann",
       "role": "admin",
       "repoCount": 1,
       "orgs": [
@@ -372,23 +368,7 @@
       "repos": [
         {
           "org": "spring-media",
-          "repo": "next-homeplanung"
-        }
-      ]
-    },
-    {
-      "login": "derzierau",
-      "avatar": "https://avatars.githubusercontent.com/u/60854672?v=4",
-      "profileUrl": "https://github.com/derzierau",
-      "role": "admin",
-      "repoCount": 1,
-      "orgs": [
-        "spring-media"
-      ],
-      "repos": [
-        {
-          "org": "spring-media",
-          "repo": "next-homeplanung"
+          "repo": "next-hey-grafiktool"
         }
       ]
     },
@@ -733,7 +713,7 @@
       "description": "",
       "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers",
       "org": "spring-media",
-      "repoCount": 42,
+      "repoCount": 41,
       "repos": [
         {
           "repo": "Affiliate-Link-Builder",
@@ -824,10 +804,6 @@
           "permission": "push"
         },
         {
-          "repo": "next-homeplanung",
-          "permission": "push"
-        },
-        {
           "repo": "foundry-kinesis-connector",
           "permission": "push"
         },
@@ -905,7 +881,7 @@
         }
       ],
       "permissions": {
-        "push": 42
+        "push": 41
       }
     },
     {
@@ -914,7 +890,7 @@
       "description": "",
       "url": "https://github.com/orgs/spring-media/teams/admin-intern",
       "org": "spring-media",
-      "repoCount": 42,
+      "repoCount": 41,
       "repos": [
         {
           "repo": "Affiliate-Link-Builder",
@@ -1005,10 +981,6 @@
           "permission": "pull"
         },
         {
-          "repo": "next-homeplanung",
-          "permission": "pull"
-        },
-        {
           "repo": "foundry-kinesis-connector",
           "permission": "pull"
         },
@@ -1086,7 +1058,7 @@
         }
       ],
       "permissions": {
-        "pull": 42
+        "pull": 41
       }
     },
     {
@@ -1356,6 +1328,23 @@
       }
     },
     {
+      "name": "Admin - Intern",
+      "slug": "admin-intern",
+      "description": "",
+      "url": "https://github.com/orgs/asitservices/teams/admin-intern",
+      "org": "asitservices",
+      "repoCount": 1,
+      "repos": [
+        {
+          "repo": "ec_nextdam_aws_backend",
+          "permission": "pull"
+        }
+      ],
+      "permissions": {
+        "pull": 1
+      }
+    },
+    {
       "name": "Admin - Copilot",
       "slug": "admin-copilot",
       "description": "",
@@ -1404,23 +1393,6 @@
       ],
       "permissions": {
         "push": 1
-      }
-    },
-    {
-      "name": "BILD Next",
-      "slug": "bild-next",
-      "description": "",
-      "url": "https://github.com/orgs/spring-media/teams/bild-next",
-      "org": "spring-media",
-      "repoCount": 1,
-      "repos": [
-        {
-          "repo": "next-homeplanung",
-          "permission": "admin"
-        }
-      ],
-      "permissions": {
-        "admin": 1
       }
     },
     {
@@ -1554,17 +1526,79 @@
     },
     {
       "org": "asitservices",
-      "totalRepos": 642,
-      "inactiveRepoCount": 0,
-      "totalUniqueAdmins": 0,
-      "totalUniqueTeams": 0,
-      "repos": [],
-      "admins": [],
-      "teams": []
+      "totalRepos": 644,
+      "inactiveRepoCount": 1,
+      "totalUniqueAdmins": 1,
+      "totalUniqueTeams": 1,
+      "repos": [
+        {
+          "repo": "ec_nextdam_aws_backend",
+          "url": "https://github.com/asitservices/ec_nextdam_aws_backend",
+          "repoOwner": "Please choose a valid option!",
+          "description": "",
+          "language": "JavaScript",
+          "pushedAt": "2026-03-18T10:19:41Z",
+          "createdAt": "2026-03-18T10:14:19Z",
+          "visibility": "private",
+          "size": 1030,
+          "openIssues": 4,
+          "forks": 0,
+          "stars": 0,
+          "adminCount": 1,
+          "teamCount": 1,
+          "admins": [
+            {
+              "login": "BriwwWoxoW",
+              "avatar": "https://avatars.githubusercontent.com/u/110679604?v=4",
+              "profileUrl": "https://github.com/BriwwWoxoW",
+              "role": "admin"
+            }
+          ],
+          "teams": [
+            {
+              "name": "Admin - Intern",
+              "slug": "admin-intern",
+              "description": "",
+              "permission": "pull",
+              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
+            }
+          ]
+        }
+      ],
+      "admins": [
+        {
+          "login": "BriwwWoxoW",
+          "avatar": "https://avatars.githubusercontent.com/u/110679604?v=4",
+          "profileUrl": "https://github.com/BriwwWoxoW",
+          "role": "admin",
+          "repoCount": 1,
+          "repos": [
+            "ec_nextdam_aws_backend"
+          ]
+        }
+      ],
+      "teams": [
+        {
+          "name": "Admin - Intern",
+          "slug": "admin-intern",
+          "description": "",
+          "url": "https://github.com/orgs/asitservices/teams/admin-intern",
+          "repoCount": 1,
+          "repos": [
+            {
+              "repo": "ec_nextdam_aws_backend",
+              "permission": "pull"
+            }
+          ],
+          "permissions": {
+            "pull": 1
+          }
+        }
+      ]
     },
     {
       "org": "axelspringer",
-      "totalRepos": 6,
+      "totalRepos": 5,
       "inactiveRepoCount": 2,
       "totalUniqueAdmins": 0,
       "totalUniqueTeams": 4,
@@ -1621,7 +1655,7 @@
           "size": 1404,
           "openIssues": 21,
           "forks": 57,
-          "stars": 423,
+          "stars": 425,
           "adminCount": 0,
           "teamCount": 4,
           "admins": [],
@@ -1739,7 +1773,7 @@
     },
     {
       "org": "Media-Impact",
-      "totalRepos": 14,
+      "totalRepos": 7,
       "inactiveRepoCount": 0,
       "totalUniqueAdmins": 0,
       "totalUniqueTeams": 0,
@@ -1749,10 +1783,10 @@
     },
     {
       "org": "spring-media",
-      "totalRepos": 1146,
-      "inactiveRepoCount": 42,
-      "totalUniqueAdmins": 22,
-      "totalUniqueTeams": 10,
+      "totalRepos": 1145,
+      "inactiveRepoCount": 41,
+      "totalUniqueAdmins": 20,
+      "totalUniqueTeams": 9,
       "repos": [
         {
           "repo": "Affiliate-Link-Builder",
@@ -2670,10 +2704,10 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "Video encoder service for encoding videos in different formats and resolutions.",
           "language": "Go",
-          "pushedAt": "2026-03-16T14:23:54Z",
+          "pushedAt": "2026-03-18T18:39:50Z",
           "createdAt": "2026-02-13T11:56:25Z",
           "visibility": "private",
-          "size": 141,
+          "size": 159,
           "openIssues": 0,
           "forks": 0,
           "stars": 1,
@@ -2715,65 +2749,6 @@
               "description": "",
               "permission": "pull",
               "url": "https://github.com/orgs/spring-media/teams/admin-intern"
-            }
-          ]
-        },
-        {
-          "repo": "next-homeplanung",
-          "url": "https://github.com/spring-media/next-homeplanung",
-          "repoOwner": "Please choose a valid option!  ",
-          "description": "",
-          "language": "HTML",
-          "pushedAt": "2026-03-17T12:56:37Z",
-          "createdAt": "2026-02-13T14:30:16Z",
-          "visibility": "internal",
-          "size": 2087,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 3,
-          "teamCount": 3,
-          "admins": [
-            {
-              "login": "dbpprt",
-              "avatar": "https://avatars.githubusercontent.com/u/7000188?v=4",
-              "profileUrl": "https://github.com/dbpprt",
-              "role": "admin"
-            },
-            {
-              "login": "derzierau",
-              "avatar": "https://avatars.githubusercontent.com/u/60854672?v=4",
-              "profileUrl": "https://github.com/derzierau",
-              "role": "admin"
-            },
-            {
-              "login": "patrikrohrmann",
-              "avatar": "https://avatars.githubusercontent.com/u/250340322?v=4",
-              "profileUrl": "https://github.com/patrikrohrmann",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Principle Engineers",
-              "slug": "admin-principle-engineers",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/spring-media/teams/admin-intern"
-            },
-            {
-              "name": "BILD Next",
-              "slug": "bild-next",
-              "description": "",
-              "permission": "admin",
-              "url": "https://github.com/orgs/spring-media/teams/bild-next"
             }
           ]
         },
@@ -2869,10 +2844,10 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "",
           "language": "HTML",
-          "pushedAt": "2026-03-13T13:55:21Z",
+          "pushedAt": "2026-03-18T13:19:12Z",
           "createdAt": "2026-02-25T11:46:05Z",
           "visibility": "internal",
-          "size": 7679,
+          "size": 7768,
           "openIssues": 0,
           "forks": 0,
           "stars": 1,
@@ -3483,11 +3458,11 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "Newsroom Intelligence Bot — Redaktions-Assistent für BILD",
           "language": "Python",
-          "pushedAt": "2026-03-18T09:14:58Z",
+          "pushedAt": "2026-03-18T16:39:25Z",
           "createdAt": "2026-03-12T14:38:20Z",
           "visibility": "private",
-          "size": 156,
-          "openIssues": 0,
+          "size": 223,
+          "openIssues": 1,
           "forks": 0,
           "stars": 0,
           "adminCount": 1,
@@ -3652,17 +3627,6 @@
           ]
         },
         {
-          "login": "patrikrohrmann",
-          "avatar": "https://avatars.githubusercontent.com/u/250340322?v=4",
-          "profileUrl": "https://github.com/patrikrohrmann",
-          "role": "admin",
-          "repoCount": 2,
-          "repos": [
-            "next-homeplanung",
-            "next-hey-grafiktool"
-          ]
-        },
-        {
           "login": "Luca-Esposito",
           "avatar": "https://avatars.githubusercontent.com/u/29707385?v=4",
           "profileUrl": "https://github.com/Luca-Esposito",
@@ -3753,23 +3717,13 @@
           ]
         },
         {
-          "login": "dbpprt",
-          "avatar": "https://avatars.githubusercontent.com/u/7000188?v=4",
-          "profileUrl": "https://github.com/dbpprt",
+          "login": "patrikrohrmann",
+          "avatar": "https://avatars.githubusercontent.com/u/250340322?v=4",
+          "profileUrl": "https://github.com/patrikrohrmann",
           "role": "admin",
           "repoCount": 1,
           "repos": [
-            "next-homeplanung"
-          ]
-        },
-        {
-          "login": "derzierau",
-          "avatar": "https://avatars.githubusercontent.com/u/60854672?v=4",
-          "profileUrl": "https://github.com/derzierau",
-          "role": "admin",
-          "repoCount": 1,
-          "repos": [
-            "next-homeplanung"
+            "next-hey-grafiktool"
           ]
         },
         {
@@ -3849,7 +3803,7 @@
           "slug": "admin-principle-engineers",
           "description": "",
           "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers",
-          "repoCount": 42,
+          "repoCount": 41,
           "repos": [
             {
               "repo": "Affiliate-Link-Builder",
@@ -3940,10 +3894,6 @@
               "permission": "push"
             },
             {
-              "repo": "next-homeplanung",
-              "permission": "push"
-            },
-            {
               "repo": "foundry-kinesis-connector",
               "permission": "push"
             },
@@ -4021,7 +3971,7 @@
             }
           ],
           "permissions": {
-            "push": 42
+            "push": 41
           }
         },
         {
@@ -4029,7 +3979,7 @@
           "slug": "admin-intern",
           "description": "",
           "url": "https://github.com/orgs/spring-media/teams/admin-intern",
-          "repoCount": 42,
+          "repoCount": 41,
           "repos": [
             {
               "repo": "Affiliate-Link-Builder",
@@ -4120,10 +4070,6 @@
               "permission": "pull"
             },
             {
-              "repo": "next-homeplanung",
-              "permission": "pull"
-            },
-            {
               "repo": "foundry-kinesis-connector",
               "permission": "pull"
             },
@@ -4201,7 +4147,7 @@
             }
           ],
           "permissions": {
-            "pull": 42
+            "pull": 41
           }
         },
         {
@@ -4382,22 +4328,6 @@
           ],
           "permissions": {
             "push": 1
-          }
-        },
-        {
-          "name": "BILD Next",
-          "slug": "bild-next",
-          "description": "",
-          "url": "https://github.com/orgs/spring-media/teams/bild-next",
-          "repoCount": 1,
-          "repos": [
-            {
-              "repo": "next-homeplanung",
-              "permission": "admin"
-            }
-          ],
-          "permissions": {
-            "admin": 1
           }
         },
         {
@@ -5676,11 +5606,11 @@
           "repoOwner": "Please choose a valid option!",
           "description": "Touchscreen Application with rundown functionality",
           "language": "TypeScript",
-          "pushedAt": "2026-03-17T14:21:40Z",
+          "pushedAt": "2026-03-18T13:36:26Z",
           "createdAt": "2025-11-19T13:46:23Z",
           "visibility": "internal",
-          "size": 95599,
-          "openIssues": 10,
+          "size": 95605,
+          "openIssues": 9,
           "forks": 0,
           "stars": 0,
           "adminCount": 0,
