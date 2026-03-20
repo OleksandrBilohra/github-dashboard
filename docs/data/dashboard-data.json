@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T09:43:53.681Z",
+  "generatedAt": "2026-03-20T01:48:54.485Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
@@ -7,7 +7,7 @@
       "activeRepos": 21,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-19T09:43:53.681Z"
+      "lastUpdated": "2026-03-20T01:48:54.485Z"
     },
     {
       "name": "as-cloud-services",
@@ -21,7 +21,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-19T09:43:53.681Z"
+      "lastUpdated": "2026-03-20T01:48:54.485Z"
     },
     {
       "name": "asitservices",
@@ -35,7 +35,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-19T09:43:53.681Z"
+      "lastUpdated": "2026-03-20T01:48:54.485Z"
     },
     {
       "name": "axelspringer",
@@ -54,7 +54,7 @@
           "repoOwner": "Please choose a valid option! "
         }
       ],
-      "lastUpdated": "2026-03-19T09:43:53.681Z"
+      "lastUpdated": "2026-03-20T01:48:54.485Z"
     },
     {
       "name": "Media-Impact",
@@ -62,13 +62,13 @@
       "activeRepos": 7,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-19T09:43:53.681Z"
+      "lastUpdated": "2026-03-20T01:48:54.485Z"
     },
     {
       "name": "spring-media",
-      "totalRepos": 1147,
-      "activeRepos": 1105,
-      "inactiveRepos": 42,
+      "totalRepos": 1149,
+      "activeRepos": 1113,
+      "inactiveRepos": 36,
       "inactiveList": [
         {
           "repo": "Affiliate-Link-Builder",
@@ -191,11 +191,6 @@
           "repoOwner": "Please choose a valid option!  "
         },
         {
-          "repo": "next-hey-grafiktool",
-          "url": "https://github.com/spring-media/next-hey-grafiktool",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
           "repo": "AiKoalaBear",
           "url": "https://github.com/spring-media/AiKoalaBear",
           "repoOwner": "Please choose a valid option!  "
@@ -206,23 +201,8 @@
           "repoOwner": "Please choose a valid option!  "
         },
         {
-          "repo": "next-test-backseat-wetter-local-clone",
-          "url": "https://github.com/spring-media/next-test-backseat-wetter-local-clone",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
           "repo": "Duolingoproposedfeature",
           "url": "https://github.com/spring-media/Duolingoproposedfeature",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "next-hey-adobe",
-          "url": "https://github.com/spring-media/next-hey-adobe",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "next-API-checker",
-          "url": "https://github.com/spring-media/next-API-checker",
           "repoOwner": "Please choose a valid option!  "
         },
         {
@@ -241,16 +221,6 @@
           "repoOwner": "Please choose a valid option!  "
         },
         {
-          "repo": "next-hey-feedback",
-          "url": "https://github.com/spring-media/next-hey-feedback",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "next-hey-matcher",
-          "url": "https://github.com/spring-media/next-hey-matcher",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
           "repo": "victoriametricspoc",
           "url": "https://github.com/spring-media/victoriametricspoc",
           "repoOwner": "Please choose a valid option!  "
@@ -258,11 +228,6 @@
         {
           "repo": "foundry-rasp-derived-kpis",
           "url": "https://github.com/spring-media/foundry-rasp-derived-kpis",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "next-james-2.0-alpha",
-          "url": "https://github.com/spring-media/next-james-2.0-alpha",
           "repoOwner": "Please choose a valid option!  "
         },
         {
@@ -279,9 +244,14 @@
           "repo": "next-james-go",
           "url": "https://github.com/spring-media/next-james-go",
           "repoOwner": "Please choose a valid option!  "
+        },
+        {
+          "repo": "next-backseatLG",
+          "url": "https://github.com/spring-media/next-backseatLG",
+          "repoOwner": "Please choose a valid option!  "
         }
       ],
-      "lastUpdated": "2026-03-19T09:43:53.681Z"
+      "lastUpdated": "2026-03-20T01:48:54.485Z"
     },
     {
       "name": "welttv",
@@ -530,7 +500,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-19T09:43:53.681Z"
+      "lastUpdated": "2026-03-20T01:48:54.485Z"
     },
     {
       "name": "sales-impact",
@@ -544,7 +514,7 @@
           "repoOwner": "Please choose a valid option!"
         }
       ],
-      "lastUpdated": "2026-03-19T09:43:53.681Z"
+      "lastUpdated": "2026-03-20T01:48:54.485Z"
     }
   ],
   "trends": [
@@ -1557,6 +1527,25 @@
       "Media-Impact_active": 7,
       "spring-media": 1147,
       "spring-media_active": 1105,
+      "welttv": 48,
+      "welttv_active": 0,
+      "sales-impact": 153,
+      "sales-impact_active": 152
+    },
+    {
+      "date": "2026-03-20",
+      "AS-ASK-IT": 21,
+      "AS-ASK-IT_active": 21,
+      "as-cloud-services": 36,
+      "as-cloud-services_active": 35,
+      "asitservices": 644,
+      "asitservices_active": 643,
+      "axelspringer": 5,
+      "axelspringer_active": 3,
+      "Media-Impact": 7,
+      "Media-Impact_active": 7,
+      "spring-media": 1149,
+      "spring-media_active": 1113,
       "welttv": 48,
       "welttv_active": 0,
       "sales-impact": 153,

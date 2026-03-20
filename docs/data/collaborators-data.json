@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-03-19T09:43:53.681Z",
+  "generatedAt": "2026-03-20T01:48:54.485Z",
   "globalStats": {
     "totalOrgs": 8,
-    "totalRepos": 2061,
-    "totalInactiveRepos": 95,
-    "totalUniqueAdmins": 24,
-    "totalUniqueTeams": 18
+    "totalRepos": 2063,
+    "totalInactiveRepos": 89,
+    "totalUniqueAdmins": 22,
+    "totalUniqueTeams": 17
   },
   "globalAdmins": [
     {
@@ -57,54 +57,6 @@
         {
           "org": "welttv",
           "repo": "welt-wall-scene"
-        }
-      ]
-    },
-    {
-      "login": "fabiangehrmann",
-      "avatar": "https://avatars.githubusercontent.com/u/261443335?v=4",
-      "profileUrl": "https://github.com/fabiangehrmann",
-      "role": "admin",
-      "repoCount": 9,
-      "orgs": [
-        "spring-media"
-      ],
-      "repos": [
-        {
-          "org": "spring-media",
-          "repo": "next-test-backseat-wetter-local-clone"
-        },
-        {
-          "org": "spring-media",
-          "repo": "next-hey-adobe"
-        },
-        {
-          "org": "spring-media",
-          "repo": "next-API-checker"
-        },
-        {
-          "org": "spring-media",
-          "repo": "next-transcriber"
-        },
-        {
-          "org": "spring-media",
-          "repo": "hey-feedback-monitor"
-        },
-        {
-          "org": "spring-media",
-          "repo": "next-hey-feedback"
-        },
-        {
-          "org": "spring-media",
-          "repo": "next-hey-matcher"
-        },
-        {
-          "org": "spring-media",
-          "repo": "next-james-2.0-alpha"
-        },
-        {
-          "org": "spring-media",
-          "repo": "next-james-go"
         }
       ]
     },
@@ -197,6 +149,30 @@
         {
           "org": "welttv",
           "repo": "welt-wall-scene"
+        }
+      ]
+    },
+    {
+      "login": "fabiangehrmann",
+      "avatar": "https://avatars.githubusercontent.com/u/261443335?v=4",
+      "profileUrl": "https://github.com/fabiangehrmann",
+      "role": "admin",
+      "repoCount": 3,
+      "orgs": [
+        "spring-media"
+      ],
+      "repos": [
+        {
+          "org": "spring-media",
+          "repo": "next-transcriber"
+        },
+        {
+          "org": "spring-media",
+          "repo": "hey-feedback-monitor"
+        },
+        {
+          "org": "spring-media",
+          "repo": "next-james-go"
         }
       ]
     },
@@ -361,38 +337,6 @@
       ]
     },
     {
-      "login": "patrikrohrmann",
-      "avatar": "https://avatars.githubusercontent.com/u/250340322?v=4",
-      "profileUrl": "https://github.com/patrikrohrmann",
-      "role": "admin",
-      "repoCount": 1,
-      "orgs": [
-        "spring-media"
-      ],
-      "repos": [
-        {
-          "org": "spring-media",
-          "repo": "next-hey-grafiktool"
-        }
-      ]
-    },
-    {
-      "login": "kims-krams",
-      "avatar": "https://avatars.githubusercontent.com/u/262795473?v=4",
-      "profileUrl": "https://github.com/kims-krams",
-      "role": "admin",
-      "repoCount": 1,
-      "orgs": [
-        "spring-media"
-      ],
-      "repos": [
-        {
-          "org": "spring-media",
-          "repo": "next-hey-grafiktool"
-        }
-      ]
-    },
-    {
       "login": "dsimetchiev",
       "avatar": "https://avatars.githubusercontent.com/u/38256166?v=4",
       "profileUrl": "https://github.com/dsimetchiev",
@@ -441,22 +385,6 @@
       ]
     },
     {
-      "login": "AndreasPrang",
-      "avatar": "https://avatars.githubusercontent.com/u/1097566?v=4",
-      "profileUrl": "https://github.com/AndreasPrang",
-      "role": "admin",
-      "repoCount": 1,
-      "orgs": [
-        "spring-media"
-      ],
-      "repos": [
-        {
-          "org": "spring-media",
-          "repo": "next-hey-feedback"
-        }
-      ]
-    },
-    {
       "login": "arindam312",
       "avatar": "https://avatars.githubusercontent.com/u/20879791?v=4",
       "profileUrl": "https://github.com/arindam312",
@@ -485,6 +413,22 @@
         {
           "org": "spring-media",
           "repo": "hello-jannik-service"
+        }
+      ]
+    },
+    {
+      "login": "tporwol",
+      "avatar": "https://avatars.githubusercontent.com/u/267041358?v=4",
+      "profileUrl": "https://github.com/tporwol",
+      "role": "admin",
+      "repoCount": 1,
+      "orgs": [
+        "spring-media"
+      ],
+      "repos": [
+        {
+          "org": "spring-media",
+          "repo": "next-backseatLG"
         }
       ]
     },
@@ -717,7 +661,7 @@
       "description": "",
       "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers",
       "org": "spring-media",
-      "repoCount": 42,
+      "repoCount": 36,
       "repos": [
         {
           "repo": "Affiliate-Link-Builder",
@@ -816,10 +760,6 @@
           "permission": "push"
         },
         {
-          "repo": "next-hey-grafiktool",
-          "permission": "push"
-        },
-        {
           "repo": "AiKoalaBear",
           "permission": "push"
         },
@@ -828,19 +768,7 @@
           "permission": "push"
         },
         {
-          "repo": "next-test-backseat-wetter-local-clone",
-          "permission": "push"
-        },
-        {
           "repo": "Duolingoproposedfeature",
-          "permission": "push"
-        },
-        {
-          "repo": "next-hey-adobe",
-          "permission": "push"
-        },
-        {
-          "repo": "next-API-checker",
           "permission": "push"
         },
         {
@@ -856,23 +784,11 @@
           "permission": "push"
         },
         {
-          "repo": "next-hey-feedback",
-          "permission": "push"
-        },
-        {
-          "repo": "next-hey-matcher",
-          "permission": "push"
-        },
-        {
           "repo": "victoriametricspoc",
           "permission": "push"
         },
         {
           "repo": "foundry-rasp-derived-kpis",
-          "permission": "push"
-        },
-        {
-          "repo": "next-james-2.0-alpha",
           "permission": "push"
         },
         {
@@ -886,10 +802,14 @@
         {
           "repo": "next-james-go",
           "permission": "push"
+        },
+        {
+          "repo": "next-backseatLG",
+          "permission": "push"
         }
       ],
       "permissions": {
-        "push": 42
+        "push": 36
       }
     },
     {
@@ -898,7 +818,7 @@
       "description": "",
       "url": "https://github.com/orgs/spring-media/teams/admin-intern",
       "org": "spring-media",
-      "repoCount": 42,
+      "repoCount": 36,
       "repos": [
         {
           "repo": "Affiliate-Link-Builder",
@@ -997,10 +917,6 @@
           "permission": "pull"
         },
         {
-          "repo": "next-hey-grafiktool",
-          "permission": "pull"
-        },
-        {
           "repo": "AiKoalaBear",
           "permission": "pull"
         },
@@ -1009,19 +925,7 @@
           "permission": "pull"
         },
         {
-          "repo": "next-test-backseat-wetter-local-clone",
-          "permission": "pull"
-        },
-        {
           "repo": "Duolingoproposedfeature",
-          "permission": "pull"
-        },
-        {
-          "repo": "next-hey-adobe",
-          "permission": "pull"
-        },
-        {
-          "repo": "next-API-checker",
           "permission": "pull"
         },
         {
@@ -1037,23 +941,11 @@
           "permission": "pull"
         },
         {
-          "repo": "next-hey-feedback",
-          "permission": "pull"
-        },
-        {
-          "repo": "next-hey-matcher",
-          "permission": "pull"
-        },
-        {
           "repo": "victoriametricspoc",
           "permission": "pull"
         },
         {
           "repo": "foundry-rasp-derived-kpis",
-          "permission": "pull"
-        },
-        {
-          "repo": "next-james-2.0-alpha",
           "permission": "pull"
         },
         {
@@ -1067,10 +959,14 @@
         {
           "repo": "next-james-go",
           "permission": "pull"
+        },
+        {
+          "repo": "next-backseatLG",
+          "permission": "pull"
         }
       ],
       "permissions": {
-        "pull": 42
+        "pull": 36
       }
     },
     {
@@ -1161,47 +1057,6 @@
       ],
       "permissions": {
         "admin": 7
-      }
-    },
-    {
-      "name": "BILD Next_AD",
-      "slug": "bild-next_ad",
-      "description": "",
-      "url": "https://github.com/orgs/spring-media/teams/bild-next_ad",
-      "org": "spring-media",
-      "repoCount": 7,
-      "repos": [
-        {
-          "repo": "next-hey-grafiktool",
-          "permission": "push"
-        },
-        {
-          "repo": "next-test-backseat-wetter-local-clone",
-          "permission": "push"
-        },
-        {
-          "repo": "next-hey-adobe",
-          "permission": "push"
-        },
-        {
-          "repo": "next-API-checker",
-          "permission": "push"
-        },
-        {
-          "repo": "next-hey-feedback",
-          "permission": "push"
-        },
-        {
-          "repo": "next-hey-matcher",
-          "permission": "push"
-        },
-        {
-          "repo": "next-james-2.0-alpha",
-          "permission": "push"
-        }
-      ],
-      "permissions": {
-        "push": 7
       }
     },
     {
@@ -1795,10 +1650,10 @@
     },
     {
       "org": "spring-media",
-      "totalRepos": 1147,
-      "inactiveRepoCount": 42,
-      "totalUniqueAdmins": 20,
-      "totalUniqueTeams": 9,
+      "totalRepos": 1149,
+      "inactiveRepoCount": 36,
+      "totalUniqueAdmins": 18,
+      "totalUniqueTeams": 8,
       "repos": [
         {
           "repo": "Affiliate-Link-Builder",
@@ -2716,10 +2571,10 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "Video encoder service for encoding videos in different formats and resolutions.",
           "language": "Go",
-          "pushedAt": "2026-03-18T18:39:50Z",
+          "pushedAt": "2026-03-19T15:32:55Z",
           "createdAt": "2026-02-13T11:56:25Z",
           "visibility": "private",
-          "size": 159,
+          "size": 161,
           "openIssues": 0,
           "forks": 0,
           "stars": 1,
@@ -2851,59 +2706,6 @@
           ]
         },
         {
-          "repo": "next-hey-grafiktool",
-          "url": "https://github.com/spring-media/next-hey-grafiktool",
-          "repoOwner": "Please choose a valid option!  ",
-          "description": "",
-          "language": "HTML",
-          "pushedAt": "2026-03-18T13:19:12Z",
-          "createdAt": "2026-02-25T11:46:05Z",
-          "visibility": "internal",
-          "size": 7768,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 1,
-          "adminCount": 2,
-          "teamCount": 3,
-          "admins": [
-            {
-              "login": "patrikrohrmann",
-              "avatar": "https://avatars.githubusercontent.com/u/250340322?v=4",
-              "profileUrl": "https://github.com/patrikrohrmann",
-              "role": "admin"
-            },
-            {
-              "login": "kims-krams",
-              "avatar": "https://avatars.githubusercontent.com/u/262795473?v=4",
-              "profileUrl": "https://github.com/kims-krams",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Principle Engineers",
-              "slug": "admin-principle-engineers",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/spring-media/teams/admin-intern"
-            },
-            {
-              "name": "BILD Next_AD",
-              "slug": "bild-next_ad",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/bild-next_ad"
-            }
-          ]
-        },
-        {
           "repo": "AiKoalaBear",
           "url": "https://github.com/spring-media/AiKoalaBear",
           "repoOwner": "Please choose a valid option!  ",
@@ -2991,53 +2793,6 @@
           ]
         },
         {
-          "repo": "next-test-backseat-wetter-local-clone",
-          "url": "https://github.com/spring-media/next-test-backseat-wetter-local-clone",
-          "repoOwner": "Please choose a valid option!  ",
-          "description": "Backseat Wetter-Room & OSINT Dossier - Local Testing",
-          "language": "Unknown",
-          "pushedAt": "2026-03-07T06:45:44Z",
-          "createdAt": "2026-03-03T15:50:52Z",
-          "visibility": "private",
-          "size": 79,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 3,
-          "admins": [
-            {
-              "login": "fabiangehrmann",
-              "avatar": "https://avatars.githubusercontent.com/u/261443335?v=4",
-              "profileUrl": "https://github.com/fabiangehrmann",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Principle Engineers",
-              "slug": "admin-principle-engineers",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/spring-media/teams/admin-intern"
-            },
-            {
-              "name": "BILD Next_AD",
-              "slug": "bild-next_ad",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/bild-next_ad"
-            }
-          ]
-        },
-        {
           "repo": "Duolingoproposedfeature",
           "url": "https://github.com/spring-media/Duolingoproposedfeature",
           "repoOwner": "Please choose a valid option!  ",
@@ -3067,100 +2822,6 @@
               "description": "",
               "permission": "pull",
               "url": "https://github.com/orgs/spring-media/teams/admin-intern"
-            }
-          ]
-        },
-        {
-          "repo": "next-hey-adobe",
-          "url": "https://github.com/spring-media/next-hey-adobe",
-          "repoOwner": "Please choose a valid option!  ",
-          "description": "Hey_ Analytics Dashboard — Adobe Analytics + AI Insights",
-          "language": "TypeScript",
-          "pushedAt": "2026-03-17T16:21:30Z",
-          "createdAt": "2026-03-05T16:45:22Z",
-          "visibility": "private",
-          "size": 407,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 3,
-          "admins": [
-            {
-              "login": "fabiangehrmann",
-              "avatar": "https://avatars.githubusercontent.com/u/261443335?v=4",
-              "profileUrl": "https://github.com/fabiangehrmann",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Principle Engineers",
-              "slug": "admin-principle-engineers",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/spring-media/teams/admin-intern"
-            },
-            {
-              "name": "BILD Next_AD",
-              "slug": "bild-next_ad",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/bild-next_ad"
-            }
-          ]
-        },
-        {
-          "repo": "next-API-checker",
-          "url": "https://github.com/spring-media/next-API-checker",
-          "repoOwner": "Please choose a valid option!  ",
-          "description": "Chrome extension: Test APIs, parse curl commands, explore JSON/YAML/XML/CSV responses",
-          "language": "JavaScript",
-          "pushedAt": "2026-03-11T08:34:39Z",
-          "createdAt": "2026-03-06T09:09:59Z",
-          "visibility": "internal",
-          "size": 447,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 3,
-          "admins": [
-            {
-              "login": "fabiangehrmann",
-              "avatar": "https://avatars.githubusercontent.com/u/261443335?v=4",
-              "profileUrl": "https://github.com/fabiangehrmann",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Principle Engineers",
-              "slug": "admin-principle-engineers",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/spring-media/teams/admin-intern"
-            },
-            {
-              "name": "BILD Next_AD",
-              "slug": "bild-next_ad",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/bild-next_ad"
             }
           ]
         },
@@ -3285,106 +2946,6 @@
           ]
         },
         {
-          "repo": "next-hey-feedback",
-          "url": "https://github.com/spring-media/next-hey-feedback",
-          "repoOwner": "Please choose a valid option!  ",
-          "description": "Hey_ Feedback Monitor — automated feedback classification and alerting",
-          "language": "Python",
-          "pushedAt": "2026-03-11T15:42:16Z",
-          "createdAt": "2026-03-11T15:08:15Z",
-          "visibility": "private",
-          "size": 34,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 2,
-          "teamCount": 3,
-          "admins": [
-            {
-              "login": "AndreasPrang",
-              "avatar": "https://avatars.githubusercontent.com/u/1097566?v=4",
-              "profileUrl": "https://github.com/AndreasPrang",
-              "role": "admin"
-            },
-            {
-              "login": "fabiangehrmann",
-              "avatar": "https://avatars.githubusercontent.com/u/261443335?v=4",
-              "profileUrl": "https://github.com/fabiangehrmann",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Principle Engineers",
-              "slug": "admin-principle-engineers",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/spring-media/teams/admin-intern"
-            },
-            {
-              "name": "BILD Next_AD",
-              "slug": "bild-next_ad",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/bild-next_ad"
-            }
-          ]
-        },
-        {
-          "repo": "next-hey-matcher",
-          "url": "https://github.com/spring-media/next-hey-matcher",
-          "repoOwner": "Please choose a valid option!  ",
-          "description": "BILD.de Artikel ↔ Hey_ Experience Matcher (Flask + GPT-4.1-mini + Adobe Analytics)",
-          "language": "Python",
-          "pushedAt": "2026-03-12T13:46:46Z",
-          "createdAt": "2026-03-11T16:06:21Z",
-          "visibility": "private",
-          "size": 106,
-          "openIssues": 0,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 3,
-          "admins": [
-            {
-              "login": "fabiangehrmann",
-              "avatar": "https://avatars.githubusercontent.com/u/261443335?v=4",
-              "profileUrl": "https://github.com/fabiangehrmann",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Principle Engineers",
-              "slug": "admin-principle-engineers",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/spring-media/teams/admin-intern"
-            },
-            {
-              "name": "BILD Next_AD",
-              "slug": "bild-next_ad",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/bild-next_ad"
-            }
-          ]
-        },
-        {
           "repo": "victoriametricspoc",
           "url": "https://github.com/spring-media/victoriametricspoc",
           "repoOwner": "Please choose a valid option!  ",
@@ -3461,53 +3022,6 @@
               "description": "",
               "permission": "pull",
               "url": "https://github.com/orgs/spring-media/teams/admin-intern"
-            }
-          ]
-        },
-        {
-          "repo": "next-james-2.0-alpha",
-          "url": "https://github.com/spring-media/next-james-2.0-alpha",
-          "repoOwner": "Please choose a valid option!  ",
-          "description": "Newsroom Intelligence Bot — Redaktions-Assistent für BILD",
-          "language": "Python",
-          "pushedAt": "2026-03-19T08:08:57Z",
-          "createdAt": "2026-03-12T14:38:20Z",
-          "visibility": "private",
-          "size": 223,
-          "openIssues": 1,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 3,
-          "admins": [
-            {
-              "login": "fabiangehrmann",
-              "avatar": "https://avatars.githubusercontent.com/u/261443335?v=4",
-              "profileUrl": "https://github.com/fabiangehrmann",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Principle Engineers",
-              "slug": "admin-principle-engineers",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers"
-            },
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/spring-media/teams/admin-intern"
-            },
-            {
-              "name": "BILD Next_AD",
-              "slug": "bild-next_ad",
-              "description": "",
-              "permission": "push",
-              "url": "https://github.com/orgs/spring-media/teams/bild-next_ad"
             }
           ]
         },
@@ -3597,10 +3111,10 @@
           "repoOwner": "Please choose a valid option!  ",
           "description": "Newsroom Intelligence Bot — Go port (low-resource production binary)",
           "language": "Go",
-          "pushedAt": "2026-03-19T09:43:31Z",
+          "pushedAt": "2026-03-19T11:17:43Z",
           "createdAt": "2026-03-19T08:33:26Z",
           "visibility": "private",
-          "size": 9594,
+          "size": 68665,
           "openIssues": 0,
           "forks": 0,
           "stars": 0,
@@ -3630,27 +3144,49 @@
               "url": "https://github.com/orgs/spring-media/teams/admin-intern"
             }
           ]
+        },
+        {
+          "repo": "next-backseatLG",
+          "url": "https://github.com/spring-media/next-backseatLG",
+          "repoOwner": "Please choose a valid option!  ",
+          "description": "BILD L&G Evergreen Themenfinder",
+          "language": "Go",
+          "pushedAt": "2026-03-19T13:22:27Z",
+          "createdAt": "2026-03-19T13:15:24Z",
+          "visibility": "private",
+          "size": 3779,
+          "openIssues": 0,
+          "forks": 0,
+          "stars": 0,
+          "adminCount": 1,
+          "teamCount": 2,
+          "admins": [
+            {
+              "login": "tporwol",
+              "avatar": "https://avatars.githubusercontent.com/u/267041358?v=4",
+              "profileUrl": "https://github.com/tporwol",
+              "role": "admin"
+            }
+          ],
+          "teams": [
+            {
+              "name": "Admin - Principle Engineers",
+              "slug": "admin-principle-engineers",
+              "description": "",
+              "permission": "push",
+              "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers"
+            },
+            {
+              "name": "Admin - Intern",
+              "slug": "admin-intern",
+              "description": "",
+              "permission": "pull",
+              "url": "https://github.com/orgs/spring-media/teams/admin-intern"
+            }
+          ]
         }
       ],
       "admins": [
-        {
-          "login": "fabiangehrmann",
-          "avatar": "https://avatars.githubusercontent.com/u/261443335?v=4",
-          "profileUrl": "https://github.com/fabiangehrmann",
-          "role": "admin",
-          "repoCount": 9,
-          "repos": [
-            "next-test-backseat-wetter-local-clone",
-            "next-hey-adobe",
-            "next-API-checker",
-            "next-transcriber",
-            "hey-feedback-monitor",
-            "next-hey-feedback",
-            "next-hey-matcher",
-            "next-james-2.0-alpha",
-            "next-james-go"
-          ]
-        },
         {
           "login": "qwert666",
           "avatar": "https://avatars.githubusercontent.com/u/66954?v=4",
@@ -3677,6 +3213,18 @@
             "clickhouse-superset-poc",
             "victoriametricspoc",
             "foundry-rasp-derived-kpis"
+          ]
+        },
+        {
+          "login": "fabiangehrmann",
+          "avatar": "https://avatars.githubusercontent.com/u/261443335?v=4",
+          "profileUrl": "https://github.com/fabiangehrmann",
+          "role": "admin",
+          "repoCount": 3,
+          "repos": [
+            "next-transcriber",
+            "hey-feedback-monitor",
+            "next-james-go"
           ]
         },
         {
@@ -3770,26 +3318,6 @@
           ]
         },
         {
-          "login": "patrikrohrmann",
-          "avatar": "https://avatars.githubusercontent.com/u/250340322?v=4",
-          "profileUrl": "https://github.com/patrikrohrmann",
-          "role": "admin",
-          "repoCount": 1,
-          "repos": [
-            "next-hey-grafiktool"
-          ]
-        },
-        {
-          "login": "kims-krams",
-          "avatar": "https://avatars.githubusercontent.com/u/262795473?v=4",
-          "profileUrl": "https://github.com/kims-krams",
-          "role": "admin",
-          "repoCount": 1,
-          "repos": [
-            "next-hey-grafiktool"
-          ]
-        },
-        {
           "login": "dsimetchiev",
           "avatar": "https://avatars.githubusercontent.com/u/38256166?v=4",
           "profileUrl": "https://github.com/dsimetchiev",
@@ -3820,16 +3348,6 @@
           ]
         },
         {
-          "login": "AndreasPrang",
-          "avatar": "https://avatars.githubusercontent.com/u/1097566?v=4",
-          "profileUrl": "https://github.com/AndreasPrang",
-          "role": "admin",
-          "repoCount": 1,
-          "repos": [
-            "next-hey-feedback"
-          ]
-        },
-        {
           "login": "arindam312",
           "avatar": "https://avatars.githubusercontent.com/u/20879791?v=4",
           "profileUrl": "https://github.com/arindam312",
@@ -3848,6 +3366,16 @@
           "repos": [
             "hello-jannik-service"
           ]
+        },
+        {
+          "login": "tporwol",
+          "avatar": "https://avatars.githubusercontent.com/u/267041358?v=4",
+          "profileUrl": "https://github.com/tporwol",
+          "role": "admin",
+          "repoCount": 1,
+          "repos": [
+            "next-backseatLG"
+          ]
         }
       ],
       "teams": [
@@ -3856,7 +3384,7 @@
           "slug": "admin-principle-engineers",
           "description": "",
           "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers",
-          "repoCount": 42,
+          "repoCount": 36,
           "repos": [
             {
               "repo": "Affiliate-Link-Builder",
@@ -3955,10 +3483,6 @@
               "permission": "push"
             },
             {
-              "repo": "next-hey-grafiktool",
-              "permission": "push"
-            },
-            {
               "repo": "AiKoalaBear",
               "permission": "push"
             },
@@ -3967,19 +3491,7 @@
               "permission": "push"
             },
             {
-              "repo": "next-test-backseat-wetter-local-clone",
-              "permission": "push"
-            },
-            {
               "repo": "Duolingoproposedfeature",
-              "permission": "push"
-            },
-            {
-              "repo": "next-hey-adobe",
-              "permission": "push"
-            },
-            {
-              "repo": "next-API-checker",
               "permission": "push"
             },
             {
@@ -3995,23 +3507,11 @@
               "permission": "push"
             },
             {
-              "repo": "next-hey-feedback",
-              "permission": "push"
-            },
-            {
-              "repo": "next-hey-matcher",
-              "permission": "push"
-            },
-            {
               "repo": "victoriametricspoc",
               "permission": "push"
             },
             {
               "repo": "foundry-rasp-derived-kpis",
-              "permission": "push"
-            },
-            {
-              "repo": "next-james-2.0-alpha",
               "permission": "push"
             },
             {
@@ -4025,10 +3525,14 @@
             {
               "repo": "next-james-go",
               "permission": "push"
+            },
+            {
+              "repo": "next-backseatLG",
+              "permission": "push"
             }
           ],
           "permissions": {
-            "push": 42
+            "push": 36
           }
         },
         {
@@ -4036,7 +3540,7 @@
           "slug": "admin-intern",
           "description": "",
           "url": "https://github.com/orgs/spring-media/teams/admin-intern",
-          "repoCount": 42,
+          "repoCount": 36,
           "repos": [
             {
               "repo": "Affiliate-Link-Builder",
@@ -4135,10 +3639,6 @@
               "permission": "pull"
             },
             {
-              "repo": "next-hey-grafiktool",
-              "permission": "pull"
-            },
-            {
               "repo": "AiKoalaBear",
               "permission": "pull"
             },
@@ -4147,19 +3647,7 @@
               "permission": "pull"
             },
             {
-              "repo": "next-test-backseat-wetter-local-clone",
-              "permission": "pull"
-            },
-            {
               "repo": "Duolingoproposedfeature",
-              "permission": "pull"
-            },
-            {
-              "repo": "next-hey-adobe",
-              "permission": "pull"
-            },
-            {
-              "repo": "next-API-checker",
               "permission": "pull"
             },
             {
@@ -4175,23 +3663,11 @@
               "permission": "pull"
             },
             {
-              "repo": "next-hey-feedback",
-              "permission": "pull"
-            },
-            {
-              "repo": "next-hey-matcher",
-              "permission": "pull"
-            },
-            {
               "repo": "victoriametricspoc",
               "permission": "pull"
             },
             {
               "repo": "foundry-rasp-derived-kpis",
-              "permission": "pull"
-            },
-            {
-              "repo": "next-james-2.0-alpha",
               "permission": "pull"
             },
             {
@@ -4205,10 +3681,14 @@
             {
               "repo": "next-james-go",
               "permission": "pull"
+            },
+            {
+              "repo": "next-backseatLG",
+              "permission": "pull"
             }
           ],
           "permissions": {
-            "pull": 42
+            "pull": 36
           }
         },
         {
@@ -4297,46 +3777,6 @@
           ],
           "permissions": {
             "admin": 7
-          }
-        },
-        {
-          "name": "BILD Next_AD",
-          "slug": "bild-next_ad",
-          "description": "",
-          "url": "https://github.com/orgs/spring-media/teams/bild-next_ad",
-          "repoCount": 7,
-          "repos": [
-            {
-              "repo": "next-hey-grafiktool",
-              "permission": "push"
-            },
-            {
-              "repo": "next-test-backseat-wetter-local-clone",
-              "permission": "push"
-            },
-            {
-              "repo": "next-hey-adobe",
-              "permission": "push"
-            },
-            {
-              "repo": "next-API-checker",
-              "permission": "push"
-            },
-            {
-              "repo": "next-hey-feedback",
-              "permission": "push"
-            },
-            {
-              "repo": "next-hey-matcher",
-              "permission": "push"
-            },
-            {
-              "repo": "next-james-2.0-alpha",
-              "permission": "push"
-            }
-          ],
-          "permissions": {
-            "push": 7
           }
         },
         {
@@ -5667,10 +5107,10 @@
           "repoOwner": "Please choose a valid option!",
           "description": "Touchscreen Application with rundown functionality",
           "language": "TypeScript",
-          "pushedAt": "2026-03-19T09:45:31Z",
+          "pushedAt": "2026-03-19T12:20:32Z",
           "createdAt": "2025-11-19T13:46:23Z",
           "visibility": "internal",
-          "size": 95605,
+          "size": 95623,
           "openIssues": 9,
           "forks": 0,
           "stars": 0,
