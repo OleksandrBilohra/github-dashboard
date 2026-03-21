@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-03-20T09:41:56.856Z",
+  "generatedAt": "2026-03-21T01:43:00.652Z",
   "globalStats": {
     "totalOrgs": 8,
-    "totalRepos": 2063,
+    "totalRepos": 2061,
     "totalInactiveRepos": 89,
-    "totalUniqueAdmins": 22,
-    "totalUniqueTeams": 17
+    "totalUniqueAdmins": 21,
+    "totalUniqueTeams": 16
   },
   "globalAdmins": [
     {
@@ -177,18 +177,22 @@
       ]
     },
     {
-      "login": "BriwwWoxoW",
-      "avatar": "https://avatars.githubusercontent.com/u/110679604?v=4",
-      "profileUrl": "https://github.com/BriwwWoxoW",
+      "login": "mvilling",
+      "avatar": "https://avatars.githubusercontent.com/u/73826203?v=4",
+      "profileUrl": "https://github.com/mvilling",
       "role": "admin",
-      "repoCount": 1,
+      "repoCount": 2,
       "orgs": [
-        "asitservices"
+        "spring-media"
       ],
       "repos": [
         {
-          "org": "asitservices",
-          "repo": "ec_nextdam_aws_backend"
+          "org": "spring-media",
+          "repo": "video-notifications"
+        },
+        {
+          "org": "spring-media",
+          "repo": "video-rendition"
         }
       ]
     },
@@ -269,22 +273,6 @@
         {
           "org": "spring-media",
           "repo": "video-content-management-ui"
-        }
-      ]
-    },
-    {
-      "login": "mvilling",
-      "avatar": "https://avatars.githubusercontent.com/u/73826203?v=4",
-      "profileUrl": "https://github.com/mvilling",
-      "role": "admin",
-      "repoCount": 1,
-      "orgs": [
-        "spring-media"
-      ],
-      "repos": [
-        {
-          "org": "spring-media",
-          "repo": "video-notifications"
         }
       ]
     },
@@ -661,7 +649,7 @@
       "description": "",
       "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers",
       "org": "spring-media",
-      "repoCount": 36,
+      "repoCount": 37,
       "repos": [
         {
           "repo": "Affiliate-Link-Builder",
@@ -806,10 +794,14 @@
         {
           "repo": "next-backseatLG",
           "permission": "push"
+        },
+        {
+          "repo": "video-rendition",
+          "permission": "push"
         }
       ],
       "permissions": {
-        "push": 36
+        "push": 37
       }
     },
     {
@@ -818,7 +810,7 @@
       "description": "",
       "url": "https://github.com/orgs/spring-media/teams/admin-intern",
       "org": "spring-media",
-      "repoCount": 36,
+      "repoCount": 37,
       "repos": [
         {
           "repo": "Affiliate-Link-Builder",
@@ -963,10 +955,14 @@
         {
           "repo": "next-backseatLG",
           "permission": "pull"
+        },
+        {
+          "repo": "video-rendition",
+          "permission": "pull"
         }
       ],
       "permissions": {
-        "pull": 36
+        "pull": 37
       }
     },
     {
@@ -975,7 +971,7 @@
       "description": "",
       "url": "https://github.com/orgs/spring-media/teams/video-audio",
       "org": "spring-media",
-      "repoCount": 9,
+      "repoCount": 10,
       "repos": [
         {
           "repo": "ott-xk6",
@@ -1012,10 +1008,14 @@
         {
           "repo": "video-encoder",
           "permission": "pull"
+        },
+        {
+          "repo": "video-rendition",
+          "permission": "pull"
         }
       ],
       "permissions": {
-        "pull": 9
+        "pull": 10
       }
     },
     {
@@ -1024,7 +1024,7 @@
       "description": "",
       "url": "https://github.com/orgs/spring-media/teams/video_ad",
       "org": "spring-media",
-      "repoCount": 7,
+      "repoCount": 8,
       "repos": [
         {
           "repo": "video-ops-cli",
@@ -1053,10 +1053,14 @@
         {
           "repo": "video-encoder",
           "permission": "admin"
+        },
+        {
+          "repo": "video-rendition",
+          "permission": "admin"
         }
       ],
       "permissions": {
-        "admin": 7
+        "admin": 8
       }
     },
     {
@@ -1187,23 +1191,6 @@
       "repos": [
         {
           "repo": "terraform-aws-control_tower_account_factory",
-          "permission": "pull"
-        }
-      ],
-      "permissions": {
-        "pull": 1
-      }
-    },
-    {
-      "name": "Admin - Intern",
-      "slug": "admin-intern",
-      "description": "",
-      "url": "https://github.com/orgs/asitservices/teams/admin-intern",
-      "org": "asitservices",
-      "repoCount": 1,
-      "repos": [
-        {
-          "repo": "ec_nextdam_aws_backend",
           "permission": "pull"
         }
       ],
@@ -1393,75 +1380,13 @@
     },
     {
       "org": "asitservices",
-      "totalRepos": 644,
-      "inactiveRepoCount": 1,
-      "totalUniqueAdmins": 1,
-      "totalUniqueTeams": 1,
-      "repos": [
-        {
-          "repo": "ec_nextdam_aws_backend",
-          "url": "https://github.com/asitservices/ec_nextdam_aws_backend",
-          "repoOwner": "Please choose a valid option!",
-          "description": "",
-          "language": "JavaScript",
-          "pushedAt": "2026-03-18T10:19:41Z",
-          "createdAt": "2026-03-18T10:14:19Z",
-          "visibility": "private",
-          "size": 1030,
-          "openIssues": 4,
-          "forks": 0,
-          "stars": 0,
-          "adminCount": 1,
-          "teamCount": 1,
-          "admins": [
-            {
-              "login": "BriwwWoxoW",
-              "avatar": "https://avatars.githubusercontent.com/u/110679604?v=4",
-              "profileUrl": "https://github.com/BriwwWoxoW",
-              "role": "admin"
-            }
-          ],
-          "teams": [
-            {
-              "name": "Admin - Intern",
-              "slug": "admin-intern",
-              "description": "",
-              "permission": "pull",
-              "url": "https://github.com/orgs/asitservices/teams/admin-intern"
-            }
-          ]
-        }
-      ],
-      "admins": [
-        {
-          "login": "BriwwWoxoW",
-          "avatar": "https://avatars.githubusercontent.com/u/110679604?v=4",
-          "profileUrl": "https://github.com/BriwwWoxoW",
-          "role": "admin",
-          "repoCount": 1,
-          "repos": [
-            "ec_nextdam_aws_backend"
-          ]
-        }
-      ],
-      "teams": [
-        {
-          "name": "Admin - Intern",
-          "slug": "admin-intern",
-          "description": "",
-          "url": "https://github.com/orgs/asitservices/teams/admin-intern",
-          "repoCount": 1,
-          "repos": [
-            {
-              "repo": "ec_nextdam_aws_backend",
-              "permission": "pull"
-            }
-          ],
-          "permissions": {
-            "pull": 1
-          }
-        }
-      ]
+      "totalRepos": 641,
+      "inactiveRepoCount": 0,
+      "totalUniqueAdmins": 0,
+      "totalUniqueTeams": 0,
+      "repos": [],
+      "admins": [],
+      "teams": []
     },
     {
       "org": "axelspringer",
@@ -1521,7 +1446,7 @@
           "visibility": "public",
           "size": 1404,
           "openIssues": 21,
-          "forks": 57,
+          "forks": 58,
           "stars": 425,
           "adminCount": 0,
           "teamCount": 4,
@@ -1650,8 +1575,8 @@
     },
     {
       "org": "spring-media",
-      "totalRepos": 1149,
-      "inactiveRepoCount": 36,
+      "totalRepos": 1150,
+      "inactiveRepoCount": 37,
       "totalUniqueAdmins": 18,
       "totalUniqueTeams": 8,
       "repos": [
@@ -3184,6 +3109,60 @@
               "url": "https://github.com/orgs/spring-media/teams/admin-intern"
             }
           ]
+        },
+        {
+          "repo": "video-rendition",
+          "url": "https://github.com/spring-media/video-rendition",
+          "repoOwner": "Please choose a valid option!  ",
+          "description": "Manages renditions of an asset.",
+          "language": "Go",
+          "pushedAt": "2026-03-20T15:59:35Z",
+          "createdAt": "2026-03-20T13:58:26Z",
+          "visibility": "private",
+          "size": 52,
+          "openIssues": 0,
+          "forks": 0,
+          "stars": 0,
+          "adminCount": 1,
+          "teamCount": 4,
+          "admins": [
+            {
+              "login": "mvilling",
+              "avatar": "https://avatars.githubusercontent.com/u/73826203?v=4",
+              "profileUrl": "https://github.com/mvilling",
+              "role": "admin"
+            }
+          ],
+          "teams": [
+            {
+              "name": "Video_AD",
+              "slug": "video_ad",
+              "description": "",
+              "permission": "admin",
+              "url": "https://github.com/orgs/spring-media/teams/video_ad"
+            },
+            {
+              "name": "Admin - Principle Engineers",
+              "slug": "admin-principle-engineers",
+              "description": "",
+              "permission": "push",
+              "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers"
+            },
+            {
+              "name": "Video & Audio",
+              "slug": "video-audio",
+              "description": "",
+              "permission": "pull",
+              "url": "https://github.com/orgs/spring-media/teams/video-audio"
+            },
+            {
+              "name": "Admin - Intern",
+              "slug": "admin-intern",
+              "description": "",
+              "permission": "pull",
+              "url": "https://github.com/orgs/spring-media/teams/admin-intern"
+            }
+          ]
         }
       ],
       "admins": [
@@ -3225,6 +3204,17 @@
             "next-transcriber",
             "hey-feedback-monitor",
             "next-james-go"
+          ]
+        },
+        {
+          "login": "mvilling",
+          "avatar": "https://avatars.githubusercontent.com/u/73826203?v=4",
+          "profileUrl": "https://github.com/mvilling",
+          "role": "admin",
+          "repoCount": 2,
+          "repos": [
+            "video-notifications",
+            "video-rendition"
           ]
         },
         {
@@ -3275,16 +3265,6 @@
           "repoCount": 1,
           "repos": [
             "video-content-management-ui"
-          ]
-        },
-        {
-          "login": "mvilling",
-          "avatar": "https://avatars.githubusercontent.com/u/73826203?v=4",
-          "profileUrl": "https://github.com/mvilling",
-          "role": "admin",
-          "repoCount": 1,
-          "repos": [
-            "video-notifications"
           ]
         },
         {
@@ -3384,7 +3364,7 @@
           "slug": "admin-principle-engineers",
           "description": "",
           "url": "https://github.com/orgs/spring-media/teams/admin-principle-engineers",
-          "repoCount": 36,
+          "repoCount": 37,
           "repos": [
             {
               "repo": "Affiliate-Link-Builder",
@@ -3529,10 +3509,14 @@
             {
               "repo": "next-backseatLG",
               "permission": "push"
+            },
+            {
+              "repo": "video-rendition",
+              "permission": "push"
             }
           ],
           "permissions": {
-            "push": 36
+            "push": 37
           }
         },
         {
@@ -3540,7 +3524,7 @@
           "slug": "admin-intern",
           "description": "",
           "url": "https://github.com/orgs/spring-media/teams/admin-intern",
-          "repoCount": 36,
+          "repoCount": 37,
           "repos": [
             {
               "repo": "Affiliate-Link-Builder",
@@ -3685,10 +3669,14 @@
             {
               "repo": "next-backseatLG",
               "permission": "pull"
+            },
+            {
+              "repo": "video-rendition",
+              "permission": "pull"
             }
           ],
           "permissions": {
-            "pull": 36
+            "pull": 37
           }
         },
         {
@@ -3696,7 +3684,7 @@
           "slug": "video-audio",
           "description": "",
           "url": "https://github.com/orgs/spring-media/teams/video-audio",
-          "repoCount": 9,
+          "repoCount": 10,
           "repos": [
             {
               "repo": "ott-xk6",
@@ -3733,10 +3721,14 @@
             {
               "repo": "video-encoder",
               "permission": "pull"
+            },
+            {
+              "repo": "video-rendition",
+              "permission": "pull"
             }
           ],
           "permissions": {
-            "pull": 9
+            "pull": 10
           }
         },
         {
@@ -3744,7 +3736,7 @@
           "slug": "video_ad",
           "description": "",
           "url": "https://github.com/orgs/spring-media/teams/video_ad",
-          "repoCount": 7,
+          "repoCount": 8,
           "repos": [
             {
               "repo": "video-ops-cli",
@@ -3773,10 +3765,14 @@
             {
               "repo": "video-encoder",
               "permission": "admin"
+            },
+            {
+              "repo": "video-rendition",
+              "permission": "admin"
             }
           ],
           "permissions": {
-            "admin": 7
+            "admin": 8
           }
         },
         {
@@ -3862,10 +3858,10 @@
           "repoOwner": "Please choose a valid option!",
           "description": "HTML5 Templates for Pilot Edge",
           "language": "HTML",
-          "pushedAt": "2026-02-18T13:17:54Z",
+          "pushedAt": "2026-03-20T14:04:20Z",
           "createdAt": "2020-02-21T22:12:01Z",
           "visibility": "internal",
-          "size": 11677,
+          "size": 11706,
           "openIssues": 0,
           "forks": 0,
           "stars": 0,
@@ -5107,11 +5103,11 @@
           "repoOwner": "Please choose a valid option!",
           "description": "Touchscreen Application with rundown functionality",
           "language": "TypeScript",
-          "pushedAt": "2026-03-20T08:12:59Z",
+          "pushedAt": "2026-03-20T11:37:27Z",
           "createdAt": "2025-11-19T13:46:23Z",
           "visibility": "internal",
-          "size": 95634,
-          "openIssues": 9,
+          "size": 95649,
+          "openIssues": 7,
           "forks": 0,
           "stars": 0,
           "adminCount": 0,
