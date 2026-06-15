@@ -1,519 +1,69 @@
 {
-  "generatedAt": "2026-03-22T09:33:03.682Z",
+  "generatedAt": "2026-06-15T12:36:03.181Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
-      "totalRepos": 21,
-      "activeRepos": 21,
+      "totalRepos": 0,
+      "activeRepos": 0,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-22T09:33:03.682Z"
+      "lastUpdated": "2026-06-15T12:36:03.181Z"
     },
     {
       "name": "as-cloud-services",
-      "totalRepos": 36,
-      "activeRepos": 35,
-      "inactiveRepos": 1,
-      "inactiveList": [
-        {
-          "repo": "terraform-aws-control_tower_account_factory",
-          "url": "https://github.com/as-cloud-services/terraform-aws-control_tower_account_factory",
-          "repoOwner": "Please choose a valid option!"
-        }
-      ],
-      "lastUpdated": "2026-03-22T09:33:03.682Z"
+      "totalRepos": 0,
+      "activeRepos": 0,
+      "inactiveRepos": 0,
+      "inactiveList": [],
+      "lastUpdated": "2026-06-15T12:36:03.181Z"
     },
     {
       "name": "asitservices",
-      "totalRepos": 641,
-      "activeRepos": 641,
+      "totalRepos": 0,
+      "activeRepos": 0,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-22T09:33:03.682Z"
+      "lastUpdated": "2026-06-15T12:36:03.181Z"
     },
     {
       "name": "axelspringer",
-      "totalRepos": 5,
-      "activeRepos": 3,
-      "inactiveRepos": 2,
-      "inactiveList": [
-        {
-          "repo": "ForwardTacotron",
-          "url": "https://github.com/axelspringer/ForwardTacotron",
-          "repoOwner": "Please choose a valid option! "
-        },
-        {
-          "repo": "DeepPhonemizer",
-          "url": "https://github.com/axelspringer/DeepPhonemizer",
-          "repoOwner": "Please choose a valid option! "
-        }
-      ],
-      "lastUpdated": "2026-03-22T09:33:03.682Z"
+      "totalRepos": 0,
+      "activeRepos": 0,
+      "inactiveRepos": 0,
+      "inactiveList": [],
+      "lastUpdated": "2026-06-15T12:36:03.181Z"
     },
     {
       "name": "Media-Impact",
-      "totalRepos": 7,
-      "activeRepos": 7,
+      "totalRepos": 0,
+      "activeRepos": 0,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-03-22T09:33:03.682Z"
+      "lastUpdated": "2026-06-15T12:36:03.181Z"
     },
     {
       "name": "spring-media",
-      "totalRepos": 1150,
-      "activeRepos": 1113,
-      "inactiveRepos": 37,
-      "inactiveList": [
-        {
-          "repo": "Affiliate-Link-Builder",
-          "url": "https://github.com/spring-media/Affiliate-Link-Builder",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "ps-hackathon-coco-api",
-          "url": "https://github.com/spring-media/ps-hackathon-coco-api",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "semantic-release-ci-test",
-          "url": "https://github.com/spring-media/semantic-release-ci-test",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "Swinject",
-          "url": "https://github.com/spring-media/Swinject",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "NMTIOS",
-          "url": "https://github.com/spring-media/NMTIOS",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "politico-landingpage",
-          "url": "https://github.com/spring-media/politico-landingpage",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "ott-xk6",
-          "url": "https://github.com/spring-media/ott-xk6",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "ott-events-report",
-          "url": "https://github.com/spring-media/ott-events-report",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "video-ops-cli",
-          "url": "https://github.com/spring-media/video-ops-cli",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "video-content-management-ui",
-          "url": "https://github.com/spring-media/video-content-management-ui",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "video-terraform-aws-cognito",
-          "url": "https://github.com/spring-media/video-terraform-aws-cognito",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "video-azure-blob-url",
-          "url": "https://github.com/spring-media/video-azure-blob-url",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "TaxonomyPython",
-          "url": "https://github.com/spring-media/TaxonomyPython",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "video-notifications",
-          "url": "https://github.com/spring-media/video-notifications",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "t-ps-wall-e",
-          "url": "https://github.com/spring-media/t-ps-wall-e",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "GithubTest",
-          "url": "https://github.com/spring-media/GithubTest",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "video-editorial-one-tts-ingest",
-          "url": "https://github.com/spring-media/video-editorial-one-tts-ingest",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "githubTest2",
-          "url": "https://github.com/spring-media/githubTest2",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "foundry-github-gradle-plugin",
-          "url": "https://github.com/spring-media/foundry-github-gradle-plugin",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "eval-pipeline",
-          "url": "https://github.com/spring-media/eval-pipeline",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "tech-rfcs",
-          "url": "https://github.com/spring-media/tech-rfcs",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "video-encoder",
-          "url": "https://github.com/spring-media/video-encoder",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "foundry-kinesis-connector",
-          "url": "https://github.com/spring-media/foundry-kinesis-connector",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "clickhouse-superset-poc",
-          "url": "https://github.com/spring-media/clickhouse-superset-poc",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "AiKoalaBear",
-          "url": "https://github.com/spring-media/AiKoalaBear",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "ps-compass-test-v2",
-          "url": "https://github.com/spring-media/ps-compass-test-v2",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "Duolingoproposedfeature",
-          "url": "https://github.com/spring-media/Duolingoproposedfeature",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "ps-go-toolkit",
-          "url": "https://github.com/spring-media/ps-go-toolkit",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "next-transcriber",
-          "url": "https://github.com/spring-media/next-transcriber",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "hey-feedback-monitor",
-          "url": "https://github.com/spring-media/hey-feedback-monitor",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "victoriametricspoc",
-          "url": "https://github.com/spring-media/victoriametricspoc",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "foundry-rasp-derived-kpis",
-          "url": "https://github.com/spring-media/foundry-rasp-derived-kpis",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "storyradar-prototype",
-          "url": "https://github.com/spring-media/storyradar-prototype",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "hello-jannik-service",
-          "url": "https://github.com/spring-media/hello-jannik-service",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "next-james-go",
-          "url": "https://github.com/spring-media/next-james-go",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "next-backseatLG",
-          "url": "https://github.com/spring-media/next-backseatLG",
-          "repoOwner": "Please choose a valid option!  "
-        },
-        {
-          "repo": "video-rendition",
-          "url": "https://github.com/spring-media/video-rendition",
-          "repoOwner": "Please choose a valid option!  "
-        }
-      ],
-      "lastUpdated": "2026-03-22T09:33:03.682Z"
+      "totalRepos": 0,
+      "activeRepos": 0,
+      "inactiveRepos": 0,
+      "inactiveList": [],
+      "lastUpdated": "2026-06-15T12:36:03.181Z"
     },
     {
       "name": "welttv",
-      "totalRepos": 48,
+      "totalRepos": 0,
       "activeRepos": 0,
-      "inactiveRepos": 48,
-      "inactiveList": [
-        {
-          "repo": "PilotEdgeTemplates",
-          "url": "https://github.com/welttv/PilotEdgeTemplates",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "mosattack",
-          "url": "https://github.com/welttv/mosattack",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "eurest-mailer",
-          "url": "https://github.com/welttv/eurest-mailer",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "loudness-scanner",
-          "url": "https://github.com/welttv/loudness-scanner",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "streaming-portal",
-          "url": "https://github.com/welttv/streaming-portal",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "envivio-streamcontrol",
-          "url": "https://github.com/welttv/envivio-streamcontrol",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "envivio-streamstopper",
-          "url": "https://github.com/welttv/envivio-streamstopper",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "curcontrol",
-          "url": "https://github.com/welttv/curcontrol",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "octopower",
-          "url": "https://github.com/welttv/octopower",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "octopus-config",
-          "url": "https://github.com/welttv/octopus-config",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "octopus-mosboundsim",
-          "url": "https://github.com/welttv/octopus-mosboundsim",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "octopus-importsim",
-          "url": "https://github.com/welttv/octopus-importsim",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "puppet",
-          "url": "https://github.com/welttv/puppet",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "check_mk-local-welt",
-          "url": "https://github.com/welttv/check_mk-local-welt",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "check_mk-etc",
-          "url": "https://github.com/welttv/check_mk-etc",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "octopus-api-scripts",
-          "url": "https://github.com/welttv/octopus-api-scripts",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "octopus-octoserv",
-          "url": "https://github.com/welttv/octopus-octoserv",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "octopus-launcher",
-          "url": "https://github.com/welttv/octopus-launcher",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "check_mk-scripts",
-          "url": "https://github.com/welttv/check_mk-scripts",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "mosart-config",
-          "url": "https://github.com/welttv/mosart-config",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "test-repo",
-          "url": "https://github.com/welttv/test-repo",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ansible",
-          "url": "https://github.com/welttv/ansible",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "octopus-storytemplates",
-          "url": "https://github.com/welttv/octopus-storytemplates",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "zabbix",
-          "url": "https://github.com/welttv/zabbix",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ses-control",
-          "url": "https://github.com/welttv/ses-control",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ehkn",
-          "url": "https://github.com/welttv/ehkn",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "docker-phpwithmssql",
-          "url": "https://github.com/welttv/docker-phpwithmssql",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "octopus-injectagent-parser",
-          "url": "https://github.com/welttv/octopus-injectagent-parser",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "octopus-msgtransmitsim",
-          "url": "https://github.com/welttv/octopus-msgtransmitsim",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "render-manager",
-          "url": "https://github.com/welttv/render-manager",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ansible-epc",
-          "url": "https://github.com/welttv/ansible-epc",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "imposter",
-          "url": "https://github.com/welttv/imposter",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "octopus-archive-viewer",
-          "url": "https://github.com/welttv/octopus-archive-viewer",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "octopus-epg",
-          "url": "https://github.com/welttv/octopus-epg",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "arema-jobs",
-          "url": "https://github.com/welttv/arema-jobs",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "ehkn-tool",
-          "url": "https://github.com/welttv/ehkn-tool",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "vizinuse",
-          "url": "https://github.com/welttv/vizinuse",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "vizscripts",
-          "url": "https://github.com/welttv/vizscripts",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "VizDataParser",
-          "url": "https://github.com/welttv/VizDataParser",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "data-api",
-          "url": "https://github.com/welttv/data-api",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "data-server",
-          "url": "https://github.com/welttv/data-server",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "viz-pilot-templates",
-          "url": "https://github.com/welttv/viz-pilot-templates",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "welt-wall-preset-editor",
-          "url": "https://github.com/welttv/welt-wall-preset-editor",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "welt-wall-scene",
-          "url": "https://github.com/welttv/welt-wall-scene",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "TouchApplication",
-          "url": "https://github.com/welttv/TouchApplication",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "CCFeeder",
-          "url": "https://github.com/welttv/CCFeeder",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "viz-emulator",
-          "url": "https://github.com/welttv/viz-emulator",
-          "repoOwner": "Please choose a valid option!"
-        },
-        {
-          "repo": "welt-wall-monitor",
-          "url": "https://github.com/welttv/welt-wall-monitor",
-          "repoOwner": "Please choose a valid option!"
-        }
-      ],
-      "lastUpdated": "2026-03-22T09:33:03.682Z"
+      "inactiveRepos": 0,
+      "inactiveList": [],
+      "lastUpdated": "2026-06-15T12:36:03.181Z"
     },
     {
       "name": "sales-impact",
-      "totalRepos": 153,
-      "activeRepos": 152,
-      "inactiveRepos": 1,
-      "inactiveList": [
-        {
-          "repo": "autobild-chatbot-exp",
-          "url": "https://github.com/sales-impact/autobild-chatbot-exp",
-          "repoOwner": "Please choose a valid option!"
-        }
-      ],
-      "lastUpdated": "2026-03-22T09:33:03.682Z"
+      "totalRepos": 0,
+      "activeRepos": 0,
+      "inactiveRepos": 0,
+      "inactiveList": [],
+      "lastUpdated": "2026-06-15T12:36:03.181Z"
     }
   ],
   "trends": [
@@ -1644,6 +1194,25 @@
       "welttv_active": 0,
       "sales-impact": 153,
       "sales-impact_active": 152
+    },
+    {
+      "date": "2026-06-15",
+      "AS-ASK-IT": 0,
+      "AS-ASK-IT_active": 0,
+      "as-cloud-services": 0,
+      "as-cloud-services_active": 0,
+      "asitservices": 0,
+      "asitservices_active": 0,
+      "axelspringer": 0,
+      "axelspringer_active": 0,
+      "Media-Impact": 0,
+      "Media-Impact_active": 0,
+      "spring-media": 0,
+      "spring-media_active": 0,
+      "welttv": 0,
+      "welttv_active": 0,
+      "sales-impact": 0,
+      "sales-impact_active": 0
     }
   ]
 }
