@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-15T02:48:06.751Z",
+  "generatedAt": "2026-07-15T10:52:25.734Z",
   "organizations": [
     {
       "name": "AS-ASK-IT",
@@ -7,7 +7,7 @@
       "activeRepos": 0,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-07-15T02:48:06.751Z"
+      "lastUpdated": "2026-07-15T10:52:25.734Z"
     },
     {
       "name": "as-cloud-services",
@@ -15,7 +15,7 @@
       "activeRepos": 0,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-07-15T02:48:06.751Z"
+      "lastUpdated": "2026-07-15T10:52:25.734Z"
     },
     {
       "name": "asitservices",
@@ -23,7 +23,7 @@
       "activeRepos": 0,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-07-15T02:48:06.751Z"
+      "lastUpdated": "2026-07-15T10:52:25.734Z"
     },
     {
       "name": "axelspringer",
@@ -31,7 +31,7 @@
       "activeRepos": 0,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-07-15T02:48:06.751Z"
+      "lastUpdated": "2026-07-15T10:52:25.734Z"
     },
     {
       "name": "Media-Impact",
@@ -39,7 +39,7 @@
       "activeRepos": 0,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-07-15T02:48:06.751Z"
+      "lastUpdated": "2026-07-15T10:52:25.734Z"
     },
     {
       "name": "spring-media",
@@ -47,7 +47,7 @@
       "activeRepos": 0,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-07-15T02:48:06.751Z"
+      "lastUpdated": "2026-07-15T10:52:25.734Z"
     },
     {
       "name": "welttv",
@@ -55,7 +55,7 @@
       "activeRepos": 0,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-07-15T02:48:06.751Z"
+      "lastUpdated": "2026-07-15T10:52:25.734Z"
     },
     {
       "name": "sales-impact",
@@ -63,29 +63,10 @@
       "activeRepos": 0,
       "inactiveRepos": 0,
       "inactiveList": [],
-      "lastUpdated": "2026-07-15T02:48:06.751Z"
+      "lastUpdated": "2026-07-15T10:52:25.734Z"
     }
   ],
   "trends": [
-    {
-      "date": "2026-03-09",
-      "AS-ASK-IT": 21,
-      "AS-ASK-IT_active": 21,
-      "as-cloud-services": 35,
-      "as-cloud-services_active": 35,
-      "asitservices": 772,
-      "asitservices_active": 500,
-      "axelspringer": 4,
-      "axelspringer_active": 4,
-      "Media-Impact": 14,
-      "Media-Impact_active": 14,
-      "spring-media": 1140,
-      "spring-media_active": 1107,
-      "welttv": 48,
-      "welttv_active": 0,
-      "sales-impact": 150,
-      "sales-impact_active": 150
-    },
     {
       "date": "2026-03-10",
       "AS-ASK-IT": 21,
@@ -1741,6 +1722,25 @@
     },
     {
       "date": "2026-07-14",
+      "AS-ASK-IT": 0,
+      "AS-ASK-IT_active": 0,
+      "as-cloud-services": 0,
+      "as-cloud-services_active": 0,
+      "asitservices": 0,
+      "asitservices_active": 0,
+      "axelspringer": 0,
+      "axelspringer_active": 0,
+      "Media-Impact": 0,
+      "Media-Impact_active": 0,
+      "spring-media": 0,
+      "spring-media_active": 0,
+      "welttv": 0,
+      "welttv_active": 0,
+      "sales-impact": 0,
+      "sales-impact_active": 0
+    },
+    {
+      "date": "2026-07-15",
       "AS-ASK-IT": 0,
       "AS-ASK-IT_active": 0,
       "as-cloud-services": 0,
